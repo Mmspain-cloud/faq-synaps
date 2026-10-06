@@ -4,11 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Synaps FAQ | Centro de Formación Webedia</title>
-  <meta name="description" content="Portal interactivo de Preguntas Frecuentes y Guía de Formación de Synaps, la plataforma de Inteligencia Artificial de Webedia y Elephant.">
+  <meta name="description" content="Portal interactivo de FAQ y Guía de Formación de Synaps, la plataforma de Inteligencia Artificial de Webedia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Alineación y centrado de las tarjetas de soporte en 6.4 */
+    .support-resources-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 1.25rem !important;
+    }
+    .support-resources-grid .resource-card {
+      flex: 0 1 calc(33.333% - 1.25rem) !important;
+      min-width: 280px !important;
+      box-sizing: border-box !important;
+    }
+    @media (max-width: 992px) {
+      .support-resources-grid .resource-card {
+        flex: 0 1 calc(50% - 1.25rem) !important;
+      }
+    }
+    @media (max-width: 640px) {
+      .support-resources-grid .resource-card {
+        flex: 0 1 100% !important;
+      }
+    }
+  </style>
 </head>
 <body data-theme="dark">
   <!-- Fondo con efecto de red neuronal -->
@@ -60,9 +84,9 @@
           <input 
             type="search" 
             id="faqSearchInput" 
-            placeholder="Buscar por palabra clave (ej. PACTE, Notebook, Deep Research, 180 días, gobernanza, obstáculos, ROI...)" 
+            placeholder="Buscar por palabra clave (ej. PACTE, Few-Shot, Notebook, Deep Research, 180 días, obstáculos...)" 
             autocomplete="off"
-            aria-label="Buscar preguntas y respuestas"
+            aria-label="Buscar preguntas y respuestas en el FAQ"
           >
           <button id="clearSearchBtn" class="clear-btn" title="Limpiar búsqueda" aria-label="Limpiar búsqueda" style="display: none;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -138,7 +162,7 @@
         <div class="section-header">
           <div class="section-tag">Módulo I</div>
           <h2 class="section-title">¿Qué es Synaps y Cuáles son sus Objetivos y Principios?</h2>
-          <p class="section-desc">Fundamentos, visión estratégica de Webedia & Elephant, privacidad y gobernanza corporativa.</p>
+          <p class="section-desc">Fundamentos, visión estratégica de Webedia, privacidad y gobernanza corporativa.</p>
         </div>
 
         <!-- Pregunta 1.1 -->
@@ -611,7 +635,7 @@
           </details>
         </article>
 
-        <!-- Pregunta 3.3 -->
+        <!-- Pregunta 3.3 (Actualizada con Comparativa Zero/One/Few Shot y Meta-Prompting) -->
         <article class="faq-card" data-category="prompts" id="faq-3-3">
           <details class="faq-details">
             <summary class="faq-summary">
@@ -627,9 +651,52 @@
               </div>
             </summary>
             <div class="faq-content">
-              <ul class="styled-list">
-                <li><strong>Few-Shot Prompting (Ejemplos Reales):</strong> Proporciona uno o dos ejemplos del formato deseado; el modelo captará el patrón 10 veces mejor que con párrafos explicativos.</li>
-                <li><strong>Uso de Markdown:</strong> Emplea encabezados (<code>#</code>), listas y negritas (<code>**</code>) para estructurar tus prompts; Gemini organizará mejor el razonamiento.</li>
+              <p>Además de la estructura P.A.C.T.E., aplica estas técnicas formales y probadas:</p>
+
+              <!-- Comparativa de Técnicas de Prompting -->
+              <h4 class="subhead mt-3">🎯 Las 3 Técnicas de Instrucción (Prompting Techniques)</h4>
+              <div class="grid-cards-3 mt-2">
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <span class="info-icon">⚡</span>
+                    <strong>Zero-Shot</strong>
+                  </div>
+                  <p><em>«Just tell him whatever you want»</em></p>
+                  <p class="text-sm">Pides la tarea directamente sin proporcionar ejemplos previos. Muy rápido para tareas sencillas, pero con menor control en peticiones complejas.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <span class="info-icon">🎯</span>
+                    <strong>One-Shot</strong>
+                  </div>
+                  <p><em>«Guide him with just one example»</em></p>
+                  <p class="text-sm">Incluyes 1 único ejemplo resuelto. Ayuda a que la IA entienda el tono, la formalidad y la estructura exacta esperada.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <span class="info-icon">💎</span>
+                    <strong>Few-Shot</strong>
+                  </div>
+                  <p><em>«Show, don't say that»</em></p>
+                  <p class="text-sm">Aportas de 2 a 3 ejemplos concretos del resultado. Es la técnica más recomendada para tareas con matices o clasificaciones estrictas.</p>
+                </div>
+              </div>
+
+              <!-- Truco Meta-Prompting -->
+              <div class="callout-box mt-3" style="border-left: 4px solid #6366f1;">
+                <div class="callout-title">🪄 Truco Pro de Auto-Optimización (Meta-Prompting)</div>
+                <p>
+                  Cuando estés trabajando en Synaps Chat y vayas puliendo un resultado mensaje tras mensaje, <strong>no copies y pegues manualmente tus correcciones</strong>. Al terminar la sesión, pídele directamente a Gemini:
+                </p>
+                <div class="highlight-quote mt-2" style="font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                  «Ahora revisa toda nuestra conversación y consolídala en un único prompt maestro, estructurado con la metodología P.A.C.T.E., para que pueda guardarlo en mi biblioteca y reutilizarlo en el futuro con un solo clic».
+                </div>
+              </div>
+
+              <!-- Otras Técnicas Avanzadas -->
+              <h4 class="subhead mt-4">Mejores Prácticas y Hábitos Recomendados</h4>
+              <ul class="styled-list mt-2">
+                <li><strong>Estructuración con Markdown:</strong> Emplea encabezados (<code>#</code>), listas y negritas (<code>**</code>) para estructurar tus prompts; Gemini organizará mejor el razonamiento.</li>
                 <li><strong>Prompt Interactivo de Clarificación:</strong> Pídele al final: <em>«Antes de redactar, hazme 3 preguntas para asegurarte de que comprendes mi objetivo»</em>.</li>
                 <li><strong>Multimodalidad con Capturas:</strong> Puedes arrastrar capturas de pantalla, gráficos o tablas directamente al chat para que analice texto e imagen a la vez.</li>
                 <li><strong>Contexto Negativo (Límites):</strong> Especifica con claridad lo que NO debe hacer (ej. <em>«Evita jerga técnica compleja y no menciones marcas competidoras»</em>).</li>
@@ -1064,7 +1131,7 @@
           </details>
         </article>
 
-        <!-- Pregunta 6.4 (Sin Visibilidad y Reconocimiento) -->
+        <!-- Pregunta 6.4 (Con las 2 últimas tarjetas centradas) -->
         <article class="faq-card" data-category="champions" id="faq-6-4">
           <details class="faq-details">
             <summary class="faq-summary">
@@ -1111,7 +1178,7 @@
       <div id="noResultsBlock" class="no-results-block" style="display: none;">
         <div class="no-results-icon">🔍</div>
         <h3>No se encontraron preguntas coincidentes</h3>
-        <p>Prueba con otros términos como <em>"PACTE"</em>, <em>"notebook"</em>, <em>"agentes"</em>, <em>"gobernanza"</em> o <em>"obstáculos"</em>.</p>
+        <p>Prueba con otros términos como <em>"PACTE"</em>, <em>"Few-Shot"</em>, <em>"notebook"</em>, <em>"agentes"</em>, <em>"gobernanza"</em> u <em>"obstáculos"</em>.</p>
         <button id="resetSearchBtn" class="primary-btn mt-3">Ver todas las preguntas</button>
       </div>
     </section>
