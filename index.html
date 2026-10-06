@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="dark">
-  <!-- Fondo con efecto neuronal -->
+  <!-- Fondo con efecto de red neuronal -->
   <div class="neural-bg" aria-hidden="true">
     <div class="glow-orb orb-1"></div>
     <div class="glow-orb orb-2"></div>
@@ -23,15 +23,12 @@
   <header class="site-header">
     <div class="header-container">
       <div class="brand">
-        <div class="logo-icon" style="width: auto; height: 32px;">
-          <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="height: 28px; width: auto;">
-            <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="currentColor" letter-spacing="-1">webedia</text>
+        <!-- Logo SVG Webedia limpio y transparente sin títulos adyacentes -->
+        <div class="logo-icon" style="width: auto; height: 32px; display: flex; align-items: center;">
+          <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="height: 30px; width: auto; background: transparent;" aria-label="Webedia">
+            <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-1">webedia</text>
             <text x="370" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#6366f1" letter-spacing="-1">/.</text>
           </svg>
-        </div>
-        <div class="brand-text">
-          <div class="brand-title">SYNAPS <span>AI</span></div>
-          <div class="brand-subtitle">Portal de Formación IA</div>
         </div>
       </div>
       <div class="header-actions">
@@ -39,10 +36,6 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           <span>Herramienta P.A.C.T.E.</span>
         </a>
-        <button id="themeToggleBtn" class="header-btn icon-only-btn" title="Cambiar tema claro / oscuro" aria-label="Cambiar tema">
-          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
       </div>
     </div>
   </header>
@@ -67,7 +60,7 @@
           <input 
             type="search" 
             id="faqSearchInput" 
-            placeholder="Buscar por palabra clave (ej. PACTE, Notebook, Deep Research, 180 días, gobernanza, agentes, ROI...)" 
+            placeholder="Buscar por palabra clave (ej. PACTE, Notebook, Deep Research, 180 días, gobernanza, obstáculos, ROI...)" 
             autocomplete="off"
             aria-label="Buscar preguntas y respuestas"
           >
@@ -91,7 +84,7 @@
         </div>
       </div>
 
-      <!-- Filtros por Categoría (Pills con conteos actualizados) -->
+      <!-- Filtros por Categoría (Pills) -->
       <nav class="category-filters" aria-label="Filtro de módulos del FAQ">
         <button class="filter-pill active" data-category="all">
           <span class="pill-dot"></span>
@@ -115,7 +108,7 @@
         </button>
         <button class="filter-pill" data-category="roi">
           <span class="pill-icon">📈</span>
-          V. Puntos de Dolor & KPIs <span class="pill-count">3</span>
+          V. Obstáculos & KPIs <span class="pill-count">3</span>
         </button>
         <button class="filter-pill" data-category="champions">
           <span class="pill-icon">🌟</span>
@@ -199,7 +192,7 @@
                 </div>
                 <div class="info-card">
                   <div class="info-card-header"><span class="info-icon">⚙️</span><strong>Fábrica de Casos de Uso</strong></div>
-                  <p>Consolidar una "fábrica de casos de uso" interna para multiplicar la eficiencia operativa diaria en todas las unidades.</p>
+                  <p>Consolidar una factoría interna de soluciones para multiplicar la eficiencia operativa diaria en todas las unidades.</p>
                 </div>
                 <div class="info-card">
                   <div class="info-card-header"><span class="info-icon">⏱️</span><strong>Ahorro de Miles de Horas</strong></div>
@@ -231,15 +224,15 @@
             </summary>
             <div class="faq-content">
               <p>
-                Synaps está diseñado bajo el principio de <strong>«extensión del usuario»</strong>: solo puede acceder a la información sobre la cual tienes <strong>permiso personal explícito</strong> en tus cuentas corporativas.
+                Synaps está concebido bajo el principio de <strong>«extensión del usuario»</strong>: solo puede acceder a la información sobre la cual tienes <strong>permiso personal explícito</strong> en tus cuentas corporativas.
               </p>
               <div class="callout-box">
                 <div class="callout-title">🔒 Entorno Sellado («Walled Garden»)</div>
-                <p>Tus prompts y datos empresariales permanecen estrictamente dentro del perímetro seguro de Webedia. Esto garantiza:</p>
+                <p>Tus prompts y datos empresariales permanecen estrictamente dentro del perímetro seguro de Webedia:</p>
               </div>
               <ul class="styled-list">
                 <li><strong>Sin Entrenamiento Externo:</strong> Tus datos NUNCA se utilizan para entrenar modelos de Gemini externos ni de terceros.</li>
-                <li><strong>Privacidad Total:</strong> Tu información no se comparte, no se vende ni se usa con fines publicitarios. Nadie fuera de tu acceso autorizado puede ver tus datos.</li>
+                <li><strong>Privacidad Total:</strong> Tu información no se comparte, no se vende ni se usa con fines publicitarios.</li>
                 <li><strong>Seguridad Enterprise & ACLs:</strong> Estricta adhesión a permisos de acceso existentes, prevención de pérdida de datos (DLP), auditoría y cumplimiento normativo.</li>
                 <li><strong>Cifrado Avanzado:</strong> Protección de datos con cifrado robusto del lado del cliente para salvaguardar información sensible.</li>
               </ul>
@@ -263,12 +256,12 @@
               </div>
             </summary>
             <div class="faq-content">
-              <p>Para asegurar un entorno profesional ordenado y proteger los activos de la empresa:</p>
+              <p>Para asegurar un entorno ordenado y proteger los activos estratégicos de la empresa:</p>
               <ul class="styled-list">
-                <li><strong>Propiedad de Webedia:</strong> Cualquier agente, flujo o prompt desarrollado en la plataforma Synaps pertenece contractualmente a Webedia.</li>
-                <li><strong>Continuidad del Negocio:</strong> Los agentes críticos para las operaciones deben ser compartidos o transferidos al equipo si un colaborador cambia de rol o se marcha.</li>
+                <li><strong>Propiedad de Webedia:</strong> Cualquier agente, flujo o prompt desarrollado en la plataforma Synaps pertenece a Webedia.</li>
+                <li><strong>Continuidad del Negocio:</strong> Los agentes operativos críticos deben ser compartidos o transferidos al equipo si un colaborador cambia de posición o se marcha.</li>
                 <li><strong>Roles Asignados:</strong> Se aconseja designar formalmente un <em>«propietario» (owner)</em> y un <em>«alterno»</em> para cada agente en producción.</li>
-                <li><strong>Protocolo de Offboarding:</strong> La revisión y reasignación de accesos de agentes de Synaps forma parte del proceso de baja o transición corporativa estándar.</li>
+                <li><strong>Protocolo de Offboarding:</strong> La reasignación de accesos en Synaps forma parte del proceso de baja o transición corporativa estándar.</li>
               </ul>
             </div>
           </details>
@@ -300,27 +293,27 @@
             </summary>
             <div class="faq-content">
               <p>
-                <strong>Synaps Chat</strong> (también conocido en la plataforma como Synaps Search) es la <strong>interfaz conversacional principal</strong> de Gemini Enterprise, diseñada para atender consultas generales, generar contenido y agilizar tareas diarias como tu asistente inteligente personal.
+                <strong>Synaps Chat</strong> (también denominado Synaps Search) es la <strong>interfaz conversacional principal</strong> de Gemini Enterprise, diseñada para resolver consultas, generar contenidos y agilizar tareas cotidianas como tu asistente inteligente diario.
               </p>
               <div class="feature-box">
                 <h4>🔄 ¿Cómo funciona y qué integra?</h4>
-                <p>Ingresas una instrucción o prompt, y Gemini activa sus modelos avanzados junto con la Búsqueda de Google y conectores de datos autorizados. Puede consultar en tiempo real tus repositorios internos (<strong>Gmail, Google Drive, Google Calendar</strong>) o aplicaciones empresariales autorizadas (<strong>Salesforce, CRM</strong>). Puedes usar <code>@</code> para invocar a agentes especialistas directamente en la conversación.</p>
+                <p>Ingresas una instrucción o prompt y Gemini activa sus capacidades coordinadas con la Búsqueda de Google y conectores corporativos autorizados. Puede consultar en tiempo real tus repositorios internos (<strong>Gmail, Google Drive, Google Calendar</strong>) o herramientas empresariales (<strong>Salesforce, CRM</strong>). Puedes usar <code>@</code> para invocar a agentes especialistas directamente en la conversación.</p>
               </div>
               <div class="grid-cards-2 mt-3">
                 <div class="info-card">
                   <div class="info-card-header"><span class="info-icon">🧠</span><strong>Función «Memorize»</strong></div>
-                  <p>Guarda tus preferencias de trabajo persistentes (formato favorito, tono, proyectos actuales). Si un prompt contradice una memoria, la instrucción actual prevalece.</p>
+                  <p>Guarda tus preferencias de trabajo persistentes (formato, tono o proyectos en curso). Si un prompt contradice una memoria guardada, la instrucción actual prevalece.</p>
                 </div>
                 <div class="info-card">
                   <div class="info-card-header"><span class="info-icon">📌</span><strong>Chats Anclados («Pinned Chats»)</strong></div>
-                  <p>Sirven exclusivamente para tu organización visual diaria. No confieren mayor peso cognitivo ni alteran la memoria entre sesiones separadas.</p>
+                  <p>Sirven exclusivamente para tu organización visual diaria. No confieren mayor relevancia cognitiva al modelo ni afectan sesiones independientes.</p>
                 </div>
               </div>
               <div class="callout-box warning-theme mt-3">
                 <div class="callout-title">⏳ Regla de Caducidad de 180 Días</div>
-                <p>Todas las conversaciones tienen una vida útil máxima de <strong>180 días</strong>. Synaps Chat no es un gestor documental; guarda tus prompts clave y entregables finales en Google Drive o tus carpetas habituales.</p>
+                <p>Todas las conversaciones tienen una vida útil máxima de <strong>180 días</strong>. Synaps Chat no es un archivo documental; almacena tus prompts clave y entregables finales en Google Drive o tus carpetas de trabajo habituales.</p>
               </div>
-              <p class="mt-2"><strong>Qué NO puede hacer:</strong> Procesar flujos desatendidos continuos (usa <em>Workflow Agents</em>), conectar fuentes externas no autorizadas o alternar a modelos no homologados (opera con las versiones oficiales de Gemini Pro y Flash).</p>
+              <p class="mt-2"><strong>Qué NO puede hacer:</strong> Ejecutar procesos desatendidos continuos (para eso están los <em>Workflow Agents</em>), conectarse a fuentes externas no autorizadas o alternar a modelos no homologados (opera con las versiones oficiales de Gemini Pro y Flash).</p>
             </div>
           </details>
         </article>
@@ -342,7 +335,7 @@
             </summary>
             <div class="faq-content">
               <p>
-                <strong>Deep Research</strong> es un agente autónomo avanzado de Synaps concebido como un <strong>analista aumentado</strong>. Es capaz de <strong>cruzar, comparar y sintetizar información</strong> de múltiples fuentes web y documentales heterogéneas para investigaciones estratégicas complejas.
+                <strong>Deep Research</strong> es un agente autónomo de Synaps que actúa como un <strong>analista aumentado</strong>. Es capaz de <strong>cruzar, comparar y sintetizar información</strong> de múltiples fuentes web y documentales heterogéneas para análisis estratégicos de alta complejidad.
               </p>
               <div class="grid-cards-2">
                 <div class="benefit-card">
@@ -350,16 +343,16 @@
                   <ul>
                     <li>Análisis profundo de competidores, licitaciones y benchmarking de mercado.</li>
                     <li>Elaboración de informes de tendencias e inteligencia comercial 360°.</li>
-                    <li>Construcción de argumentarios de venta a partir de documentación técnica dispersa.</li>
+                    <li>Construcción de argumentarios comerciales basados en documentación densa.</li>
                   </ul>
                 </div>
                 <div class="benefit-card">
                   <div class="benefit-title">⚠️ Pautas y limitaciones</div>
                   <ul>
                     <li><strong>Alto consumo de recursos:</strong> Realiza múltiples búsquedas autónomas en bucle y puede demorar hasta 10 minutos. Úsalo con criterio.</li>
-                    <li><strong>Sin acceso a Paywalls:</strong> Rastrea la web pública abierta; no puede saltar autenticaciones privadas ni muros de pago.</li>
-                    <li><strong>Alcance preciso:</strong> Acota el objetivo en el prompt para evitar informes excesivamente genéricos.</li>
-                    <li><strong>Verificación activa:</strong> Aunque aporta enlaces, comprueba siempre los extractos citados.</li>
+                    <li><strong>Sin acceso a Paywalls:</strong> Rastrea la web pública abierta; no puede sortear muros de pago ni accesos con login.</li>
+                    <li><strong>Alcance preciso:</strong> Acota el objetivo en el prompt para evitar informes genéricos o diluidos.</li>
+                    <li><strong>Verificación activa:</strong> Aunque cita enlaces web, comprueba siempre los extractos citados.</li>
                   </ul>
                 </div>
               </div>
@@ -384,7 +377,7 @@
             </summary>
             <div class="faq-content">
               <p>
-                <strong>Gemini Notebook</strong> (anteriormente conocido como NotebookLM) te permite crear tu propio <strong>experto temático en IA</strong> cargando tus documentos de referencia (contratos, auditorías, normativas, CVs, políticas o manuales). Responderá <strong>ÚNICAMENTE anclado en esa base de datos</strong>, reduciendo drásticamente las alucinaciones.
+                <strong>Gemini Notebook</strong> (anteriormente NotebookLM) te permite crear tu propio <strong>experto temático en IA</strong> anclado en tus documentos de referencia (contratos, auditorías, normativas, CVs, políticas o manuales). Responderá <strong>ÚNICAMENTE basándose en las fuentes que cargues</strong>, citando siempre página y párrafo exactos.
               </p>
               <div class="specs-grid">
                 <div class="spec-item">
@@ -393,16 +386,16 @@
                 </div>
                 <div class="spec-item">
                   <span class="spec-number">500.000</span>
-                  <span class="spec-desc">Palabras por fuente (y hasta 200 MB por archivo local), asimilando cientos de páginas al instante</span>
+                  <span class="spec-desc">Palabras por fuente (hasta 200 MB por archivo local), procesando cientos de páginas al instante</span>
                 </div>
                 <div class="spec-item">
                   <span class="spec-number">Audio Podcast</span>
-                  <span class="spec-desc">Generación de resúmenes dinámicos en audio a dos voces, guías de estudio, FAQs y mapas conceptuales</span>
+                  <span class="spec-desc">Resúmenes dinámicos en audio a dos voces, guías de estudio, FAQs estructuradas y mapas conceptuales</span>
                 </div>
               </div>
               <div class="callout-box mt-3">
                 <div class="callout-title">💡 Buenas Prácticas de Notebook</div>
-                <p>Crea <strong>cuadernos monotemáticos</strong> dedicados a un único proyecto o cliente. Recuerda que no tiene sincronización dinámica automática: si un documento se actualiza, vuelve a importarlo y purga fuentes obsoletas.</p>
+                <p>Crea <strong>cuadernos monotemáticos</strong> dedicados a un único proyecto o cliente. Recuerda que no tiene sincronización dinámica automática: si un archivo cambia, vuelve a importarlo y purga fuentes obsoletas.</p>
               </div>
             </div>
           </details>
@@ -425,7 +418,7 @@
             </summary>
             <div class="faq-content">
               <p>
-                Los <strong>Agentes de IA</strong> marcan el paso de una herramienta reactiva a un <strong>colaborador virtual autónomo</strong>, capaz de razonar, desglosar objetivos en planes, interactuar con herramientas corporativas y aprender iterativamente.
+                Los <strong>Agentes de IA</strong> representan la transición de una herramienta puntual a un <strong>colaborador virtual proactivo</strong>, capaz de razonar, descomponer objetivos en subtareas, interactuar con herramientas corporativas y adaptarse a imprevistos.
               </p>
               <div class="vs-comparison">
                 <div class="vs-col chatbot-col">
@@ -434,16 +427,16 @@
                   <ul>
                     <li>Sigue guiones estáticos y respuestas rígidas.</li>
                     <li>1 Pregunta = 1 Respuesta inmediata.</li>
-                    <li>Se detiene esperando la siguiente orden manual.</li>
+                    <li>Se detiene a la espera de la siguiente orden manual.</li>
                   </ul>
                 </div>
                 <div class="vs-col agent-col">
                   <div class="vs-tag highlight">Agente de IA Synaps</div>
-                  <p class="vs-metaphor">«Como un compañero de equipo proactivo»</p>
+                  <p class="vs-metaphor">«Como un compañero de equipo experimentado»</p>
                   <ul>
-                    <li>Interpreta el objetivo global y planifica las subtareas.</li>
+                    <li>Comprende el objetivo global y planifica el flujo de trabajo.</li>
                     <li>Ejecuta múltiples acciones coordinadas entre varias aplicaciones.</li>
-                    <li>Resuelve bloqueos de manera adaptativa durante el flujo.</li>
+                    <li>Resuelve obstáculos de manera autónoma durante la ejecución.</li>
                   </ul>
                 </div>
               </div>
@@ -451,7 +444,7 @@
           </details>
         </article>
 
-        <!-- Pregunta 2.5 (NUEVA: Árbol de Decisión) -->
+        <!-- Pregunta 2.5 -->
         <article class="faq-card" data-category="tools" id="faq-2-5">
           <details class="faq-details">
             <summary class="faq-summary">
@@ -467,11 +460,11 @@
               </div>
             </summary>
             <div class="faq-content">
-              <p>El principio fundamental es <strong>comenzar siempre por la solución más sencilla</strong> antes de escalar:</p>
+              <p>La regla fundamental es <strong>empezar siempre por la solución más sencilla</strong> antes de escalar:</p>
               <div class="decision-ladder">
                 <div class="ladder-steps">
                   <div class="step-badge">1. ¿Es una tarea puntual?</div>
-                  <span><strong>SÍ ➔</strong> Usa <strong>Synaps Chat con un Prompt simple</strong>.</span>
+                  <span><strong>SÍ ➔</strong> Utiliza <strong>Synaps Chat con un Prompt simple</strong>.</span>
                 </div>
                 <div class="ladder-steps">
                   <div class="step-badge">2. ¿Instrucciones repetitivas?</div>
@@ -479,13 +472,13 @@
                 </div>
                 <div class="ladder-steps">
                   <div class="step-badge">3. ¿Requiere lógica compleja o APIs externas?</div>
-                  <span><strong>SÍ ➔</strong> Escala a un <strong>Agente Pro-Code</strong> desarrollado junto a TI.</span>
+                  <span><strong>SÍ ➔</strong> Escala a un <strong>Agente Pro-Code</strong> desarrollado junto al equipo técnico.</span>
                 </div>
                 <div class="ladder-steps">
                   <div class="step-badge">4. ¿Automatización sin código (No-Code)?</div>
                   <span>
                     • Si es una <strong>conversación interactiva</strong> ➔ <strong>Agente de Chat</strong>.<br>
-                    • Si es un <strong>proceso secuencial desatendido</strong> (ej. Gmail a Sheets) ➔ <strong>Agente de Flujo (Workflow Agent)</strong>.
+                    • Si es un <strong>proceso desatendido paso a paso</strong> (ej. Gmail a Sheets) ➔ <strong>Agente de Flujo (Workflow Agent)</strong>.
                   </span>
                 </div>
               </div>
@@ -493,7 +486,7 @@
           </details>
         </article>
 
-        <!-- Pregunta 2.6 (NUEVA: Creación No-Code y Agent Designer) -->
+        <!-- Pregunta 2.6 -->
         <article class="faq-card" data-category="tools" id="faq-2-6">
           <details class="faq-details">
             <summary class="faq-summary">
@@ -509,7 +502,7 @@
               </div>
             </summary>
             <div class="faq-content">
-              <p>Puedes construir agentes personalizados mediante lenguaje natural en el <strong>Agent Designer</strong> a través de dos caminos:</p>
+              <p>Puedes construir agentes personalizados mediante lenguaje natural en el <strong>Agent Designer</strong> a través de dos modalidades:</p>
               <div class="grid-cards-2">
                 <div class="info-card">
                   <div class="info-card-header"><span class="info-icon">🪄</span><strong>Workflow Builder</strong></div>
@@ -522,7 +515,7 @@
               </div>
               <div class="callout-box warning-theme mt-3">
                 <div class="callout-title">🔒 Tu Laboratorio Privado Seguro</div>
-                <p>Por defecto, <strong>todos los agentes que creas son estrictamente privados e invisibles para los demás</strong>. Esto te permite experimentar con libertad. Verifica siempre los conectores que habilitas (piensa antes de actuar) y contacta al Core Team para publicarlos en la Galería compartida si aportan valor general a la empresa.</p>
+                <p>Por defecto, <strong>todos los agentes que creas son estrictamente privados e invisibles para los demás</strong>. Esto te permite experimentar con libertad. Piensa antes de activar conectores y contacta al Core Team para publicarlos en la Galería compartida si aportan valor general a la empresa.</p>
               </div>
             </div>
           </details>
@@ -580,13 +573,13 @@
             </summary>
             <div class="faq-content">
               <p>
-                El método <strong>P.A.C.T.E.</strong> es el marco oficial estándar en Webedia y Elephant para componer instrucciones con contexto suficiente y máxima puntería:
+                El método <strong>P.A.C.T.E.</strong> es el estándar corporativo en Webedia y Elephant para componer instrucciones precisas y contextualizadas:
               </p>
               <div class="pacte-framework-grid">
                 <div class="pacte-card letter-p">
                   <div class="pacte-letter">P</div>
                   <div class="pacte-name">Persona</div>
-                  <div class="pacte-desc">Rol o especialidad que adopta la IA.</div>
+                  <div class="pacte-desc">Rol o especialidad que asume la IA.</div>
                   <div class="pacte-example"><em>Ej:</em> «Actúa como un Diseñador UX Senior en e-commerce».</div>
                 </div>
                 <div class="pacte-card letter-a">
@@ -635,7 +628,7 @@
             </summary>
             <div class="faq-content">
               <ul class="styled-list">
-                <li><strong>Few-Shot Prompting (Ejemplos Reales):</strong> Proporciona uno o dos ejemplos concretos de la respuesta esperada; la IA captará el patrón 10 veces mejor que con párrafos explicativos.</li>
+                <li><strong>Few-Shot Prompting (Ejemplos Reales):</strong> Proporciona uno o dos ejemplos del formato deseado; el modelo captará el patrón 10 veces mejor que con párrafos explicativos.</li>
                 <li><strong>Uso de Markdown:</strong> Emplea encabezados (<code>#</code>), listas y negritas (<code>**</code>) para estructurar tus prompts; Gemini organizará mejor el razonamiento.</li>
                 <li><strong>Prompt Interactivo de Clarificación:</strong> Pídele al final: <em>«Antes de redactar, hazme 3 preguntas para asegurarte de que comprendes mi objetivo»</em>.</li>
                 <li><strong>Multimodalidad con Capturas:</strong> Puedes arrastrar capturas de pantalla, gráficos o tablas directamente al chat para que analice texto e imagen a la vez.</li>
@@ -704,7 +697,7 @@
             </summary>
             <div class="faq-content">
               <p>
-                Una «alucinación» ocurre cuando un modelo inventa hechos plausibles pero incorrectos con total seguridad. Para erradicarlas:
+                Una «alucinación» ocurre cuando un modelo inventa datos con total seguridad aparente. Para erradicarlas:
               </p>
               <div class="check-actions-list">
                 <div class="check-action-item"><span class="check-icon">🔍</span><div><strong>Validación con Google:</strong> Usa el botón de verificación directa en Gemini para cotejar afirmaciones con la web en tiempo real.</div></div>
@@ -743,13 +736,13 @@
                 </div>
               </div>
               <p class="mt-3">
-                <strong>Nunca delegues tu pensamiento crítico</strong>. La IA amplifica tu talento, pero jamás sustituye tu experiencia ni tu sensibilidad humana.
+                <strong>Nunca delegues tu pensamiento crítico</strong>. La IA amplifica tu talento, pero jamás sustituye tu experiencia ni tu criterio profesional.
               </p>
             </div>
           </details>
         </article>
 
-        <!-- Pregunta 4.4 (NUEVA: Precauciones adicionales) -->
+        <!-- Pregunta 4.4 -->
         <article class="faq-card" data-category="safety" id="faq-4-4">
           <details class="faq-details">
             <summary class="faq-summary">
@@ -766,7 +759,7 @@
             </summary>
             <div class="faq-content">
               <ul class="styled-list">
-                <li><strong>Clasificación de Datos:</strong> Trata la información que introduzcas como documentación interna de trabajo y evita introducir datos personales de clientes no anonimizados o información altamente confidencial sin autorización.</li>
+                <li><strong>Clasificación de Datos:</strong> Trata la información que introduzcas como documentación interna de trabajo y evita introducir datos personales de clientes no anonimizados o información altamente sensible sin autorización previa.</li>
                 <li><strong>Aumenta, no reemplaces:</strong> Utiliza la IA para generar ideas, estructurar borradores y procesar información, pero confía siempre en el criterio humano para las decisiones de negocio.</li>
                 <li><strong>Diversidad de Puntos de Vista:</strong> Contrasta los análisis de la IA con la opinión de compañeros para no caer en sesgos de confirmación o perspectivas estrechas.</li>
               </ul>
@@ -779,8 +772,8 @@
       <div class="faq-section-block" data-section="roi" id="seccion-roi">
         <div class="section-header">
           <div class="section-tag">Módulo V</div>
-          <h2 class="section-title">De los Puntos de Dolor a las Ganancias Cuantificables</h2>
-          <p class="section-desc">Metodología de impacto Pain ➔ Action ➔ Gain, KPIs medibles y casos reales probados en Webedia.</p>
+          <h2 class="section-title">De los Obstáculos a las Ganancias Cuantificables</h2>
+          <p class="section-desc">Metodología de impacto Obstáculo ➔ Acción ➔ Ganancia, KPIs medibles y casos reales probados en Webedia.</p>
         </div>
 
         <!-- Pregunta 5.1 -->
@@ -789,7 +782,7 @@
             <summary class="faq-summary">
               <div class="summary-left">
                 <span class="q-number">5.1</span>
-                <h3 class="q-title">¿Cómo identificamos los "puntos de dolor" que Synaps puede resolver?</h3>
+                <h3 class="q-title">¿Cómo identificamos los obstáculos que Synaps puede resolver?</h3>
               </div>
               <div class="summary-actions">
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
@@ -799,22 +792,22 @@
               </div>
             </summary>
             <div class="faq-content">
-              <p>Los puntos de dolor son fricciones cotidianas identificadas en los talleres departamentales de Webedia, agrupadas en 3 categorías:</p>
+              <p>Los obstáculos son cuellos de botella cotidianos identificados en los talleres departamentales de Webedia, agrupados en 3 áreas:</p>
               <div class="pain-categories-grid">
                 <div class="pain-category-card">
                   <div class="pain-icon">🧠</div>
                   <h4>Carga Mental y Sobrecarga</h4>
-                  <p>Saturación por cadenas kilométricas de emails, dispersión de documentos en múltiples carpetas y desgaste en tareas repetitivas de bajo valor.</p>
+                  <p>Saturación por cadenas kilométricas de correos, dispersión documental en múltiples carpetas y desgaste en tareas repetitivas de escaso valor añadido.</p>
                 </div>
                 <div class="pain-category-card">
                   <div class="pain-icon">⏳</div>
-                  <h4>Productividad y Fricción</h4>
-                  <p>Procesos manuales mecánicos (copiar datos de Gmail a Sheets, conciliar reportes, programar agendas) que roban horas productivas clave.</p>
+                  <h4>Productividad y Fricción Operativa</h4>
+                  <p>Procesos manuales mecánicos (copiar datos de Gmail a Sheets, conciliar reportes, coordinar agendas) que consumen horas clave de los equipos.</p>
                 </div>
                 <div class="pain-category-card">
                   <div class="pain-icon">🎨</div>
                   <h4>Bloqueos Creativos e Innovación</h4>
-                  <p>Síndrome de la hoja en blanco, necesidad de adaptar un mismo concepto a múltiples canales y formatos, y falta de tiempo para brainstorming.</p>
+                  <p>Síndrome de la hoja en blanco, necesidad de adaptar una misma campaña a múltiples formatos y canales, y falta de tiempo para ideación estratégica.</p>
                 </div>
               </div>
             </div>
@@ -827,7 +820,7 @@
             <summary class="faq-summary">
               <div class="summary-left">
                 <span class="q-number">5.2</span>
-                <h3 class="q-title">¿Cómo se traducen estos puntos de dolor en ganancias medibles con Synaps?</h3>
+                <h3 class="q-title">¿Cómo se traducen estos obstáculos en ganancias medibles con Synaps?</h3>
               </div>
               <div class="summary-actions">
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
@@ -837,44 +830,44 @@
               </div>
             </summary>
             <div class="faq-content">
-              <p>Aplicamos el marco estructurado <strong>«Desafío (Pain) ➔ Solución (Action) ➔ Impacto (Gain)»</strong>:</p>
+              <p>Aplicamos el marco estructurado <strong>«Obstáculo (Desafío) ➔ Solución (Acción) ➔ Ganancia (Impacto)»</strong>:</p>
               <div class="flow-stages">
                 <div class="flow-stage">
-                  <div class="stage-tag pain">1. Desafío (Pain)</div>
-                  <p>El cuello de botella concreto antes de la IA.</p>
+                  <div class="stage-tag pain">1. Obstáculo</div>
+                  <p>El cuello de botella concreto antes de incorporar la IA.</p>
                 </div>
                 <div class="flow-arrow">➔</div>
                 <div class="flow-stage">
-                  <div class="stage-tag action">2. Solución (Action)</div>
-                  <p>Prompt ejecutado y fuentes analizadas.</p>
+                  <div class="stage-tag action">2. Solución (Acción)</div>
+                  <p>Prompt ejecutado y fuentes conectadas en Synaps.</p>
                 </div>
                 <div class="flow-arrow">➔</div>
                 <div class="flow-stage">
-                  <div class="stage-tag gain">3. Impacto (Gain)</div>
-                  <p>Beneficio cuantificado en horas, euros o calidad.</p>
+                  <div class="stage-tag gain">3. Ganancia (Impacto)</div>
+                  <p>Beneficio cuantificado en horas, precisión o ingresos.</p>
                 </div>
               </div>
               <h4 class="subhead mt-4">KPIs de impacto cuantificables:</h4>
               <div class="pill-tags mt-2">
-                <span class="kpi-pill">⏱️ Tiempo neto ahorrado (horas/semana o mes)</span>
+                <span class="kpi-pill">⏱️ Tiempo neto ahorrado (horas semanales o mensuales)</span>
                 <span class="kpi-pill">🚀 Aumento de cadencia y agilidad de entrega</span>
-                <span class="kpi-pill">🎯 Fiabilidad de decisiones (fuentes verificadas)</span>
-                <span class="kpi-pill">🛡️ Mitigación de riesgos de marca y presupuesto</span>
+                <span class="kpi-pill">🎯 Fiabilidad de decisiones (fuentes 100% verificadas)</span>
+                <span class="kpi-pill">🛡️ Mitigación de riesgos de marca y control de presupuesto</span>
                 <span class="kpi-pill">💼 Nuevas oportunidades comerciales y mayor cartera</span>
-                <span class="kpi-pill">📈 Aumento de tráfico orgánico y en Discover</span>
-                <span class="kpi-pill">🧘 Reducción del estrés laboral y mayor foco</span>
+                <span class="kpi-pill">📈 Crecimiento de tráfico y engagement en Discover</span>
+                <span class="kpi-pill">🧘 Reducción del estrés laboral y foco estratégico</span>
               </div>
             </div>
           </details>
         </article>
 
-        <!-- Pregunta 5.3 (Casos de uso completos de Webedia) -->
+        <!-- Pregunta 5.3 -->
         <article class="faq-card" data-category="roi" id="faq-5-3">
           <details class="faq-details">
             <summary class="faq-summary">
               <div class="summary-left">
                 <span class="q-number">5.3</span>
-                <h3 class="q-title">¿Puedes dar ejemplos concretos de cómo Synaps resuelve problemas reales?</h3>
+                <h3 class="q-title">¿Puedes dar ejemplos concretos de cómo Synaps resuelve obstáculos reales?</h3>
               </div>
               <div class="summary-actions">
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
@@ -884,17 +877,17 @@
               </div>
             </summary>
             <div class="faq-content">
-              <p>Casos de uso reales implementados y cuantificados en los equipos de Webedia y Elephant:</p>
+              <p>Casos reales demostrados y medidos en las unidades de Webedia y Elephant:</p>
               <div class="use-cases-grid">
                 <div class="case-card">
                   <div class="case-header"><span class="case-num">#1</span><h5>Reuniones multi-zona horaria</h5></div>
-                  <p class="case-desc">Agente que cruza calendarios globales, compensa husos horarios y reserva automáticamente.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> 1 hora ahorrada por reunión global y cero errores de agenda.</div>
+                  <p class="case-desc">Agente que cruza calendarios globales, compensa husos horarios y agenda automáticamente.</p>
+                  <div class="case-gain"><strong>Ganancia:</strong> 1 hora ahorrada por reunión global y cero desajustes horarios.</div>
                 </div>
                 <div class="case-card">
                   <div class="case-header"><span class="case-num">#2</span><h5>Monitoreo de competidores activos</h5></div>
                   <p class="case-desc">Ingesta semanal automatizada de lanzamientos rivales y generación de ganchos comerciales.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Mayor cartera de marcas cerradas y ventajas competitivas.</div>
+                  <div class="case-gain"><strong>Ganancia:</strong> Más marcas en cartera y mayor tasa de conversión comercial.</div>
                 </div>
                 <div class="case-card">
                   <div class="case-header"><span class="case-num">#3</span><h5>Scraping de horarios de cines</h5></div>
@@ -967,14 +960,14 @@
             </summary>
             <div class="faq-content">
               <p>
-                El <strong>AI Champion</strong> es un <strong>facilitador humano</strong> en su propio departamento que actúa como puente de confianza entre la visión corporativa y la práctica diaria.
+                El <strong>AI Champion</strong> es un <strong>facilitador humano</strong> dentro de su propio departamento que actúa como puente de confianza entre la visión corporativa y la operativa diaria.
               </p>
               <div class="callout-box">
                 <div class="callout-title">🤝 Su Misión Principal</div>
-                <p><strong>Traducir, tranquilizar, inspirar y acelerar</strong> la adopción de la IA en los equipos de negocio. <em>No requiere conocimientos de programación</em>, sino interés genuino por optimizar los flujos de su equipo y ser una referencia cercana.</p>
+                <p><strong>Traducir, tranquilizar, inspirar y acelerar</strong> la adopción de la IA en los equipos de negocio. <em>No requiere conocimientos de programación</em>, sino interés genuino por optimizar el trabajo de sus compañeros y ser un punto de apoyo cercano.</p>
               </div>
             </div>
-          </details>
+          </details>b
         </article>
 
         <!-- Pregunta 6.2 -->
@@ -1007,7 +1000,7 @@
                 <div class="role-card sensor">
                   <div class="role-icon">📡</div>
                   <h4>3. Sensor (Antena)</h4>
-                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades y bloqueos.</p>
+                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades y obstáculos.</p>
                 </div>
               </div>
             </div>
@@ -1037,7 +1030,7 @@
                 </div>
                 <div class="day-block">
                   <div class="day-badge">Día 2: Aplicación y Casos de Uso (Google)</div>
-                  <p>Exploración de Agentes de IA (Chat & Workflow), resolución de cuellos de botella y diseño de casos de negocio reales.</p>
+                  <p>Exploración de Agentes de IA (Chat & Workflow), resolución de obstáculos operativos y diseño de casos de negocio reales.</p>
                 </div>
               </div>
               <h4 class="subhead mt-4">El Viaje de Adopción en 4 Pasos:</h4>
@@ -1046,7 +1039,7 @@
                   <div class="step-circle">Fase 1</div>
                   <div class="step-time">Día +15</div>
                   <div class="step-title">Identificar Audiencia</div>
-                  <p>Mapear a los 8-10 primeros compañeros con cuellos de botella reales y planificar talleres prácticos.</p>
+                  <p>Mapear a los 8-10 primeros compañeros con obstáculos reales y planificar talleres prácticos.</p>
                 </div>
                 <div class="timeline-step">
                   <div class="step-circle">Fase 2</div>
@@ -1071,7 +1064,7 @@
           </details>
         </article>
 
-        <!-- Pregunta 6.4 -->
+        <!-- Pregunta 6.4 (Sin Visibilidad y Reconocimiento) -->
         <article class="faq-card" data-category="champions" id="faq-6-4">
           <details class="faq-details">
             <summary class="faq-summary">
@@ -1090,7 +1083,7 @@
               <div class="support-resources-grid">
                 <div class="resource-card">
                   <span class="res-icon">🧰</span>
-                  <div><strong>Toolkit y Kits de Formación:</strong> Presentaciones, ejercicios y plantillas para impartir talleres con facilidad.</div>
+                  <div><strong>Toolkit y Kits de Formación:</strong> Presentaciones, ejercicios prácticos y plantillas listas para facilitar sesiones con tus compañeros.</div>
                 </div>
                 <div class="resource-card">
                   <span class="res-icon">🔄</span>
@@ -1106,11 +1099,7 @@
                 </div>
                 <div class="resource-card">
                   <span class="res-icon">💬</span>
-                  <div><strong>Comunidad Exclusiva Online:</strong> Espacio privado de debate y colaboración entre todos los Champions de Webedia y Elephant.</div>
-                </div>
-                <div class="resource-card">
-                  <span class="res-icon">🏆</span>
-                  <div><strong>Visibilidad y Reconocimiento:</strong> Espacios de presentación a la dirección para los casos de éxito más impactantes.</div>
+                  <div><strong>Soporte Online:</strong> Espacio privado de debate y colaboración entre todos los Champions de Webedia y Elephant.</div>
                 </div>
               </div>
             </div>
@@ -1122,7 +1111,7 @@
       <div id="noResultsBlock" class="no-results-block" style="display: none;">
         <div class="no-results-icon">🔍</div>
         <h3>No se encontraron preguntas coincidentes</h3>
-        <p>Prueba con otros términos como <em>"PACTE"</em>, <em>"notebook"</em>, <em>"agentes"</em>, <em>"gobernanza"</em> o <em>"champion"</em>.</p>
+        <p>Prueba con otros términos como <em>"PACTE"</em>, <em>"notebook"</em>, <em>"agentes"</em>, <em>"gobernanza"</em> o <em>"obstáculos"</em>.</p>
         <button id="resetSearchBtn" class="primary-btn mt-3">Ver todas las preguntas</button>
       </div>
     </section>
