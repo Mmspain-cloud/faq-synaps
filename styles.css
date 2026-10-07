@@ -4855,3 +4855,12 @@ textarea::placeholder {
 .cant-do-card li {
   color: #475569 !important;
 }
+
+
+
+/* P.A.C.T.E. — iniciales en morado */
+.input-group label strong {
+  color: #7c3aed !important;
+  font-size: 0.98rem !important;
+  font-weight: 900 !important;
+}
