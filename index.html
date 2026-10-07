@@ -24,35 +24,35 @@
 
     /* ==========================================================================
 
-       SOBREESCRITURA PARA TEMA CLARO - ALTA LEGIBILIDAD (WEBEDIA SYNAPS)
+       SOBREESCRITURA TOTAL TEMA CLARO - BLINDADO Y DE ALTA LEGIBILIDAD
 
        ========================================================================== */
 
     body {
 
-      background-color: #f8fafc !important; /* Fondo claro de alta calidad slate-50 */
+      background-color: #f8fafc !important; /* slate-50 */
 
-      color: #0f172a !important; /* Texto principal oscuro slate-900 */
+      color: #0f172a !important; /* slate-900 */
 
     }
 
 
 
-    /* Ajuste de orbes para fondo claro (tonos pastel sutiles) */
+    /* Ajuste de orbes decorativos para fondo claro */
 
     .neural-bg {
 
-      background: #f1f5f9 !important; /* slate-100 */
+      background: #f8fafc !important;
 
     }
 
     .neural-bg .grid-overlay {
 
-      opacity: 0.15 !important; /* Cuadrícula sutil */
+      opacity: 0.12 !important;
 
-      background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+      background-image: linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
 
-                        linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px) !important;
+                        linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px) !important;
 
     }
 
@@ -60,19 +60,47 @@
 
       filter: blur(140px) !important;
 
-      opacity: 0.45 !important;
+      opacity: 0.35 !important;
 
     }
 
-    .orb-1 { background: #c084fc !important; } /* Púrpura suave */
+    .orb-1 { background: #cbd5e1 !important; }
 
-    .orb-2 { background: #818cf8 !important; } /* Índigo suave */
+    .orb-2 { background: #cbd5e1 !important; }
 
     .orb-3 { background: #cbd5e1 !important; }
 
 
 
-    /* Títulos y Subtítulos en Tema Claro */
+    /* Barra de navegación superior */
+
+    .site-header {
+
+      background: rgba(255, 255, 255, 0.9) !important;
+
+      border-bottom: 1px solid #e2e8f0 !important; /* slate-200 */
+
+      backdrop-filter: blur(12px) !important;
+
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.03) !important;
+
+    }
+
+    .logo-icon svg text {
+
+      fill: #0f172a !important;
+
+    }
+
+    .logo-icon svg text[fill="#6366f1"] {
+
+      fill: #4f46e5 !important;
+
+    }
+
+
+
+    /* Hero e Indicaciones */
 
     .hero-title {
 
@@ -82,7 +110,7 @@
 
     .hero-subtitle {
 
-      color: #475569 !important; /* Gris intermedio de lectura */
+      color: #475569 !important;
 
     }
 
@@ -98,43 +126,21 @@
 
 
 
-    /* Header y Barra de Navegación */
-
-    .site-header {
-
-      background: rgba(255, 255, 255, 0.8) !important;
-
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important; /* slate-200 */
-
-      backdrop-filter: blur(12px) !important;
-
-    }
-
-    /* Logo Webedia en Negro para tema claro */
-
-    .logo-icon svg text {
-
-      fill: #0f172a !important;
-
-    }
-
-    .logo-icon svg text[fill="#6366f1"] {
-
-      fill: #4f46e5 !important; /* Mantener la barra inclinada en índigo corporativo */
-
-    }
-
-
-
-    /* Buscador e Inputs */
+    /* Barra de Búsqueda Interactiva */
 
     .search-wrapper {
 
-      background: rgba(255, 255, 255, 0.9) !important;
+      background: #ffffff !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1px solid #cbd5e1 !important;
 
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05) !important;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04) !important;
+
+    }
+
+    .search-box {
+
+      background: transparent !important;
 
     }
 
@@ -160,9 +166,11 @@
 
     .search-status-bar {
 
-      color: #64748b !important;
+      color: #475569 !important;
 
-      border-top: 1px solid #f1f5f9 !important;
+      border-top: 1px solid #e2e8f0 !important;
+
+      background: #f8fafc !important;
 
     }
 
@@ -180,7 +188,7 @@
 
 
 
-    /* Categorías de Filtro (Pills) */
+    /* Filtros (Pills) */
 
     .filter-pill {
 
@@ -190,7 +198,7 @@
 
       color: #475569 !important;
 
-      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.02) !important;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02) !important;
 
     }
 
@@ -210,7 +218,7 @@
 
       color: #ffffff !important;
 
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25) !important;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
 
     }
 
@@ -232,33 +240,47 @@
 
 
 
-    /* Banner Regla de Oro */
+    /* Regla de Oro (Texto en negro y alta legibilidad) */
 
     .golden-rule-banner {
 
-      background: linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%) !important; /* Degradado índigo-púrpura muy suave */
+      background: #eff6ff !important; /* Azul suave */
 
-      border: 1px solid #c7d2fe !important;
+      border: 1.5px solid #bfdbfe !important;
 
-      color: #312e81 !important;
+      color: #1e293b !important; /* Texto principal oscuro */
+
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.04) !important;
+
+    }
+
+    .golden-rule-banner strong {
+
+      color: #0f172a !important; /* Negrita en negro */
 
     }
 
     .banner-title {
 
-      color: #1e1b4b !important;
+      color: #1e3a8a !important; /* Título azul cobalto oscuro */
+
+    }
+
+    .banner-text {
+
+      color: #334155 !important; /* Texto sutil en gris oscuro */
 
     }
 
     .banner-icon {
 
-      color: #4f46e5 !important;
+      color: #3b82f6 !important;
 
     }
 
 
 
-    /* Bloques de Secciones y Encabezados */
+    /* Secciones y Encabezados */
 
     .section-title {
 
@@ -278,25 +300,25 @@
 
       color: #4f46e5 !important;
 
-      border: 1px solid rgba(79, 70, 229, 0.1) !important;
+      border: 1px solid rgba(79, 70, 229, 0.15) !important;
 
     }
 
 
 
-    /* Tarjetas del FAQ (Módulos) */
+    /* Tarjetas del FAQ */
 
     .faq-card {
 
       background: #ffffff !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #e2e8f0 !important; /* Bordes suaves en gris slate-200 */
 
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.015) !important;
 
       border-radius: 12px !important;
 
-      transition: all 0.3s ease !important;
+      transition: all 0.25s ease !important;
 
     }
 
@@ -304,7 +326,7 @@
 
       border-color: #cbd5e1 !important;
 
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04) !important;
 
       transform: translateY(-2px) !important;
 
@@ -334,15 +356,15 @@
 
 
 
-    /* Contenido del FAQ */
+    /* Contenido Interno FAQ */
 
     .faq-content {
 
-      color: #334155 !important; /* Gris carbón de alta lectura */
+      color: #334155 !important;
 
       border-top: 1px solid #f1f5f9 !important;
 
-      line-height: 1.625 !important;
+      background: #ffffff !important;
 
     }
 
@@ -352,19 +374,29 @@
 
     }
 
+    
+
+    /* Sobreescritura Viñetas de Listas en Modo Claro */
+
     .styled-list li::before {
 
-      background-color: #4f46e5 !important;
+      background-color: #4f46e5 !important; /* Forzar el punto en índigo */
+
+    }
+
+    .styled-list li {
+
+      color: #334155 !important;
 
     }
 
 
 
-    /* Cajas Destacadas (Callouts, Features, Warnings) */
+    /* Cajas y Bloques Informativos Internos */
 
     .callout-box {
 
-      background: #f8fafc !important; /* slate-50 */
+      background: #f8fafc !important;
 
       border-left: 4px solid #4f46e5 !important;
 
@@ -380,7 +412,7 @@
 
     .callout-box.warning-theme {
 
-      background: #fffbeb !important; /* Ámbar ultra claro */
+      background: #fffbeb !important; /* Ámbar pastel */
 
       border-left-color: #d97706 !important;
 
@@ -396,7 +428,7 @@
 
     .feature-box {
 
-      background: #f0fdf4 !important; /* Esmeralda claro */
+      background: #f0fdf4 !important; /* Verde pastel */
 
       border-left: 4px solid #16a34a !important;
 
@@ -422,15 +454,15 @@
 
 
 
-    /* Cuadrículas e Info Cards internas */
+    /* Info Cards e Iconos */
 
     .info-card {
 
       background: #f8fafc !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #e2e8f0 !important;
 
-      color: #475569 !important;
+      color: #334155 !important;
 
     }
 
@@ -446,6 +478,8 @@
 
       border: 1px solid #e2e8f0 !important;
 
+      color: #334155 !important;
+
     }
 
     .benefit-title {
@@ -456,11 +490,11 @@
 
 
 
-    /* Comparativas de Chatbot vs Agente */
+    /* Comparativas y Decisiones */
 
     .vs-comparison {
 
-      background: #f1f5f9 !important;
+      background: #f8fafc !important;
 
       border: 1px solid #e2e8f0 !important;
 
@@ -471,6 +505,8 @@
       background: #ffffff !important;
 
       border: 1px solid #e2e8f0 !important;
+
+      color: #334155 !important;
 
     }
 
@@ -496,15 +532,13 @@
 
     }
 
-
-
-    /* Escalera de Decisión */
-
     .decision-ladder {
 
-      background: #f8fafc !important;
+      background: #ffffff !important;
 
       border: 1px solid #e2e8f0 !important;
+
+      color: #334155 !important;
 
     }
 
@@ -524,15 +558,15 @@
 
 
 
-    /* Tarjetas de Casos de Uso */
+    /* Casos de Uso */
 
     .use-cases-grid .case-card {
 
       background: #ffffff !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #e2e8f0 !important;
 
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02) !important;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.01) !important;
 
     }
 
@@ -550,9 +584,11 @@
 
     .case-gain {
 
-      background: #f1f5f9 !important;
+      background: #f8fafc !important;
 
       color: #334155 !important;
+
+      border-top: 1px solid #f1f5f9 !important;
 
     }
 
@@ -566,13 +602,15 @@
 
 
 
-    /* Tarjetas de Apoyo y Roles de Champions */
+    /* Champions, Roles, Recursos */
 
     .role-card {
 
       background: #ffffff !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #e2e8f0 !important;
+
+      color: #334155 !important;
 
     }
 
@@ -586,9 +624,9 @@
 
       background: #ffffff !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #e2e8f0 !important;
 
-      color: #475569 !important;
+      color: #334155 !important;
 
     }
 
@@ -603,6 +641,8 @@
       background: #ffffff !important;
 
       border: 1px solid #e2e8f0 !important;
+
+      color: #334155 !important;
 
     }
 
@@ -622,9 +662,9 @@
 
       background: #ffffff !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #e2e8f0 !important;
 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03) !important;
 
     }
 
@@ -664,7 +704,7 @@
 
       background: #f8fafc !important;
 
-      border: 1px solid #d1d5db !important;
+      border: 1.5px solid #cbd5e1 !important;
 
       color: #0f172a !important;
 
@@ -682,7 +722,7 @@
 
       background: #f8fafc !important;
 
-      border: 1px solid #e2e8f0 !important;
+      border: 1.5px solid #cbd5e1 !important;
 
       color: #334155 !important;
 
@@ -722,7 +762,7 @@
 
 
 
-    /* Soporte de Cuadrículas en 6.4 */
+    /* Soporte Cuadrículas */
 
     .support-resources-grid {
 
@@ -768,7 +808,7 @@
 
 
 
-    /* SOLUCIÓN INTEGRAL PARA LA VISUALIZACIÓN DE LA IMAGEN */
+    /* CAPTURA E IMAGEN DE CONECTORES - TOTALMENTE EN CLARO */
 
     .connector-image-container {
 
@@ -778,17 +818,17 @@
 
       overflow: hidden !important;
 
-      border: 1.5px solid #e2e8f0 !important; /* slate-200 */
+      border: 1.5px solid #cbd5e1 !important; /* slate-300 */
 
-      background: #f8fafc !important; /* Fondo claro neutro */
+      background: #ffffff !important; /* Fondo claro */
 
       display: flex !important;
 
       justify-content: center !important;
 
-      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06) !important;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05) !important;
 
-      padding: 8px !important; /* Espacio de cortesía */
+      padding: 10px !important;
 
     }
 
@@ -806,7 +846,7 @@
 
     
 
-    /* Ajuste visual para el botón de Synaps */
+    /* Botón Synaps */
 
     .synaps-btn {
 
@@ -1668,7 +1708,7 @@
 
                   <ul>
 
-                    <li>Comprende el objetivo global y planifica el flujo de trabajo.</li>
+                    <li>Comprende el objetivo global and planifica el flujo de trabajo.</li>
 
                     <li>Ejecuta múltiples acciones coordinadas entre varias aplicaciones.</li>
 
@@ -2612,7 +2652,7 @@
 
               <div class="use-cases-grid mt-2" style="margin-bottom: 2rem;">
 
-                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
+                <div class="case-card">
 
                   <div class="case-header"><span class="case-num">📧</span><h5>Buscar correos y adjuntos</h5></div>
 
@@ -2622,7 +2662,7 @@
 
                 </div>
 
-                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
+                <div class="case-card">
 
                   <div class="case-header"><span class="case-num">🔍</span><h5>Localizar documentos en segundos</h5></div>
 
@@ -2632,7 +2672,7 @@
 
                 </div>
 
-                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
+                <div class="case-card">
 
                   <div class="case-header"><span class="case-num">📁</span><h5>Organizar y resumir archivos</h5></div>
 
@@ -2642,7 +2682,7 @@
 
                 </div>
 
-                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
+                <div class="case-card">
 
                   <div class="case-header"><span class="case-num">📝</span><h5>Auto-status y recordatorios</h5></div>
 
@@ -2896,7 +2936,7 @@
 
                   <h4>3. Sensor (Antena)</h4>
 
-                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades and obstáculos.</p>
+                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades y obstáculos.</p>
 
                 </div>
 
