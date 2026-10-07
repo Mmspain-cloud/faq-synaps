@@ -2223,3 +2223,440 @@ details[open] .chevron-icon {
   text-align: center;
   max-width: 800px;
 }
+```css
+/* ============================================================
+   WEBEDIA SYNAPS — LIGHT MODE OVERRIDE
+   ============================================================ */
+
+/* ---------- PALETA PRINCIPAL ---------- */
+
+:root,
+[data-theme="light"] {
+  --bg-primary: #f7f8fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f8fafc;
+
+  /* Tarjetas SIEMPRE blancas */
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+
+  --text-main: #111827;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --accent-primary: #4f46e5;
+  --accent-secondary: #7c3aed;
+  --accent-cyan: #0284c7;
+
+  --accent-gradient: linear-gradient(
+    135deg,
+    #4f46e5 0%,
+    #7c3aed 50%,
+    #0284c7 100%
+  );
+
+  --accent-glow: rgba(79, 70, 229, 0.14);
+
+  --border-subtle: #e5e7eb;
+  --border-hover: rgba(79, 70, 229, 0.35);
+  --border-active: rgba(79, 70, 229, 0.65);
+
+  --card-shadow:
+    0 4px 16px rgba(15, 23, 42, 0.06),
+    0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+
+/* ---------- BODY / FONDO ---------- */
+
+html,
+body {
+  background: #f7f8fa !important;
+  color: #111827 !important;
+}
+
+body {
+  background-color: #f7f8fa !important;
+}
+
+
+/* ---------- FONDO DECORATIVO ---------- */
+
+/* Mucho más sutil para no cansar la vista */
+.neural-bg {
+  opacity: 0.35;
+}
+
+.glow-orb {
+  opacity: 0.08 !important;
+  filter: blur(120px);
+}
+
+.grid-overlay {
+  opacity: 0.18 !important;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.04);
+}
+
+
+/* ---------- LOGO WEBEDIA ---------- */
+
+/* El SVG original tiene el texto en blanco.
+   Lo forzamos a negro y mantenemos fondo transparente. */
+
+.logo-icon {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #111827 !important;
+  border-radius: 0 !important;
+}
+
+.logo-icon svg {
+  background: transparent !important;
+}
+
+.logo-icon svg text {
+  fill: #111827 !important;
+}
+
+
+/* ---------- BOTONES DEL HEADER ---------- */
+
+.header-btn {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none;
+}
+
+.header-btn:hover {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+
+/* Botón Synaps mantiene el color corporativo */
+
+.synaps-btn {
+  background: linear-gradient(
+    135deg,
+    #4f46e5 0%,
+    #7c3aed 100%
+  ) !important;
+
+  color: #ffffff !important;
+  border: none !important;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero-title,
+.section-title,
+.q-title {
+  color: #111827 !important;
+}
+
+.hero-subtitle,
+.section-desc {
+  color: #475569 !important;
+}
+
+
+/* ---------- KPI CARDS ---------- */
+
+.kpi-ribbon {
+  position: relative;
+  z-index: 2;
+}
+
+.kpi-card {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: var(--card-shadow) !important;
+  backdrop-filter: none !important;
+}
+
+.kpi-card:hover {
+  background: #ffffff !important;
+  border-color: rgba(79, 70, 229, 0.35) !important;
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(79, 70, 229, 0.08) !important;
+}
+
+
+/* ---------- BÚSQUEDA ---------- */
+
+.search-box {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
+  backdrop-filter: none !important;
+}
+
+.search-box:focus-within {
+  background: #ffffff !important;
+  border-color: #6366f1 !important;
+}
+
+.search-box input {
+  color: #111827 !important;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.search-icon,
+.clear-btn {
+  color: #64748b !important;
+}
+
+
+/* ---------- FILTROS ---------- */
+
+.filter-pill {
+  background: #ffffff !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0 !important;
+  backdrop-filter: none !important;
+}
+
+.filter-pill:hover {
+  background: #f8fafc !important;
+  color: #111827 !important;
+}
+
+.filter-pill.active {
+  background: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4f46e5 !important;
+}
+
+
+/* ---------- BANNER REGLA DE ORO ---------- */
+
+.golden-rule-banner {
+  background: linear-gradient(
+    135deg,
+    #eef2ff 0%,
+    #f5f3ff 100%
+  ) !important;
+
+  border: 1px solid #c7d2fe !important;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08) !important;
+  backdrop-filter: none !important;
+}
+
+.banner-text {
+  color: #1e293b !important;
+}
+
+.banner-title {
+  color: #4f46e5 !important;
+}
+
+
+/* ---------- FAQ CARDS ---------- */
+
+.faq-card {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+  backdrop-filter: none !important;
+}
+
+.faq-card:hover {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.faq-card.is-active,
+.faq-card:has(details[open]) {
+  background: #ffffff !important;
+  border-color: rgba(79, 70, 229, 0.5) !important;
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.06),
+    0 0 0 1px rgba(79, 70, 229, 0.12) !important;
+}
+
+
+/* ---------- CONTENIDO FAQ ---------- */
+
+.faq-content {
+  color: #475569 !important;
+  border-top-color: #eef0f3 !important;
+}
+
+.faq-content strong {
+  color: #111827 !important;
+}
+
+.q-number {
+  background: #eef2ff !important;
+  color: #4f46e5 !important;
+}
+
+.copy-link-btn {
+  color: #64748b !important;
+}
+
+.copy-link-btn:hover {
+  background: #f1f5f9 !important;
+  color: #4f46e5 !important;
+}
+
+.chevron-icon {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+}
+
+
+/* ---------- TARJETAS INTERIORES ---------- */
+
+.info-card,
+.benefit-card,
+.pain-category-card,
+.role-card,
+.resource-card,
+.feature-box,
+.spec-item,
+.vs-col {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #475569 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.info-card-header,
+.feature-box h4,
+.badge-title,
+.vs-metaphor {
+  color: #111827 !important;
+}
+
+
+/* ---------- PILLS / TAGS ---------- */
+
+.tag-item,
+.kpi-pill {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+.kpi-pill {
+  background: #eef2ff !important;
+  border-color: #c7d2fe !important;
+  color: #3730a3 !important;
+}
+
+
+/* ---------- CALLOUTS ---------- */
+
+.callout-box {
+  background: #eef2ff !important;
+}
+
+.highlight-quote {
+  background: linear-gradient(
+    135deg,
+    #ecfeff 0%,
+    #eef2ff 100%
+  ) !important;
+
+  border-color: #bae6fd !important;
+  color: #1e293b !important;
+}
+
+
+/* ---------- COMPARATIVA ---------- */
+
+.vs-col {
+  background: #ffffff !important;
+}
+
+.vs-col.agent-col {
+  background: #eef2ff !important;
+  border-color: #818cf8 !important;
+}
+
+.vs-tag {
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+}
+
+
+/* ---------- TEXTOS AUXILIARES ---------- */
+
+.text-sm,
+.spec-desc {
+  color: #475569 !important;
+}
+
+.section-tag {
+  color: #4f46e5 !important;
+}
+
+.text-action-btn {
+  color: #4f46e5 !important;
+}
+
+
+/* ---------- SEPARADORES ---------- */
+
+.section-header {
+  border-bottom-color: #e5e7eb !important;
+}
+
+.divider {
+  color: #cbd5e1 !important;
+}
+
+
+/* ---------- CONECTORES / IMÁGENES ---------- */
+
+.connector-image-container {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06) !important;
+}
+
+
+/* ---------- ACCESIBILIDAD / CONTRASTE ---------- */
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* ---------- EVITAR EFECTO GLASS OSCURO ---------- */
+
+.kpi-card,
+.search-box,
+.filter-pill,
+.faq-card,
+.info-card,
+.benefit-card,
+.pain-category-card,
+.role-card,
+.resource-card,
+.feature-box,
+.spec-item,
+.vs-col {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+```
