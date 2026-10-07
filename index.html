@@ -1,1266 +1,2815 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Synaps FAQ | Centro de Formación Webedia</title>
+
   <meta name="description" content="Portal interactivo de FAQ y Guía de Formación de Synaps, la plataforma de Inteligencia Artificial de Webedia.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+
   <style>
+
     /* Alineación y centrado de las tarjetas de soporte en 6.4 */
+
     .support-resources-grid {
+
       display: flex !important;
+
       flex-wrap: wrap !important;
+
       justify-content: center !important;
+
       gap: 1.25rem !important;
+
     }
+
     .support-resources-grid .resource-card {
+
       flex: 0 1 calc(33.333% - 1.25rem) !important;
+
       min-width: 280px !important;
+
       box-sizing: border-box !important;
+
     }
+
     @media (max-width: 992px) {
+
       .support-resources-grid .resource-card {
+
         flex: 0 1 calc(50% - 1.25rem) !important;
+
       }
+
     }
+
     @media (max-width: 640px) {
+
       .support-resources-grid .resource-card {
+
         flex: 0 1 100% !important;
+
       }
+
     }
+
+    /* Estilos personalizados para la imagen de conectores */
+
+    .connector-image-container {
+
+      margin: 1.25rem 0;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      background: rgba(0, 0, 0, 0.2);
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+    .connector-image-container img {
+
+      max-width: 100%;
+
+      height: auto;
+
+      display: block;
+
+    }
+
   </style>
+
 </head>
+
 <body data-theme="dark">
+
   <!-- Fondo con efecto de red neuronal -->
+
   <div class="neural-bg" aria-hidden="true">
+
     <div class="glow-orb orb-1"></div>
+
     <div class="glow-orb orb-2"></div>
+
     <div class="glow-orb orb-3"></div>
+
     <div class="grid-overlay"></div>
+
   </div>
 
   <!-- Barra de Navegación Superior -->
+
   <header class="site-header">
+
     <div class="header-container">
+
       <div class="brand">
+
         <!-- Logo SVG Webedia limpio y transparente sin títulos adyacentes -->
+
         <div class="logo-icon" style="width: auto; height: 32px; display: flex; align-items: center;">
+
           <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="height: 30px; width: auto; background: transparent;" aria-label="Webedia">
+
             <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-1">webedia</text>
+
             <text x="370" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#6366f1" letter-spacing="-1">/.</text>
+
           </svg>
+
         </div>
+
       </div>
-      <div class="header-actions">
+
+      <div class="header-actions" style="display: flex; gap: 0.75rem; align-items: center;">
+
         <a href="#pacte-generator" class="header-btn secondary-btn" title="Generador interactivo de Prompts P.A.C.T.E.">
+
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+
           <span>Herramienta P.A.C.T.E.</span>
+
         </a>
+
+        <!-- Botón de Acceso Directo a Synaps -->
+
+        <a href="https://synaps.webedia-group.com/" target="_blank" class="header-btn primary-btn" title="Ir a Synaps AI Webedia" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: white; border: none; text-decoration: none;">
+
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+
+          <span>Entrar a Synaps</span>
+
+        </a>
+
       </div>
+
     </div>
+
   </header>
 
   <main class="main-content">
+
     <!-- Hero Section -->
+
     <section class="hero-section">
+
       <h1 class="hero-title">
+
         FAQ sobre <span class="gradient-text">Synaps</span>
+
       </h1>
+
       <p class="hero-subtitle">
+
         Tu guía interactiva de uso, herramientas de IA de Google, mejores prácticas y formación para los equipos de <strong>Webedia</strong>.
+
       </p>
 
       <!-- Barra de Búsqueda Interactiva -->
+
       <div class="search-wrapper">
+
         <div class="search-box">
+
           <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+
             <circle cx="11" cy="11" r="8"></circle>
+
             <path d="m21 21-4.35-4.35"></path>
+
           </svg>
+
           <input 
+
             type="search" 
+
             id="faqSearchInput" 
-            placeholder="Buscar por palabra clave (ej. PACTE, Few-Shot, Notebook, Deep Research, 180 días, obstáculos...)" 
+
+            placeholder="Buscar por palabra clave (ej. PACTE, conectores, modelo, flujo, recordatorios...)" 
+
             autocomplete="off"
+
             aria-label="Buscar preguntas y respuestas en el FAQ"
+
           >
+
           <button id="clearSearchBtn" class="clear-btn" title="Limpiar búsqueda" aria-label="Limpiar búsqueda" style="display: none;">
+
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+
           </button>
+
         </div>
+
         <div class="search-status-bar">
-          <span id="searchResultCount" class="result-count">Mostrando todas las 24 preguntas</span>
+
+          <span id="searchResultCount" class="result-count">Mostrando todas las 28 preguntas</span>
+
           <div class="expand-collapse-controls">
+
             <button id="expandAllBtn" class="text-action-btn">
+
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+
               Expandir todas
+
             </button>
+
             <span class="divider">|</span>
+
             <button id="collapseAllBtn" class="text-action-btn">
+
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+
               Colapsar todas
+
             </button>
+
           </div>
+
         </div>
+
       </div>
 
       <!-- Filtros por Categoría (Pills) -->
+
       <nav class="category-filters" aria-label="Filtro de módulos del FAQ">
+
         <button class="filter-pill active" data-category="all">
+
           <span class="pill-dot"></span>
-          Todas <span class="pill-count">24</span>
+
+          Todas <span class="pill-count">28</span>
+
         </button>
+
         <button class="filter-pill" data-category="vision">
+
           <span class="pill-icon">🎯</span>
+
           I. Visión y Objetivos <span class="pill-count">4</span>
+
         </button>
+
         <button class="filter-pill" data-category="tools">
+
           <span class="pill-icon">⚡</span>
+
           II. Herramientas de IA <span class="pill-count">6</span>
+
         </button>
+
         <button class="filter-pill" data-category="prompts">
+
           <span class="pill-icon">✍️</span>
+
           III. Prompts & P.A.C.T.E. <span class="pill-count">3</span>
+
         </button>
+
         <button class="filter-pill" data-category="safety">
+
           <span class="pill-icon">🛡️</span>
-          IV. Seguridad & Ética <span class="pill-count">4</span>
+
+          IV. Seguridad & Ética <span class="pill-count font-weight-bold">4</span>
+
         </button>
+
         <button class="filter-pill" data-category="roi">
+
           <span class="pill-icon">📈</span>
+
           V. Obstáculos & KPIs <span class="pill-count">3</span>
+
         </button>
+
         <button class="filter-pill" data-category="champions">
+
           <span class="pill-icon">🌟</span>
+
           VI. AI Champions <span class="pill-count">4</span>
+
         </button>
+
+        <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(168, 85, 247, 0.4);">
+
+          <span class="pill-icon">💡</span>
+
+          VII. Buenas Prácticas <span class="pill-count">4</span>
+
+        </button>
+
       </nav>
+
     </section>
 
     <!-- Banner Regla de Oro -->
+
     <div class="golden-rule-banner">
+
       <div class="banner-icon">
+
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
       </div>
+
       <div class="banner-content">
+
         <div class="banner-title">Regla de Oro de Synaps</div>
+
         <div class="banner-text">
+
           <strong>«Tú eres el Piloto, la IA es el Copiloto»</strong> — La IA aumenta tu productividad y propone borradores, pero el juicio crítico, la estrategia y la validación final siempre están en tus manos.
+
         </div>
+
       </div>
+
     </div>
 
     <!-- Contenedor Principal de Preguntas del FAQ -->
+
     <section class="faq-container" id="faqList">
 
       <!-- ==================== SECCIÓN I ==================== -->
+
       <div class="faq-section-block" data-section="vision" id="seccion-vision">
+
         <div class="section-header">
+
           <div class="section-tag">Módulo I</div>
+
           <h2 class="section-title">¿Qué es Synaps y Cuáles son sus Objetivos y Principios?</h2>
+
           <p class="section-desc">Fundamentos, visión estratégica de Webedia, privacidad y gobernanza corporativa.</p>
+
         </div>
 
         <!-- Pregunta 1.1 -->
+
         <article class="faq-card" data-category="vision" id="faq-1-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">1.1</span>
+
                 <h3 class="q-title">¿Qué es Synaps y cuál es su visión principal?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 <strong>Synaps</strong> es la <strong>plataforma de inteligencia artificial de Webedia</strong>, inspirada en las sinapsis del cerebro humano. Actúa como una <strong>puerta de entrada única y segura a la inteligencia artificial de Google</strong> (Gemini Enterprise) para todos los equipos de <strong>Webedia</strong>.
+
               </p>
+
               <div class="callout-box">
+
                 <div class="callout-title">🎯 Visión Estratégica</div>
+
                 <p>Impulsar la <strong>Visión y la Eficiencia</strong> dentro de la organización como pilar fundamental de la <strong>Hoja de Ruta 2026–2027</strong>. Simboliza la red neuronal, la interconexión de habilidades multidisciplinares y la velocidad de pensamiento aumentada de la IA empresarial.</p>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 1.2 -->
+
         <article class="faq-card" data-category="vision" id="faq-1-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">1.2</span>
+
                 <h3 class="q-title">¿Cuáles son los objetivos clave de Synaps para la organización?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Los objetivos estratégicos establecidos para el despliegue global de Synaps son:</p>
+
               <div class="grid-cards-2">
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">👥</span><strong>500 Usuarios Formados</strong></div>
+
                   <p>Alcanzar 500 profesionales formados y totalmente operativos en el uso de Synaps para <strong>diciembre de 2026</strong>.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">⚙️</span><strong>Fábrica de Casos de Uso</strong></div>
+
                   <p>Consolidar una factoría interna de soluciones para multiplicar la eficiencia operativa diaria en todas las unidades.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">⏱️</span><strong>Ahorro de Miles de Horas</strong></div>
+
                   <p>Liberar a nuestros equipos de tareas manuales repetitivas, ahorrando miles de horas de trabajo al año.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🚀</span><strong>Maximizar el Valor Añadido</strong></div>
+
                   <p>Reorientar el talento humano hacia la creación artística, el pensamiento estratégico y la innovación de negocio.</p>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 1.3 -->
+
         <article class="faq-card" data-category="vision" id="faq-1-3">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">1.3</span>
+
                 <h3 class="q-title">¿Cómo garantiza Synaps la seguridad y la confidencialidad de mis datos?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 Synaps está concebido bajo el principio de <strong>«extensión del usuario»</strong>: solo puede acceder a la información sobre la cual tienes <strong>permiso personal explícito</strong> en tus cuentas corporativas.
+
               </p>
+
               <div class="callout-box">
+
                 <div class="callout-title">🔒 Entorno Sellado («Walled Garden»)</div>
+
                 <p>Tus prompts y datos empresariales permanecen estrictamente dentro del perímetro seguro de Webedia:</p>
+
               </div>
+
               <ul class="styled-list">
+
                 <li><strong>Sin Entrenamiento Externo:</strong> Tus datos NUNCA se utilizan para entrenar modelos de Gemini externos ni de terceros.</li>
+
                 <li><strong>Privacidad Total:</strong> Tu información no se comparte, no se vende ni se usa con fines publicitarios.</li>
+
                 <li><strong>Seguridad Enterprise & ACLs:</strong> Estricta adhesión a permisos de acceso existentes, prevención de pérdida de datos (DLP), auditoría y cumplimiento normativo.</li>
+
                 <li><strong>Cifrado Avanzado:</strong> Protección de datos con cifrado robusto del lado del cliente para salvaguardar información sensible.</li>
+
               </ul>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 1.4 -->
+
         <article class="faq-card" data-category="vision" id="faq-1-4">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">1.4</span>
+
                 <h3 class="q-title">¿Qué normas de gobernanza y propiedad intelectual aplican a Synaps?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Para asegurar un entorno ordenado y proteger los activos estratégicos de la empresa:</p>
+
               <ul class="styled-list">
+
                 <li><strong>Propiedad de Webedia:</strong> Cualquier agente, flujo o prompt desarrollado en la plataforma Synaps pertenece a Webedia.</li>
+
                 <li><strong>Continuidad del Negocio:</strong> Los agentes operativos críticos deben ser compartidos o transferidos al equipo si un colaborador cambia de posición o se marcha.</li>
+
                 <li><strong>Roles Asignados:</strong> Se aconseja designar formalmente un <em>«propietario» (owner)</em> y un <em>«alterno»</em> para cada agente en producción.</li>
+
                 <li><strong>Protocolo de Offboarding:</strong> La reasignación de accesos en Synaps forma parte del proceso de baja o transición corporativa estándar.</li>
+
               </ul>
+
             </div>
+
           </details>
+
         </article>
+
       </div>
 
       <!-- ==================== SECCIÓN II ==================== -->
+
       <div class="faq-section-block" data-section="tools" id="seccion-tools">
+
         <div class="section-header">
+
           <div class="section-tag">Módulo II</div>
+
           <h2 class="section-title">Componentes Clave de Synaps: Tus Herramientas de IA</h2>
+
           <p class="section-desc">Synaps Chat, Deep Research, Gemini Notebook y la arquitectura completa de Agentes No-Code y Pro-Code.</p>
+
         </div>
 
         <!-- Pregunta 2.1 -->
+
         <article class="faq-card" data-category="tools" id="faq-2-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">2.1</span>
+
                 <h3 class="q-title">¿Qué es Synaps Chat y para qué sirve?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 <strong>Synaps Chat</strong> (también denominado Synaps Search) es la <strong>interfaz conversacional principal</strong> de Gemini Enterprise, diseñada para resolver consultas, generar contenidos y agilizar tareas cotidianas como tu asistente inteligente diario.
+
               </p>
+
               <div class="feature-box">
+
                 <h4>🔄 ¿Cómo funciona y qué integra?</h4>
+
                 <p>Ingresas una instrucción o prompt y Gemini activa sus capacidades coordinadas con la Búsqueda de Google y conectores corporativos autorizados. Puede consultar en tiempo real tus repositorios internos (<strong>Gmail, Google Drive, Google Calendar</strong>) o herramientas empresariales (<strong>Salesforce, CRM</strong>). Puedes usar <code>@</code> para invocar a agentes especialistas directamente en la conversación.</p>
+
               </div>
+
               <div class="grid-cards-2 mt-3">
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🧠</span><strong>Función «Memorize»</strong></div>
+
                   <p>Guarda tus preferencias de trabajo persistentes (formato, tono o proyectos en curso). Si un prompt contradice una memoria guardada, la instrucción actual prevalece.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">📌</span><strong>Chats Anclados («Pinned Chats»)</strong></div>
+
                   <p>Sirven exclusivamente para tu organización visual diaria. No confieren mayor relevancia cognitiva al modelo ni afectan sesiones independientes.</p>
+
                 </div>
+
               </div>
+
               <div class="callout-box warning-theme mt-3">
+
                 <div class="callout-title">⏳ Regla de Caducidad de 180 Días</div>
+
                 <p>Todas las conversaciones tienen una vida útil máxima de <strong>180 días</strong>. Synaps Chat no es un archivo documental; almacena tus prompts clave y entregables finales en Google Drive o tus carpetas de trabajo habituales.</p>
+
               </div>
+
               <p class="mt-2"><strong>Qué NO puede hacer:</strong> Ejecutar procesos desatendidos continuos (para eso están los <em>Workflow Agents</em>), conectarse a fuentes externas no autorizadas o alternar a modelos no homologados (opera con las versiones oficiales de Gemini Pro y Flash).</p>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 2.2 -->
+
         <article class="faq-card" data-category="tools" id="faq-2-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">2.2</span>
+
                 <h3 class="q-title">¿Qué es Deep Research y cuándo debería usarlo?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 <strong>Deep Research</strong> es un agente autónomo de Synaps que actúa como un <strong>analista aumentado</strong>. Es capaz de <strong>cruzar, comparar y sintetizar información</strong> de múltiples fuentes web y documentales heterogéneas para análisis estratégicos de alta complejidad.
+
               </p>
+
               <div class="grid-cards-2">
+
                 <div class="benefit-card">
+
                   <div class="benefit-title">💎 Casos de uso ideales</div>
+
                   <ul>
+
                     <li>Análisis profundo de competidores, licitaciones y benchmarking de mercado.</li>
+
                     <li>Elaboración de informes de tendencias e inteligencia comercial 360°.</li>
+
                     <li>Construcción de argumentarios comerciales basados en documentación densa.</li>
+
                   </ul>
+
                 </div>
+
                 <div class="benefit-card">
+
                   <div class="benefit-title">⚠️ Pautas y limitaciones</div>
+
                   <ul>
+
                     <li><strong>Alto consumo de recursos:</strong> Realiza múltiples búsquedas autónomas en bucle y puede demorar hasta 10 minutos. Úsalo con criterio.</li>
+
                     <li><strong>Sin acceso a Paywalls:</strong> Rastrea la web pública abierta; no puede sortear muros de pago ni accesos con login.</li>
+
                     <li><strong>Alcance preciso:</strong> Acota el objetivo en el prompt para evitar informes genéricos o diluidos.</li>
+
                     <li><strong>Verificación activa:</strong> Aunque cita enlaces web, comprueba siempre los extractos citados.</li>
+
                   </ul>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 2.3 -->
+
         <article class="faq-card" data-category="tools" id="faq-2-3">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">2.3</span>
+
                 <h3 class="q-title">¿Qué es Gemini Notebook y cómo me ayuda a convertirme en un experto?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 <strong>Gemini Notebook</strong> (anteriormente NotebookLM) te permite crear tu propio <strong>experto temático en IA</strong> anclado en tus documentos de referencia (contratos, auditorías, normativas, CVs, políticas o manuales). Responderá <strong>ÚNICAMENTE basándose en las fuentes que cargues</strong>, citando siempre página y párrafo exactos.
+
               </p>
+
               <div class="specs-grid">
+
                 <div class="spec-item">
+
                   <span class="spec-number">Hasta 300</span>
+
                   <span class="spec-desc">Fuentes autorizadas por cuaderno (PDFs, Google Docs, Slides, URLs, vídeos de YouTube o audio)</span>
+
                 </div>
+
                 <div class="spec-item">
+
                   <span class="spec-number">500.000</span>
+
                   <span class="spec-desc">Palabras por fuente (hasta 200 MB por archivo local), procesando cientos de páginas al instante</span>
+
                 </div>
+
                 <div class="spec-item">
+
                   <span class="spec-number">Audio Podcast</span>
+
                   <span class="spec-desc">Resúmenes dinámicos en audio a dos voces, guías de estudio, FAQs estructuradas y mapas conceptuales</span>
+
                 </div>
+
               </div>
+
               <div class="callout-box mt-3">
+
                 <div class="callout-title">💡 Buenas Prácticas de Notebook</div>
+
                 <p>Crea <strong>cuadernos monotemáticos</strong> dedicados a un único proyecto o cliente. Recuerda que no tiene sincronización dinámica automática: si un archivo cambia, vuelve a importarlo y purga fuentes obsoletas.</p>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 2.4 -->
+
         <article class="faq-card" data-category="tools" id="faq-2-4">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">2.4</span>
+
                 <h3 class="q-title">¿Qué son los Agentes de IA en Synaps y qué los diferencia de un chatbot tradicional?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 Los <strong>Agentes de IA</strong> representan la transición de una herramienta puntual a un <strong>colaborador virtual proactivo</strong>, capaz de razonar, descomponer objetivos en subtareas, interactuar con herramientas corporativas y adaptarse a imprevistos.
+
               </p>
+
               <div class="vs-comparison">
+
                 <div class="vs-col chatbot-col">
+
                   <div class="vs-tag">Chatbot Tradicional</div>
+
                   <p class="vs-metaphor">«Como una centralita telefónica automática»</p>
+
                   <ul>
+
                     <li>Sigue guiones estáticos y respuestas rígidas.</li>
+
                     <li>1 Pregunta = 1 Respuesta inmediata.</li>
+
                     <li>Se detiene a la espera de la siguiente orden manual.</li>
+
                   </ul>
+
                 </div>
+
                 <div class="vs-col agent-col">
+
                   <div class="vs-tag highlight">Agente de IA Synaps</div>
+
                   <p class="vs-metaphor">«Como un compañero de equipo experimentado»</p>
+
                   <ul>
+
                     <li>Comprende el objetivo global y planifica el flujo de trabajo.</li>
+
                     <li>Ejecuta múltiples acciones coordinadas entre varias aplicaciones.</li>
+
                     <li>Resuelve obstáculos de manera autónoma durante la ejecución.</li>
+
                   </ul>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 2.5 -->
+
         <article class="faq-card" data-category="tools" id="faq-2-5">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">2.5</span>
+
                 <h3 class="q-title">¿Cómo decido qué tipo de solución o agente usar? (Árbol de Decisión)</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>La regla fundamental es <strong>empezar siempre por la solución más sencilla</strong> antes de escalar:</p>
+
               <div class="decision-ladder">
+
                 <div class="ladder-steps">
+
                   <div class="step-badge">1. ¿Es una tarea puntual?</div>
+
                   <span><strong>SÍ ➔</strong> Utiliza <strong>Synaps Chat con un Prompt simple</strong>.</span>
+
                 </div>
+
                 <div class="ladder-steps">
+
                   <div class="step-badge">2. ¿Instrucciones repetitivas?</div>
+
                   <span><strong>NO ➔</strong> Guarda un <strong>Prompt Guardado (Saved Prompt)</strong> reutilizable para ti o tu equipo.</span>
+
                 </div>
+
                 <div class="ladder-steps">
+
                   <div class="step-badge">3. ¿Requiere lógica compleja o APIs externas?</div>
+
                   <span><strong>SÍ ➔</strong> Escala a un <strong>Agente Pro-Code</strong> desarrollado junto al equipo técnico.</span>
+
                 </div>
+
                 <div class="ladder-steps">
+
                   <div class="step-badge">4. ¿Automatización sin código (No-Code)?</div>
+
                   <span>
+
                     • Si es una <strong>conversación interactiva</strong> ➔ <strong>Agente de Chat</strong>.<br>
+
                     • Si es un <strong>proceso desatendido paso a paso</strong> (ej. Gmail a Sheets) ➔ <strong>Agente de Flujo (Workflow Agent)</strong>.
+
                   </span>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 2.6 -->
+
         <article class="faq-card" data-category="tools" id="faq-2-6">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">2.6</span>
+
                 <h3 class="q-title">¿Cómo se crean los agentes No-Code en Synaps y cuáles son las mejores prácticas?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Puedes construir agentes personalizados mediante lenguaje natural en el <strong>Agent Designer</strong> a través de dos modalidades:</p>
+
               <div class="grid-cards-2">
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🪄</span><strong>Workflow Builder</strong></div>
+
                   <p>Describe en lenguaje natural tu objetivo y el constructor generará la primera versión interactiva, pudiendo solicitarle ajustes sobre la marcha.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🛠️</span><strong>The Compiler («Build Manually»)</strong></div>
+
                   <p>Ofrece control granular directo sobre las instrucciones del sistema, fuentes documentales, selección de conectores y prompts de arranque.</p>
+
                 </div>
+
               </div>
+
               <div class="callout-box warning-theme mt-3">
+
                 <div class="callout-title">🔒 Tu Laboratorio Privado Seguro</div>
+
                 <p>Por defecto, <strong>todos los agentes que creas son estrictamente privados e invisibles para los demás</strong>. Esto te permite experimentar con libertad. Piensa antes de activar conectores y contacta al Core Team para publicarlos en la Galería compartida si aportan valor general a la empresa.</p>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
+
       </div>
 
       <!-- ==================== SECCIÓN III ==================== -->
+
       <div class="faq-section-block" data-section="prompts" id="seccion-prompts">
+
         <div class="section-header">
+
           <div class="section-tag">Módulo III</div>
+
           <h2 class="section-title">Dominando la Ingeniería de Prompts</h2>
+
           <p class="section-desc">El arte de instruir a Gemini, la metodología estándar P.A.C.T.E. y técnicas avanzadas probadas.</p>
+
         </div>
 
         <!-- Pregunta 3.1 -->
+
         <article class="faq-card" data-category="prompts" id="faq-3-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">3.1</span>
+
                 <h3 class="q-title">¿Qué es la ingeniería de prompts y por qué es tan importante para usar Synaps?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 La <strong>ingeniería de prompts</strong> es el arte de <strong>diseñar y estructurar instrucciones precisas</strong> para obtener la mejor respuesta posible de los modelos Gemini de Google.
+
               </p>
+
               <div class="key-takeaway">
+
                 💡 <strong>Principio Clave:</strong> La calidad de tu prompt determina directamente la calidad del resultado. Trata a la IA como tu <strong>asistente ultra-capaz pero literal</strong>, ¡NUNCA como un oráculo mágico que adivina tu pensamiento!
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 3.2 -->
+
         <article class="faq-card" data-category="prompts" id="faq-3-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">3.2</span>
+
                 <h3 class="q-title">¿Qué es el método P.A.C.T.E. para crear prompts efectivos?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 El método <strong>P.A.C.T.E.</strong> es el estándar corporativo en Webedia para componer instrucciones precisas y contextualizadas:
+
               </p>
+
               <div class="pacte-framework-grid">
+
                 <div class="pacte-card letter-p">
+
                   <div class="pacte-letter">P</div>
+
                   <div class="pacte-name">Persona</div>
+
                   <div class="pacte-desc">Rol o especialidad que asume la IA.</div>
+
                   <div class="pacte-example"><em>Ej:</em> «Actúa como un Diseñador UX Senior en e-commerce».</div>
+
                 </div>
+
                 <div class="pacte-card letter-a">
+
                   <div class="pacte-letter">A</div>
+
                   <div class="pacte-name">Acción</div>
+
                   <div class="pacte-desc">La tarea concreta y desglosada a realizar.</div>
+
                   <div class="pacte-example"><em>Ej:</em> «Audita la navegación y redacta recomendaciones».</div>
+
                 </div>
+
                 <div class="pacte-card letter-c">
+
                   <div class="pacte-letter">C</div>
+
                   <div class="pacte-name">Contexto</div>
+
                   <div class="pacte-desc">Antecedentes, restricciones y público meta.</div>
+
                   <div class="pacte-example"><em>Ej:</em> «Audiencia joven en España que navega en móvil».</div>
+
                 </div>
+
                 <div class="pacte-card letter-t">
+
                   <div class="pacte-letter">T</div>
+
                   <div class="pacte-name">Tono</div>
+
                   <div class="pacte-desc">Registro o estilo de comunicación esperado.</div>
+
                   <div class="pacte-example"><em>Ej:</em> «Corporativo, constructivo, directo y conciso».</div>
+
                 </div>
+
                 <div class="pacte-card letter-e">
+
                   <div class="pacte-letter">E</div>
+
                   <div class="pacte-name">Elemento</div>
+
                   <div class="pacte-desc">Formato exacto de entrega del resultado.</div>
+
                   <div class="pacte-example"><em>Ej:</em> «Tabla con columnas: Problema, Solución e Impacto».</div>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 3.3 (Actualizada con Comparativa Zero/One/Few Shot y Meta-Prompting) -->
+
         <article class="faq-card" data-category="prompts" id="faq-3-3">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">3.3</span>
+
                 <h3 class="q-title">¿Hay consejos y técnicas avanzadas para prompts de calidad?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Además de la estructura P.A.C.T.E., aplica estas técnicas formales y probadas:</p>
 
               <!-- Comparativa de Técnicas de Prompting -->
+
               <h4 class="subhead mt-3">🎯 Las 3 Técnicas de Instrucción (Prompting Techniques)</h4>
+
               <div class="grid-cards-3 mt-2">
+
                 <div class="info-card">
+
                   <div class="info-card-header">
+
                     <span class="info-icon">⚡</span>
+
                     <strong>Zero-Shot</strong>
+
                   </div>
+
                   <p><em>«Just tell him whatever you want»</em></p>
+
                   <p class="text-sm">Pides la tarea directamente sin proporcionar ejemplos previos. Muy rápido para tareas sencillas, pero con menor control en peticiones complejas.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header">
+
                     <span class="info-icon">🎯</span>
+
                     <strong>One-Shot</strong>
+
                   </div>
+
                   <p><em>«Guide him with just one example»</em></p>
+
                   <p class="text-sm">Incluyes 1 único ejemplo resuelto. Ayuda a que la IA entienda el tono, la formalidad y la estructura exacta esperada.</p>
+
                 </div>
+
                 <div class="info-card">
+
                   <div class="info-card-header">
+
                     <span class="info-icon">💎</span>
+
                     <strong>Few-Shot</strong>
+
                   </div>
+
                   <p><em>«Show, don't say that»</em></p>
+
                   <p class="text-sm">Aportas de 2 a 3 ejemplos concretos del resultado. Es la técnica más recomendada para tareas con matices o clasificaciones estrictas.</p>
+
                 </div>
+
               </div>
 
               <!-- Truco Meta-Prompting -->
+
               <div class="callout-box mt-3" style="border-left: 4px solid #6366f1;">
+
                 <div class="callout-title">🪄 Truco Pro de Auto-Optimización (Meta-Prompting)</div>
+
                 <p>
+
                   Cuando estés trabajando en Synaps Chat y vayas puliendo un resultado mensaje tras mensaje, <strong>no copies y pegues manualmente tus correcciones</strong>. Al terminar la sesión, pídele directamente a Gemini:
+
                 </p>
+
                 <div class="highlight-quote mt-2" style="font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+
                   «Ahora revisa toda nuestra conversación y consolídala en un único prompt maestro, estructurado con la metodología P.A.C.T.E., para que pueda guardarlo en mi biblioteca y reutilizarlo en el futuro con un solo clic».
+
                 </div>
+
               </div>
 
               <!-- Otras Técnicas Avanzadas -->
+
               <h4 class="subhead mt-4">Mejores Prácticas y Hábitos Recomendados</h4>
+
               <ul class="styled-list mt-2">
+
                 <li><strong>Estructuración con Markdown:</strong> Emplea encabezados (<code>#</code>), listas y negritas (<code>**</code>) para estructurar tus prompts; Gemini organizará mejor el razonamiento.</li>
+
                 <li><strong>Prompt Interactivo de Clarificación:</strong> Pídele al final: <em>«Antes de redactar, hazme 3 preguntas para asegurarte de que comprendes mi objetivo»</em>.</li>
+
                 <li><strong>Multimodalidad con Capturas:</strong> Puedes arrastrar capturas de pantalla, gráficos o tablas directamente al chat para que analice texto e imagen a la vez.</li>
+
                 <li><strong>Contexto Negativo (Límites):</strong> Especifica con claridad lo que NO debe hacer (ej. <em>«Evita jerga técnica compleja y no menciones marcas competidoras»</em>).</li>
+
                 <li><strong>Longitud Esperada:</strong> Define siempre la extensión (ej. <em>«en exactamente 3 párrafos de 50 palabras cada uno»</em>).</li>
+
                 <li><strong>Atención a Sesgos (Primacía y Recencia):</strong> Los modelos prestan máxima atención al inicio y al final de tu instrucción; sitúa allí las restricciones vitales.</li>
+
                 <li><strong>Revisión Reflexiva:</strong> Pide a la IA que revise su propio borrador: <em>«Evalúa tu respuesta e identifica qué datos podrían ser ambiguos»</em>.</li>
+
               </ul>
+
             </div>
+
           </details>
+
         </article>
+
       </div>
 
       <!-- ==================== SECCIÓN IV ==================== -->
+
       <div class="faq-section-block" data-section="safety" id="seccion-safety">
+
         <div class="section-header">
+
           <div class="section-tag">Módulo IV</div>
+
           <h2 class="section-title">Uso Responsable y Seguridad de la IA</h2>
+
           <p class="section-desc">Principios éticos de Google, mitigación de alucinaciones, la Regla de Oro y precauciones clave.</p>
+
         </div>
 
         <!-- Pregunta 4.1 -->
+
         <article class="faq-card" data-category="safety" id="faq-4-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">4.1</span>
+
                 <h3 class="q-title">¿Cuáles son los principios de Google sobre la IA que rigen a Synaps?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Google y Webedia rigen el desarrollo y despliegue de Synaps bajo 7 principios éticos inquebrantables:</p>
+
               <div class="principles-grid">
+
                 <div class="principle-item"><span class="p-num">1</span><div><strong>Socialmente útil:</strong> Beneficiar a las personas y aportar valor real de negocio.</div></div>
+
                 <div class="principle-item"><span class="p-num">2</span><div><strong>Evitar prejuicios injustos:</strong> Mitigar sesgos algorítmicos en contenidos y decisiones.</div></div>
+
                 <div class="principle-item"><span class="p-num">3</span><div><strong>Diseño y seguridad comprobados:</strong> Controles rigurosos para evitar riesgos operativos.</div></div>
+
                 <div class="principle-item"><span class="p-num">4</span><div><strong>Responsabilidad hacia las personas:</strong> Mantener siempre la supervisión y control humano.</div></div>
+
                 <div class="principle-item"><span class="p-num">5</span><div><strong>Privacidad por diseño:</strong> Custodia absoluta y confidencialidad de la información.</div></div>
+
                 <div class="principle-item"><span class="p-num">6</span><div><strong>Excelencia científica:</strong> Estándares de rigor tecnológico y actualización continua.</div></div>
+
                 <div class="principle-item"><span class="p-num">7</span><div><strong>Disponibilidad ética:</strong> Limitar el uso a aplicaciones alineadas con estos valores.</div></div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 4.2 -->
+
         <article class="faq-card" data-category="safety" id="faq-4-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">4.2</span>
+
                 <h3 class="q-title">¿Cómo me aseguro de que los resultados de la IA sean correctos y no "alucinaciones"?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 Una «alucinación» ocurre cuando un modelo inventa datos con total seguridad aparente. Para erradicarlas:
+
               </p>
+
               <div class="check-actions-list">
+
                 <div class="check-action-item"><span class="check-icon">🔍</span><div><strong>Validación con Google:</strong> Usa el botón de verificación directa en Gemini para cotejar afirmaciones con la web en tiempo real.</div></div>
+
                 <div class="check-action-item"><span class="check-icon">📌</span><div><strong>Verificación de Citas:</strong> En Gemini Notebook y Synaps, haz clic en las notas al pie para comprobar el párrafo original del archivo fuente.</div></div>
+
                 <div class="check-action-item"><span class="check-icon">🧠</span><div><strong>Juicio Crítico Humano:</strong> Trata toda salida como un borrador de trabajo; tú tienes la responsabilidad final de contrastar los hechos.</div></div>
+
                 <div class="check-action-item"><span class="check-icon">🔄</span><div><strong>Alineación Estricta:</strong> Exige a la IA en el prompt: <em>«Si la respuesta no puede ser verificada en las fuentes proporcionadas, responde explícitamente: "No tengo acceso a esta información en mis fuentes verificadas"»</em>.</div></div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 4.3 -->
+
         <article class="faq-card" data-category="safety" id="faq-4-3">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">4.3</span>
+
                 <h3 class="q-title">¿Qué implica la "Regla de Oro" de Synaps: "Tú eres el Piloto, la IA es el Copiloto"?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <div class="pilot-manifesto">
+
                 <div class="pilot-role">
+
                   <div class="role-badge">Tú = El Piloto</div>
+
                   <p>Mantienes el timón, lideras la estrategia, validas la pertinencia y asumes la responsabilidad del trabajo final.</p>
+
                 </div>
+
                 <div class="copilot-role">
+
                   <div class="role-badge copilot">Synaps = El Copiloto</div>
+
                   <p>Te sugiere rutas, sintetiza datos dispersos, acelera cálculos y redacta borradores para ahorrarte horas de vuelo operativo.</p>
+
                 </div>
+
               </div>
+
               <p class="mt-3">
+
                 <strong>Nunca delegues tu pensamiento crítico</strong>. La IA amplifica tu talento, pero jamás sustituye tu experiencia ni tu criterio profesional.
+
               </p>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 4.4 -->
+
         <article class="faq-card" data-category="safety" id="faq-4-4">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">4.4</span>
+
                 <h3 class="q-title">¿Qué otras precauciones debo tener en cuenta al usar la IA?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <ul class="styled-list">
+
                 <li><strong>Clasificación de Datos:</strong> Trata la información que introduzcas como documentación interna de trabajo y evita introducir datos personales de clientes no anonimizados o información altamente sensible sin autorización previa.</li>
+
                 <li><strong>Aumenta, no reemplaces:</strong> Utiliza la IA para generar ideas, estructurar borradores y procesar información, pero confía siempre en el criterio humano para las decisiones de negocio.</li>
+
                 <li><strong>Diversidad de Puntos de Vista:</strong> Contrasta los análisis de la IA con la opinión de compañeros para no caer en sesgos de confirmación o perspectivas estrechas.</li>
+
               </ul>
+
             </div>
+
           </details>
+
         </article>
+
       </div>
 
       <!-- ==================== SECCIÓN V ==================== -->
+
       <div class="faq-section-block" data-section="roi" id="seccion-roi">
+
         <div class="section-header">
+
           <div class="section-tag">Módulo V</div>
+
           <h2 class="section-title">De los Obstáculos a las Ganancias Cuantificables</h2>
+
           <p class="section-desc">Metodología de impacto Obstáculo ➔ Acción ➔ Ganancia, KPIs medibles y casos reales probados en Webedia.</p>
+
         </div>
 
         <!-- Pregunta 5.1 -->
+
         <article class="faq-card" data-category="roi" id="faq-5-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">5.1</span>
+
                 <h3 class="q-title">¿Cómo identificamos los obstáculos que Synaps puede resolver?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Los obstáculos son cuellos de botella cotidianos identificados en los talleres departamentales de Webedia, agrupados en 3 áreas:</p>
+
               <div class="pain-categories-grid">
+
                 <div class="pain-category-card">
+
                   <div class="pain-icon">🧠</div>
+
                   <h4>Carga Mental y Sobrecarga</h4>
+
                   <p>Saturación por cadenas kilométricas de correos, dispersión documental en múltiples carpetas y desgaste en tareas repetitivas de escaso valor añadido.</p>
+
                 </div>
+
                 <div class="pain-category-card">
+
                   <div class="pain-icon">⏳</div>
+
                   <h4>Productividad y Fricción Operativa</h4>
+
                   <p>Procesos manuales mecánicos (copiar datos de Gmail a Sheets, conciliar reportes, coordinar agendas) que consumen horas clave de los equipos.</p>
+
                 </div>
+
                 <div class="pain-category-card">
+
                   <div class="pain-icon">🎨</div>
+
                   <h4>Bloqueos Creativos e Innovación</h4>
+
                   <p>Síndrome de la hoja en blanco, necesidad de adaptar una misma campaña a múltiples formatos y canales, y falta de tiempo para ideación estratégica.</p>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 5.2 -->
+
         <article class="faq-card" data-category="roi" id="faq-5-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">5.2</span>
+
                 <h3 class="q-title">¿Cómo se traducen estos obstáculos en ganancias medibles con Synaps?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>Aplicamos el marco estructurado <strong>«Obstáculo (Desafío) ➔ Solución (Acción) ➔ Ganancia (Impacto)»</strong>:</p>
+
               <div class="flow-stages">
+
                 <div class="flow-stage">
+
                   <div class="stage-tag pain">1. Obstáculo</div>
+
                   <p>El cuello de botella concreto antes de incorporar la IA.</p>
+
                 </div>
+
                 <div class="flow-arrow">➔</div>
+
                 <div class="flow-stage">
+
                   <div class="stage-tag action">2. Solución (Acción)</div>
+
                   <p>Prompt ejecutado y fuentes conectadas en Synaps.</p>
+
                 </div>
+
                 <div class="flow-arrow">➔</div>
+
                 <div class="flow-stage">
+
                   <div class="stage-tag gain">3. Ganancia (Impacto)</div>
+
                   <p>Beneficio cuantificado en horas, precisión o ingresos.</p>
+
                 </div>
+
               </div>
+
               <h4 class="subhead mt-4">KPIs de impacto cuantificables:</h4>
+
               <div class="pill-tags mt-2">
+
                 <span class="kpi-pill">⏱️ Tiempo neto ahorrado (horas semanales o mensuales)</span>
+
                 <span class="kpi-pill">🚀 Aumento de cadencia y agilidad de entrega</span>
+
                 <span class="kpi-pill">🎯 Fiabilidad de decisiones (fuentes 100% verificadas)</span>
+
                 <span class="kpi-pill">🛡️ Mitigación de riesgos de marca y control de presupuesto</span>
+
                 <span class="kpi-pill">💼 Nuevas oportunidades comerciales y mayor cartera</span>
+
                 <span class="kpi-pill">📈 Crecimiento de tráfico y engagement en Discover</span>
+
                 <span class="kpi-pill">🧘 Reducción del estrés laboral y foco estratégico</span>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
-        <!-- Pregunta 5.3 -->
+        <!-- Pregunta 5.3 (Actualizada con ejemplos micro de uso diario) -->
+
         <article class="faq-card" data-category="roi" id="faq-5-3">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">5.3</span>
+
                 <h3 class="q-title">¿Puedes dar ejemplos concretos de cómo Synaps resuelve obstáculos reales?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
-              <p>Casos reales demostrados y medidos en las unidades de Webedia:</p>
-              <div class="use-cases-grid">
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#1</span><h5>Reuniones multi-zona horaria</h5></div>
-                  <p class="case-desc">Agente que cruza calendarios globales, compensa husos horarios y agenda automáticamente.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> 1 hora ahorrada por reunión global y cero desajustes horarios.</div>
+
+              <p>Casos reales demostrados y medidos en las unidades de Webedia, incluyendo acciones ágiles y micro-tareas cotidianas:</p>
+
+              
+
+              <h4 class="subhead mt-3">⚡ Micro-tareas de Productividad Diaria:</h4>
+
+              <div class="use-cases-grid mt-2" style="margin-bottom: 2rem;">
+
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📧</span><h5>Buscar correos y adjuntos</h5></div>
+
+                  <p class="case-desc">Pídele a Synaps buscar hilos específicos sin abrir Gmail. Ej: *"Encuentra el último presupuesto que me envió Mario Rigote sobre licencias y extrae el total"*.</p>
+
+                  <div class="case-gain"><strong>Ahorro:</strong> Recupera adjuntos y datos sepultados en tu bandeja en 5 segundos.</div>
+
                 </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#2</span><h5>Monitoreo de competidores activos</h5></div>
-                  <p class="case-desc">Ingesta semanal automatizada de lanzamientos rivales y generación de ganchos comerciales.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Más marcas en cartera y mayor tasa de conversión comercial.</div>
+
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">🔍</span><h5>Localizar documentos en segundos</h5></div>
+
+                  <p class="case-desc">Olvídate de navegar por infinitas carpetas compartidas. Ej: *"Busca en mi Drive el documento de Onboarding de Champions y dime cuáles son los entregables"*.</p>
+
+                  <div class="case-gain"><strong>Ahorro:</strong> Acceso instantáneo a la información sin búsquedas manuales en Drive.</div>
+
                 </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#3</span><h5>Scraping de horarios de cines</h5></div>
-                  <p class="case-desc">Visita automática a múltiples webs de exhibición para validar la disponibilidad de carteleras.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Ahorro neto de 8 horas semanales por operador.</div>
+
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📁</span><h5>Organizar y resumir archivos</h5></div>
+
+                  <p class="case-desc">Sintetiza de golpe varios archivos. Ej: *"Lee estos tres PDFs de propuestas y hazme una tabla comparativa con los puntos fuertes de cada uno"*. </p>
+
+                  <div class="case-gain"><strong>Ahorro:</strong> Evita leer cientos de páginas de documentación repetitiva o densa.</div>
+
                 </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#4</span><h5>Recopilación de noticias y debates</h5></div>
-                  <p class="case-desc">Agregación de noticias clave de actualidad vinculadas con el archivo editorial propio.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Reducción del 50% del tiempo de preparación de reuniones editoriales.</div>
+
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📝</span><h5>Auto-status y recordatorios</h5></div>
+
+                  <p class="case-desc">Genera actualizaciones de tus proyectos. Ej: *"Revisa mis correos de ayer y mi calendario de hoy, y redacta un borrador de estatus diario para enviarle a mi manager"*.</p>
+
+                  <div class="case-gain"><strong>Ahorro:</strong> Automatiza reportes de estado internos y mantén al día tus tareas clave.</div>
+
                 </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#5</span><h5>Control presupuestario de campañas</h5></div>
-                  <p class="case-desc">Gemini extrae datos de Gmail y detecta campañas activas y desviaciones de presupuesto.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Eliminación de pérdidas por presupuestos omitidos o campañas olvidadas.</div>
-                </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#6</span><h5>Rendimiento editorial guiado por datos</h5></div>
-                  <p class="case-desc">Cruce de métricas internas con tendencias de búsqueda para proponer temas con potencial viral.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> 20 horas mensuales recuperadas para los redactores.</div>
-                </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#7</span><h5>Optimización de Google Discover</h5></div>
-                  <p class="case-desc">Plan de acción técnico en 3 pasos (imágenes clave, CLS y titulares atractivos sin engaño).</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Captura inmediata de tráfico orgánico en contenidos pasivos.</div>
-                </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#8</span><h5>Revisión de derechos y Brand Safety</h5></div>
-                  <p class="case-desc">Filtrado de reclamaciones fraudulentas y validación de seguridad de marca de perfiles.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> 1 hora semanal ahorrada y minimización de riesgos reputacionales.</div>
-                </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#9</span><h5>Archivado de reportes de campañas (XMAS)</h5></div>
-                  <p class="case-desc">Escaneo de bandejas de entrada, descarga de adjuntos y estructuración por carpetas de clientes.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> 100% de automatización del archivado y 0 horas invertidas a mano.</div>
-                </div>
-                <div class="case-card">
-                  <div class="case-header"><span class="case-num">#10</span><h5>Auditorías SEO automáticas para clientes</h5></div>
-                  <p class="case-desc">Flujo desatendido que analiza exports de SEMrush, Search Console y GA4 al crear una carpeta.</p>
-                  <div class="case-gain"><strong>Ganancia:</strong> Reducción drástica del tiempo de preparación de auditorías técnicas.</div>
-                </div>
+
               </div>
+
+
+
+              <h4 class="subhead">🚀 Casos de Negocio Avanzados:</h4>
+
+              <div class="use-cases-grid mt-2">
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#1</span><h5>Reuniones multi-zona horaria</h5></div>
+
+                  <p class="case-desc">Agente que cruza calendarios globales, compensa husos horarios y agenda automáticamente.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> 1 hora ahorrada por reunión global y cero desajustes horarios.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#2</span><h5>Monitoreo de competidores activos</h5></div>
+
+                  <p class="case-desc">Ingesta semanal automatizada de lanzamientos rivales y generación de ganchos comerciales.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> Más marcas en cartera y mayor tasa de conversión comercial.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#3</span><h5>Scraping de horarios de cines</h5></div>
+
+                  <p class="case-desc">Visita automática a múltiples webs de exhibición para validar la disponibilidad de carteleras.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> Ahorro neto de 8 horas semanales por operador.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#4</span><h5>Recopilación de noticias y debates</h5></div>
+
+                  <p class="case-desc">Agregación de noticias clave de actualidad vinculadas con el archivo editorial propio.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> Reducción del 50% del tiempo de preparación de reuniones editoriales.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#5</span><h5>Control presupuestario de campañas</h5></div>
+
+                  <p class="case-desc">Gemini extrae datos de Gmail y detecta campañas activas y desviaciones de presupuesto.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> Eliminación de pérdidas por presupuestos omitidos o campañas olvidadas.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#6</span><h5>Rendimiento editorial guiado por datos</h5></div>
+
+                  <p class="case-desc">Cruce de métricas internas con tendencias de búsqueda para proponer temas con potencial viral.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> 20 horas mensuales recuperadas para los redactores.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#7</span><h5>Optimización de Google Discover</h5></div>
+
+                  <p class="case-desc">Plan de acción técnico en 3 pasos (imágenes clave, CLS y titulares atractivos sin engaño).</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> Captura inmediata de tráfico orgánico en contenidos pasivos.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#8</span><h5>Revisión de derechos y Brand Safety</h5></div>
+
+                  <p class="case-desc">Filtrado de reclamaciones fraudulentas y validación de seguridad de marca de perfiles.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> 1 hora semanal ahorrada y minimización de riesgos reputacionales.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#9</span><h5>Archivado de reportes de campañas (XMAS)</h5></div>
+
+                  <p class="case-desc">Escaneo de bandejas de entrada, descarga de adjuntos y estructuración por carpetas de clientes.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> 100% de automatización del archivado y 0 horas invertidas a mano.</div>
+
+                </div>
+
+                <div class="case-card">
+
+                  <div class="case-header"><span class="case-num">#10</span><h5>Auditorías SEO automáticas para clientes</h5></div>
+
+                  <p class="case-desc">Flujo desatendido que analiza exports de SEMrush, Search Console y GA4 al crear una carpeta.</p>
+
+                  <div class="case-gain"><strong>Ganancia:</strong> Reducción drástica del tiempo de preparación de auditorías técnicas.</div>
+
+                </div>
+
+              </div>
+
             </div>
+
           </details>
+
         </article>
+
       </div>
 
       <!-- ==================== SECCIÓN VI ==================== -->
+
       <div class="faq-section-block" data-section="champions" id="seccion-champions">
+
         <div class="section-header">
+
           <div class="section-tag">Módulo VI</div>
+
           <h2 class="section-title">El Rol del Champion de Synaps</h2>
+
           <p class="section-desc">El facilitador humano del cambio, sus 3 roles diarios, su ruta de formación y el ecosistema de apoyo.</p>
+
         </div>
 
         <!-- Pregunta 6.1 -->
+
         <article class="faq-card" data-category="champions" id="faq-6-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">6.1</span>
+
                 <h3 class="q-title">¿Quién es un Champion de Synaps y cuál es su misión?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 El <strong>AI Champion</strong> es un <strong>facilitador humano</strong> dentro de su propio departamento que actúa como puente de confianza entre la visión corporativa y la operativa diaria.
+
               </p>
+
               <div class="callout-box">
+
                 <div class="callout-title">🤝 Su Misión Principal</div>
+
                 <p><strong>Traducir, tranquilizar, inspirar y acelerar</strong> la adopción de la IA en los equipos de negocio. <em>No requiere conocimientos de programación</em>, sino interés genuino por optimizar el trabajo de sus compañeros y ser un punto de apoyo cercano.</p>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 6.2 -->
+
         <article class="faq-card" data-category="champions" id="faq-6-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">6.2</span>
+
                 <h3 class="q-title">¿Cuáles son los 3 roles diarios de un Champion?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <div class="grid-cards-3">
+
                 <div class="role-card coach">
+
                   <div class="role-icon">🧑‍🏫</div>
+
                   <h4>1. Coach</h4>
+
                   <p>Guía y acompaña a sus compañeros en casos de uso prácticos, actuando como un formador directo y paciente.</p>
+
                 </div>
+
                 <div class="role-card relay">
+
                   <div class="role-icon">📢</div>
+
                   <h4>2. Relay (Transmisor)</h4>
+
                   <p>Comparte historias de éxito reales, trucos de prompts y dinámicas de adopción para contagiar el entusiasmo.</p>
+
                 </div>
+
                 <div class="role-card sensor">
+
                   <div class="role-icon">📡</div>
+
                   <h4>3. Sensor (Antena)</h4>
+
                   <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades y obstáculos.</p>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 6.3 -->
+
         <article class="faq-card" data-category="champions" id="faq-6-3">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">6.3</span>
+
                 <h3 class="q-title">¿Cómo se forma un Champion y cuál es su camino de adopción?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <div class="training-days-box">
+
                 <div class="day-block">
+
                   <div class="day-badge">Día 1: Fundamentos (Webedia)</div>
+
                   <p>Seguridad y gobernanza de la IA, recorrido por Gemini Enterprise (Synaps Chat, Gemini Notebook) y taller intensivo del método P.A.C.T.E.</p>
+
                 </div>
+
                 <div class="day-block">
+
                   <div class="day-badge">Día 2: Aplicación y Casos de Uso (Google)</div>
+
                   <p>Exploración de Agentes de IA (Chat & Workflow), resolución de obstáculos operativos y diseño de casos de negocio reales.</p>
+
                 </div>
+
               </div>
+
               <h4 class="subhead mt-4">El Viaje de Adopción en 4 Pasos:</h4>
+
               <div class="journey-timeline">
+
                 <div class="timeline-step">
+
                   <div class="step-circle">Fase 1</div>
+
                   <div class="step-time">Día +15</div>
+
                   <div class="step-title">Identificar Audiencia</div>
+
                   <p>Mapear a los 8-10 primeros compañeros con obstáculos reales y planificar talleres prácticos.</p>
+
                 </div>
+
                 <div class="timeline-step">
+
                   <div class="step-circle">Fase 2</div>
+
                   <div class="step-time">Día +1 Mes</div>
+
                   <div class="step-title">Organizar Sesiones</div>
+
                   <p>Impartir sesiones formativas de 2 horas aplicando plantillas de invitación y encuestas de feedback.</p>
+
                 </div>
+
                 <div class="timeline-step">
+
                   <div class="step-circle">Fase 3</div>
+
                   <div class="step-time">Día +2 Meses</div>
+
                   <div class="step-title">Dinamizar Consultas</div>
+
                   <p>Organizar "office hours" semanales para resolver dudas en vivo y compartir trucos con el equipo.</p>
+
                 </div>
+
                 <div class="timeline-step">
+
                   <div class="step-circle">Fase 4</div>
+
                   <div class="step-time">Día +3 Meses</div>
+
                   <div class="step-title">Compartir Éxitos</div>
+
                   <p>Documentar testimonios cuantificados (Before & After) para contagiar la adopción al resto de la empresa.</p>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 6.4 (Con las 2 últimas tarjetas centradas) -->
+
         <article class="faq-card" data-category="champions" id="faq-6-4">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">6.4</span>
+
                 <h3 class="q-title">¿Qué apoyo y recursos tienen a su disposición los Champions?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <div class="support-resources-grid">
+
                 <div class="resource-card">
+
                   <span class="res-icon">🧰</span>
+
                   <div><strong>Toolkit y Kits de Formación:</strong> Presentaciones, ejercicios prácticos y plantillas listas para facilitar sesiones con tus compañeros.</div>
+
                 </div>
+
                 <div class="resource-card">
+
                   <span class="res-icon">🔄</span>
+
                   <div><strong>The Hub:</strong> Sincronización semanal con el Core Team para explorar novedades, resolver dudas y co-crear agentes.</div>
+
                 </div>
+
                 <div class="resource-card">
+
                   <span class="res-icon">🆘</span>
+
                   <div><strong>Línea Directa con Core Team:</strong> Soporte dedicado y ágil para desbloquear consultas técnicas o solicitudes de licencias.</div>
+
                 </div>
+
                 <div class="resource-card">
+
                   <span class="res-icon">📖</span>
+
                   <div><strong>FAQ Dinámico y Base de Conocimiento:</strong> Este portal interactivo en continua evolución con las últimas directrices.</div>
+
                 </div>
+
                 <div class="resource-card">
+
                   <span class="res-icon">💬</span>
+
                   <div><strong>Soporte Online:</strong> Espacio privado de debate y colaboración entre todos los Champions de Webedia.</div>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
+
       </div>
 
-      <!-- Estado vacío cuando la búsqueda no da resultados -->
-      <div id="noResultsBlock" class="no-results-block" style="display: none;">
-        <div class="no-results-icon">🔍</div>
-        <h3>No se encontraron preguntas coincidentes</h3>
-        <p>Prueba con otros términos como <em>"PACTE"</em>, <em>"Few-Shot"</em>, <em>"notebook"</em>, <em>"agentes"</em>, <em>"gobernanza"</em> u <em>"obstáculos"</em>.</p>
-        <button id="resetSearchBtn" class="primary-btn mt-3">Ver todas las preguntas</button>
+
+
+      <!-- ==================== SECCIÓN VII (NUEVA: BUENAS PRÁCTICAS Y SOPORTE) ==================== -->
+
+      <div class="faq-section-block" data-section="bestpractices" id="seccion-bestpractices">
+
+        <div class="section-header">
+
+          <div class="section-tag" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">Módulo VII</div>
+
+          <h2 class="section-title">Buenas Prácticas y Soporte de Synaps</h2>
+
+          <p class="section-desc">Guía esencial para resolver problemas con conectores, maximizar la calidad de los chats y organizar tus flujos de trabajo.</p>
+
+        </div>
+
+        
+
+        <!-- Pregunta 7.1 -->
+
+        <article class="faq-card" data-category="bestpractices" id="faq-7-1">
+
+          <details class="faq-details">
+
+            <summary class="faq-summary">
+
+              <div class="summary-left">
+
+                <span class="q-number">7.1</span>
+
+                <h3 class="q-title">¿Por qué mi agente o chat no encuentra información o da error en las acciones? (Conectores)</h3>
+
+              </div>
+
+              <div class="summary-actions">
+
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
+                </button>
+
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
+              </div>
+
+            </summary>
+
+            <div class="faq-content">
+
+              <p>
+
+                La causa de error más habitual cuando un agente o chat "no funciona" o "no encuentra nada" es que los <strong>conectores corporativos no están encendidos</strong> o no han sido correctamente autorizados.
+
+              </p>
+
+              <div class="callout-box warning-theme">
+
+                <div class="callout-title">⚠️ Importancia de los Conectores Activos</div>
+
+                <p>Los conectores actúan como los "ojos y manos" del agente. Si los conectores de Google Workspace (Gmail, Drive, Calendar, etc.) están desactivados, el agente no tendrá permiso técnico para acceder a tus herramientas y las consultas darán un resultado vacío o erróneo.</p>
+
+              </div>
+
+              <p class="mt-3"><strong>¿Cómo solucionarlo?</strong> Asegúrate de que el interruptor general de conectores y las autorizaciones individuales de tus herramientas estén encendidos:</p>
+
+              <div class="connector-image-container">
+
+                <img src="image.png" alt="Estado de los conectores en Synaps" aria-label="Pantalla de estado de conectores activos en Synaps">
+
+              </div>
+
+            </div>
+
+          </details>
+
+        </article>
+
+
+
+        <!-- Pregunta 7.2 -->
+
+        <article class="faq-card" data-category="bestpractices" id="faq-7-2">
+
+          <details class="faq-details">
+
+            <summary class="faq-summary">
+
+              <div class="summary-left">
+
+                <span class="q-number">7.2</span>
+
+                <h3 class="q-title">¿Qué puedo hacer si el agente no me da exactamente el resultado que quiero?</h3>
+
+              </div>
+
+              <div class="summary-actions">
+
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
+                </button>
+
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
+              </div>
+
+            </summary>
+
+            <div class="faq-content">
+
+              <p>La interacción con la IA no es estática. Si la primera respuesta no es idónea, dispones de varios mecanismos sencillos para corregir el rumbo:</p>
+
+              <ul class="styled-list">
+
+                <li><strong>Cambia de modelo:</strong> En la barra lateral o de configuración, puedes seleccionar versiones diferentes de Gemini (ej. alternar entre modelos rápidos u otros más lógicos y avanzados). A menudo, un modelo diferente interpretará mejor la estructura y lógica de tu tarea compleja.</li>
+
+                <li><strong>Cambia de herramienta o de agente:</strong> Si estás usando un agente general de chat, tal vez sea el momento de invocar a un agente específico de la biblioteca utilizando la mención <code>@nombre_agente</code> para resolver esa subtarea concreta.</li>
+
+                <li><strong>Retroalimenta al agente:</strong> No reescribas todo tu prompt inicial. Pídele directamente la corrección sobre la respuesta que te acaba de dar. Ej: *"El tono es demasiado formal, reescríbelo de forma más amigable"* o *"No incluyas la sección de costes, céntrate exclusivamente en el calendario"*.</li>
+
+              </ul>
+
+            </div>
+
+          </details>
+
+        </article>
+
+
+
+        <!-- Pregunta 7.3 -->
+
+        <article class="faq-card" data-category="bestpractices" id="faq-7-3">
+
+          <details class="faq-details">
+
+            <summary class="faq-summary">
+
+              <div class="summary-left">
+
+                <span class="q-number">7.3</span>
+
+                <h3 class="q-title">¿Cuándo y por qué es recomendable iniciar una conversación nueva?</h3>
+
+              </div>
+
+              <div class="summary-actions">
+
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
+                </button>
+
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
+              </div>
+
+            </summary>
+
+            <div class="faq-content">
+
+              <p>
+
+                Por comodidad tendemos a mantener el mismo chat abierto durante días, pero esto perjudica el rendimiento del sistema. **La recomendación óptima es abrir una conversación limpia en los siguientes casos:**
+
+              </p>
+
+              <div class="grid-cards-3">
+
+                <div class="info-card">
+
+                  <div class="info-card-header"><span class="info-icon">🧹</span><strong>Cambio de tema</strong></div>
+
+                  <p class="text-sm">Si pasas de redactar un correo a planificar una estructura de costes, empieza un chat nuevo. Así previenes que las directrices antiguas confundan el nuevo objetivo.</p>
+
+                </div>
+
+                <div class="info-card">
+
+                  <div class="info-card-header"><span class="info-icon">📏</span><strong>Chats kilométricos</strong></div>
+
+                  <p class="text-sm">Si un chat es muy largo, el agente procesa demasiada información de fondo y consumirá más memoria, volviéndose lento o "olvidando" el contexto inicial.</p>
+
+                </div>
+
+                <div class="info-card">
+
+                  <div class="info-card-header"><span class="info-icon">🔄</span><strong>Exceso de iteraciones</strong></div>
+
+                  <p class="text-sm">Si has editado o corregido muchas veces tu prompt y las indicaciones iniciales se han desviado, abre un chat limpio y escribe la indicación final corregida.</p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </details>
+
+        </article>
+
+
+
+        <!-- Pregunta 7.4 -->
+
+        <article class="faq-card" data-category="bestpractices" id="faq-7-4">
+
+          <details class="faq-details">
+
+            <summary class="faq-summary">
+
+              <div class="summary-left">
+
+                <span class="q-number">7.4</span>
+
+                <h3 class="q-title">¿Cuál es la mejor estructura para diseñar flujos de trabajo (Workflow Agents)?</h3>
+
+              </div>
+
+              <div class="summary-actions">
+
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
+                </button>
+
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
+              </div>
+
+            </summary>
+
+            <div class="faq-content">
+
+              <p>
+
+                Cuando vayas a crear flujos y automatizaciones complejas de varios pasos, evita el error clásico de intentar que un único agente lo haga todo.
+
+              </p>
+
+              <div class="key-takeaway" style="border-left-color: #a855f7;">
+
+                💡 <strong>La Regla de la Modularidad:</strong> Es infinitamente mejor diseñar **un agente pequeño y especializado para cada paso del proceso** en lugar de un único agente masivo para todo el flujo.
+
+              </div>
+
+              <p class="mt-3"><strong>¿Por qué es más recomendable este enfoque modular?</strong></p>
+
+              <ul class="styled-list">
+
+                <li><strong>Mayor fiabilidad:</strong> Un agente especializado enfoca el 100% de su capacidad en un único objetivo (ej. solo extraer datos o solo traducir), reduciendo al mínimo la posibilidad de errores o alucinaciones.</li>
+
+                <li><strong>Mantenimiento sencillo:</strong> Si un paso del flujo cambia o se actualiza, solo tendrás que modificar las instrucciones de ese agente concreto sin alterar el resto del workflow.</li>
+
+                <li><strong>Reutilización de componentes:</strong> Podrás usar ese mismo agente especialista para otros flujos de trabajo diferentes dentro de tu departamento.</li>
+
+              </ul>
+
+            </div>
+
+          </details>
+
+        </article>
+
       </div>
+
+
+
+      <!-- Estado vacío cuando la búsqueda no da resultados -->
+
+      <div id="noResultsBlock" class="no-results-block" style="display: none;">
+
+        <div class="no-results-icon">🔍</div>
+
+        <h3>No se encontraron preguntas coincidentes</h3>
+
+        <p>Prueba con otros términos como <em>"PACTE"</em>, <em>"conectores"</em>, <em>"modelo"</em>, <em>"flujo"</em>, <em>"recordatorios"</em> o <em>"buenas prácticas"</em>.</p>
+
+        <button id="resetSearchBtn" class="primary-btn mt-3">Ver todas las preguntas</button>
+
+      </div>
+
     </section>
 
     <!-- Herramienta Interactiva: Generador de Prompts P.A.C.T.E. -->
+
     <section class="interactive-tool-section" id="pacte-generator">
+
       <div class="tool-card">
+
         <div class="tool-header">
+
           <div class="badge-tool">Herramienta Interactiva de Formación</div>
+
           <h2>Generador y Validador de Prompts P.A.C.T.E.</h2>
+
           <p>Utiliza este asistente interactivo para estructurar tus prompts con la metodología oficial de Synaps antes de enviarlos a Gemini.</p>
+
         </div>
+
         <div class="tool-grid">
+
           <div class="tool-inputs">
+
             <div class="input-group">
+
               <label for="pInput"><strong>P</strong>ersona (¿Quién debe ser la IA?)</label>
+
               <input type="text" id="pInput" placeholder="Ej: Eres un editor jefe especializado en tendencias de entretenimiento...">
+
             </div>
+
             <div class="input-group">
+
               <label for="aInput"><strong>A</strong>cción (¿Qué debe hacer con exactitud?)</label>
+
               <input type="text" id="aInput" placeholder="Ej: Redacta 3 propuestas de titulares y un resumen de 150 palabras...">
+
             </div>
+
             <div class="input-group">
+
               <label for="cInput"><strong>C</strong>ontexto (¿Qué información y público tiene?)</label>
+
               <input type="text" id="cInput" placeholder="Ej: Para la audiencia de Sensacine en España durante el fin de semana...">
+
             </div>
+
             <div class="input-group">
+
               <label for="tInput"><strong>T</strong>ono (¿Qué estilo de comunicación?)</label>
+
               <input type="text" id="tInput" placeholder="Ej: Dinámico, ameno, riguroso y sin clickbait engañoso...">
+
             </div>
+
             <div class="input-group">
+
               <label for="eInput"><strong>E</strong>lemento (¿En qué formato debe entregarlo?)</label>
+
               <input type="text" id="eInput" placeholder="Ej: Lista numerada con negritas para cada titular...">
+
             </div>
+
             <div class="tool-buttons">
+
               <button id="fillSamplePromptBtn" class="secondary-btn">Cargar Ejemplo Práctico</button>
+
               <button id="clearPromptBtn" class="clear-tool-btn">Limpiar</button>
+
             </div>
+
           </div>
+
           <div class="tool-preview">
+
             <div class="preview-header">
+
               <span>Resultado Generado:</span>
+
               <button id="copyPromptResultBtn" class="copy-pill-btn">
+
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+
                 Copiar Prompt
+
               </button>
+
             </div>
+
             <div class="preview-box" id="promptOutputBox">
+
               <span class="preview-placeholder">Completa los campos o pulsa en "Cargar Ejemplo Práctico" para ver el prompt generado en tiempo real listo para copiar en Synaps Chat.</span>
+
             </div>
+
             <div class="preview-tip">
+
               <strong>Tip de Formación:</strong> Pega este prompt directamente en <strong>Synaps Chat</strong>. Si la respuesta no es 100% exacta, ¡recuerda iterar pidiéndole ajustes específicos!
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
   <!-- Pie de página -->
+
   <footer class="site-footer">
+
     <div class="footer-container">
+
       <div class="footer-left">
+
         <div class="footer-brand">Synaps • Webedia</div>
+
         <p>Centro de Aprendizaje e Innovación en Inteligencia Artificial Corporativa.</p>
+
       </div>
+
       <div class="footer-right">
+
         <span>«Tú eres el Piloto, la IA es el Copiloto»</span>
+
         <button id="backToTopBtn" class="back-top-btn" title="Subir al inicio">
+
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+
           Inicio
+
         </button>
+
       </div>
+
     </div>
+
   </footer>
 
   <!-- Toast de notificación flotante -->
+
   <div id="toastNotification" class="toast" role="alert" aria-live="assertive">
+
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
     <span id="toastMessage">Enlace copiado al portapapeles</span>
+
   </div>
 
   <script src="app.js"></script>
+
 </body>
+
 </html>
