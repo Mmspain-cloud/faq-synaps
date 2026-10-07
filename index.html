@@ -22,7 +22,707 @@
 
   <style>
 
-    /* Alineación y centrado de las tarjetas de soporte en 6.4 */
+    /* ==========================================================================
+
+       SOBREESCRITURA PARA TEMA CLARO - ALTA LEGIBILIDAD (WEBEDIA SYNAPS)
+
+       ========================================================================== */
+
+    body {
+
+      background-color: #f8fafc !important; /* Fondo claro de alta calidad slate-50 */
+
+      color: #0f172a !important; /* Texto principal oscuro slate-900 */
+
+    }
+
+
+
+    /* Ajuste de orbes para fondo claro (tonos pastel sutiles) */
+
+    .neural-bg {
+
+      background: #f1f5f9 !important; /* slate-100 */
+
+    }
+
+    .neural-bg .grid-overlay {
+
+      opacity: 0.15 !important; /* Cuadrícula sutil */
+
+      background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+
+                        linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px) !important;
+
+    }
+
+    .glow-orb {
+
+      filter: blur(140px) !important;
+
+      opacity: 0.45 !important;
+
+    }
+
+    .orb-1 { background: #c084fc !important; } /* Púrpura suave */
+
+    .orb-2 { background: #818cf8 !important; } /* Índigo suave */
+
+    .orb-3 { background: #cbd5e1 !important; }
+
+
+
+    /* Títulos y Subtítulos en Tema Claro */
+
+    .hero-title {
+
+      color: #0f172a !important;
+
+    }
+
+    .hero-subtitle {
+
+      color: #475569 !important; /* Gris intermedio de lectura */
+
+    }
+
+    .gradient-text {
+
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+
+      -webkit-background-clip: text !important;
+
+      -webkit-text-fill-color: transparent !important;
+
+    }
+
+
+
+    /* Header y Barra de Navegación */
+
+    .site-header {
+
+      background: rgba(255, 255, 255, 0.8) !important;
+
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important; /* slate-200 */
+
+      backdrop-filter: blur(12px) !important;
+
+    }
+
+    /* Logo Webedia en Negro para tema claro */
+
+    .logo-icon svg text {
+
+      fill: #0f172a !important;
+
+    }
+
+    .logo-icon svg text[fill="#6366f1"] {
+
+      fill: #4f46e5 !important; /* Mantener la barra inclinada en índigo corporativo */
+
+    }
+
+
+
+    /* Buscador e Inputs */
+
+    .search-wrapper {
+
+      background: rgba(255, 255, 255, 0.9) !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05) !important;
+
+    }
+
+    .search-box input {
+
+      color: #0f172a !important;
+
+      background: transparent !important;
+
+    }
+
+    .search-box input::placeholder {
+
+      color: #94a3b8 !important;
+
+    }
+
+    .search-icon {
+
+      color: #64748b !important;
+
+    }
+
+    .search-status-bar {
+
+      color: #64748b !important;
+
+      border-top: 1px solid #f1f5f9 !important;
+
+    }
+
+    .text-action-btn {
+
+      color: #4f46e5 !important;
+
+    }
+
+    .text-action-btn:hover {
+
+      color: #3730a3 !important;
+
+    }
+
+
+
+    /* Categorías de Filtro (Pills) */
+
+    .filter-pill {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      color: #475569 !important;
+
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.02) !important;
+
+    }
+
+    .filter-pill:hover {
+
+      border-color: #cbd5e1 !important;
+
+      color: #0f172a !important;
+
+    }
+
+    .filter-pill.active {
+
+      background: #4f46e5 !important;
+
+      border-color: #4f46e5 !important;
+
+      color: #ffffff !important;
+
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25) !important;
+
+    }
+
+    .filter-pill.active .pill-count {
+
+      background: rgba(255, 255, 255, 0.2) !important;
+
+      color: #ffffff !important;
+
+    }
+
+    .pill-count {
+
+      background: #f1f5f9 !important;
+
+      color: #64748b !important;
+
+    }
+
+
+
+    /* Banner Regla de Oro */
+
+    .golden-rule-banner {
+
+      background: linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%) !important; /* Degradado índigo-púrpura muy suave */
+
+      border: 1px solid #c7d2fe !important;
+
+      color: #312e81 !important;
+
+    }
+
+    .banner-title {
+
+      color: #1e1b4b !important;
+
+    }
+
+    .banner-icon {
+
+      color: #4f46e5 !important;
+
+    }
+
+
+
+    /* Bloques de Secciones y Encabezados */
+
+    .section-title {
+
+      color: #0f172a !important;
+
+    }
+
+    .section-desc {
+
+      color: #475569 !important;
+
+    }
+
+    .section-tag {
+
+      background: rgba(79, 70, 229, 0.08) !important;
+
+      color: #4f46e5 !important;
+
+      border: 1px solid rgba(79, 70, 229, 0.1) !important;
+
+    }
+
+
+
+    /* Tarjetas del FAQ (Módulos) */
+
+    .faq-card {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+
+      border-radius: 12px !important;
+
+      transition: all 0.3s ease !important;
+
+    }
+
+    .faq-card:hover {
+
+      border-color: #cbd5e1 !important;
+
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+
+      transform: translateY(-2px) !important;
+
+    }
+
+    .q-number {
+
+      background: #f1f5f9 !important;
+
+      color: #4f46e5 !important;
+
+      font-weight: 700 !important;
+
+    }
+
+    .q-title {
+
+      color: #0f172a !important;
+
+    }
+
+    .chevron-icon {
+
+      color: #94a3b8 !important;
+
+    }
+
+
+
+    /* Contenido del FAQ */
+
+    .faq-content {
+
+      color: #334155 !important; /* Gris carbón de alta lectura */
+
+      border-top: 1px solid #f1f5f9 !important;
+
+      line-height: 1.625 !important;
+
+    }
+
+    .faq-content strong {
+
+      color: #0f172a !important;
+
+    }
+
+    .styled-list li::before {
+
+      background-color: #4f46e5 !important;
+
+    }
+
+
+
+    /* Cajas Destacadas (Callouts, Features, Warnings) */
+
+    .callout-box {
+
+      background: #f8fafc !important; /* slate-50 */
+
+      border-left: 4px solid #4f46e5 !important;
+
+      color: #334155 !important;
+
+    }
+
+    .callout-title {
+
+      color: #0f172a !important;
+
+    }
+
+    .callout-box.warning-theme {
+
+      background: #fffbeb !important; /* Ámbar ultra claro */
+
+      border-left-color: #d97706 !important;
+
+      color: #78350f !important;
+
+    }
+
+    .callout-box.warning-theme .callout-title {
+
+      color: #92400e !important;
+
+    }
+
+    .feature-box {
+
+      background: #f0fdf4 !important; /* Esmeralda claro */
+
+      border-left: 4px solid #16a34a !important;
+
+      color: #14532d !important;
+
+    }
+
+    .feature-box h4 {
+
+      color: #166534 !important;
+
+    }
+
+    .key-takeaway {
+
+      background: #f5f3ff !important;
+
+      border-left: 4px solid #7c3aed !important;
+
+      color: #4c1d95 !important;
+
+    }
+
+
+
+    /* Cuadrículas e Info Cards internas */
+
+    .info-card {
+
+      background: #f8fafc !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      color: #475569 !important;
+
+    }
+
+    .info-card-header {
+
+      color: #0f172a !important;
+
+    }
+
+    .benefit-card {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+    }
+
+    .benefit-title {
+
+      color: #4f46e5 !important;
+
+    }
+
+
+
+    /* Comparativas de Chatbot vs Agente */
+
+    .vs-comparison {
+
+      background: #f1f5f9 !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+    }
+
+    .vs-col {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+    }
+
+    .vs-tag {
+
+      background: #e2e8f0 !important;
+
+      color: #475569 !important;
+
+    }
+
+    .vs-tag.highlight {
+
+      background: #4f46e5 !important;
+
+      color: #ffffff !important;
+
+    }
+
+    .vs-metaphor {
+
+      color: #0f172a !important;
+
+    }
+
+
+
+    /* Escalera de Decisión */
+
+    .decision-ladder {
+
+      background: #f8fafc !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+    }
+
+    .ladder-steps {
+
+      border-bottom: 1px solid #e2e8f0 !important;
+
+    }
+
+    .step-badge {
+
+      background: #e0e7ff !important;
+
+      color: #4f46e5 !important;
+
+    }
+
+
+
+    /* Tarjetas de Casos de Uso */
+
+    .use-cases-grid .case-card {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02) !important;
+
+    }
+
+    .case-card h5 {
+
+      color: #0f172a !important;
+
+    }
+
+    .case-desc {
+
+      color: #475569 !important;
+
+    }
+
+    .case-gain {
+
+      background: #f1f5f9 !important;
+
+      color: #334155 !important;
+
+    }
+
+    .case-num {
+
+      background: #4f46e5 !important;
+
+      color: #ffffff !important;
+
+    }
+
+
+
+    /* Tarjetas de Apoyo y Roles de Champions */
+
+    .role-card {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+    }
+
+    .role-card h4 {
+
+      color: #0f172a !important;
+
+    }
+
+    .resource-card {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      color: #475569 !important;
+
+    }
+
+    .resource-card strong {
+
+      color: #0f172a !important;
+
+    }
+
+    .day-block {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+    }
+
+    .day-badge {
+
+      background: #e0e7ff !important;
+
+      color: #4f46e5 !important;
+
+    }
+
+
+
+    /* Herramientas Interactivas (Generador PACTE) */
+
+    .interactive-tool-section {
+
+      background: #ffffff !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+
+    }
+
+    .tool-card {
+
+      background: #ffffff !important;
+
+    }
+
+    .badge-tool {
+
+      background: rgba(79, 70, 229, 0.08) !important;
+
+      color: #4f46e5 !important;
+
+    }
+
+    .tool-header h2 {
+
+      color: #0f172a !important;
+
+    }
+
+    .tool-header p {
+
+      color: #475569 !important;
+
+    }
+
+    .input-group label {
+
+      color: #334155 !important;
+
+    }
+
+    .input-group input {
+
+      background: #f8fafc !important;
+
+      border: 1px solid #d1d5db !important;
+
+      color: #0f172a !important;
+
+    }
+
+    .input-group input:focus {
+
+      border-color: #4f46e5 !important;
+
+      background: #ffffff !important;
+
+    }
+
+    .preview-box {
+
+      background: #f8fafc !important;
+
+      border: 1px solid #e2e8f0 !important;
+
+      color: #334155 !important;
+
+    }
+
+    .preview-placeholder {
+
+      color: #94a3b8 !important;
+
+    }
+
+    .preview-header {
+
+      color: #0f172a !important;
+
+    }
+
+
+
+    /* Pie de Página */
+
+    .site-footer {
+
+      background: #ffffff !important;
+
+      border-top: 1px solid #e2e8f0 !important;
+
+      color: #64748b !important;
+
+    }
+
+    .footer-brand {
+
+      color: #0f172a !important;
+
+    }
+
+
+
+    /* Soporte de Cuadrículas en 6.4 */
 
     .support-resources-grid {
 
@@ -66,33 +766,67 @@
 
     }
 
-    /* Estilos personalizados para la imagen de conectores */
+
+
+    /* SOLUCIÓN INTEGRAL PARA LA VISUALIZACIÓN DE LA IMAGEN */
 
     .connector-image-container {
 
-      margin: 1.25rem 0;
+      margin: 1.5rem 0 !important;
 
-      border-radius: 12px;
+      border-radius: 12px !important;
 
-      overflow: hidden;
+      overflow: hidden !important;
 
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1.5px solid #e2e8f0 !important; /* slate-200 */
 
-      background: rgba(0, 0, 0, 0.2);
+      background: #f8fafc !important; /* Fondo claro neutro */
 
-      display: flex;
+      display: flex !important;
 
-      justify-content: center;
+      justify-content: center !important;
+
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06) !important;
+
+      padding: 8px !important; /* Espacio de cortesía */
 
     }
 
     .connector-image-container img {
 
-      max-width: 100%;
+      max-width: 100% !important;
 
-      height: auto;
+      height: auto !important;
 
-      display: block;
+      display: block !important;
+
+      border-radius: 8px !important;
+
+    }
+
+    
+
+    /* Ajuste visual para el botón de Synaps */
+
+    .synaps-btn {
+
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+
+      color: #ffffff !important;
+
+      border: none !important;
+
+      box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2) !important;
+
+      transition: all 0.3s ease !important;
+
+    }
+
+    .synaps-btn:hover {
+
+      transform: translateY(-2px) !important;
+
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35) !important;
 
     }
 
@@ -102,7 +836,7 @@
 
 <body data-theme="dark">
 
-  <!-- Fondo con efecto de red neuronal -->
+  <!-- Fondo con efecto de red neuronal de alta claridad -->
 
   <div class="neural-bg" aria-hidden="true">
 
@@ -130,9 +864,9 @@
 
           <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="height: 30px; width: auto; background: transparent;" aria-label="Webedia">
 
-            <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-1">webedia</text>
+            <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#0f172a" letter-spacing="-1">webedia</text>
 
-            <text x="370" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#6366f1" letter-spacing="-1">/.</text>
+            <text x="370" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#4f46e5" letter-spacing="-1">/.</text>
 
           </svg>
 
@@ -152,7 +886,7 @@
 
         <!-- Botón de Acceso Directo a Synaps -->
 
-        <a href="https://synaps.webedia-group.com/" target="_blank" class="header-btn primary-btn" title="Ir a Synaps AI Webedia" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: white; border: none; text-decoration: none;">
+        <a href="https://synaps.webedia-group.com/" target="_blank" class="header-btn synaps-btn" title="Ir a Synaps AI Webedia">
 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
 
@@ -266,7 +1000,7 @@
 
           <span class="pill-icon">🎯</span>
 
-          I. Visión y Objetivos <span class="pill-count">4</span>
+          I. Visión <span class="pill-count">4</span>
 
         </button>
 
@@ -274,7 +1008,7 @@
 
           <span class="pill-icon">⚡</span>
 
-          II. Herramientas de IA <span class="pill-count">6</span>
+          II. Herramientas <span class="pill-count">6</span>
 
         </button>
 
@@ -282,7 +1016,7 @@
 
           <span class="pill-icon">✍️</span>
 
-          III. Prompts & P.A.C.T.E. <span class="pill-count">3</span>
+          III. Prompts <span class="pill-count">3</span>
 
         </button>
 
@@ -290,7 +1024,7 @@
 
           <span class="pill-icon">🛡️</span>
 
-          IV. Seguridad & Ética <span class="pill-count font-weight-bold">4</span>
+          IV. Seguridad <span class="pill-count">4</span>
 
         </button>
 
@@ -298,7 +1032,7 @@
 
           <span class="pill-icon">📈</span>
 
-          V. Obstáculos & KPIs <span class="pill-count">3</span>
+          V. Obstáculos <span class="pill-count">3</span>
 
         </button>
 
@@ -306,15 +1040,15 @@
 
           <span class="pill-icon">🌟</span>
 
-          VI. AI Champions <span class="pill-count">4</span>
+          VI. Champions <span class="pill-count">4</span>
 
         </button>
 
-        <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(168, 85, 247, 0.4);">
+        <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(124, 58, 237, 0.45);">
 
           <span class="pill-icon">💡</span>
 
-          VII. Buenas Prácticas <span class="pill-count">4</span>
+          VII. Prácticas <span class="pill-count">4</span>
 
         </button>
 
@@ -1276,7 +2010,7 @@
 
         </article>
 
-        <!-- Pregunta 3.3 (Actualizada con Comparativa Zero/One/Few Shot y Meta-Prompting) -->
+        <!-- Pregunta 3.3 -->
 
         <article class="faq-card" data-category="prompts" id="faq-3-3">
 
@@ -1838,7 +2572,7 @@
 
         </article>
 
-        <!-- Pregunta 5.3 (Actualizada con ejemplos micro de uso diario) -->
+        <!-- Pregunta 5.3 -->
 
         <article class="faq-card" data-category="roi" id="faq-5-3">
 
@@ -1878,9 +2612,9 @@
 
               <div class="use-cases-grid mt-2" style="margin-bottom: 2rem;">
 
-                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
 
-                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📧</span><h5>Buscar correos y adjuntos</h5></div>
+                  <div class="case-header"><span class="case-num">📧</span><h5>Buscar correos y adjuntos</h5></div>
 
                   <p class="case-desc">Pídele a Synaps buscar hilos específicos sin abrir Gmail. Ej: *"Encuentra el último presupuesto que me envió Mario Rigote sobre licencias y extrae el total"*.</p>
 
@@ -1888,9 +2622,9 @@
 
                 </div>
 
-                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
 
-                  <div class="case-header"><span class="case-num" style="background: #6366f1;">🔍</span><h5>Localizar documentos en segundos</h5></div>
+                  <div class="case-header"><span class="case-num">🔍</span><h5>Localizar documentos en segundos</h5></div>
 
                   <p class="case-desc">Olvídate de navegar por infinitas carpetas compartidas. Ej: *"Busca en mi Drive el documento de Onboarding de Champions y dime cuáles son los entregables"*.</p>
 
@@ -1898,19 +2632,19 @@
 
                 </div>
 
-                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
 
-                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📁</span><h5>Organizar y resumir archivos</h5></div>
+                  <div class="case-header"><span class="case-num">📁</span><h5>Organizar y resumir archivos</h5></div>
 
-                  <p class="case-desc">Sintetiza de golpe varios archivos. Ej: *"Lee estos tres PDFs de propuestas y hazme una tabla comparativa con los puntos fuertes de cada uno"*. </p>
+                  <p class="case-desc">Sintetiza de golpe varios archivos. Ej: *"Lee estos tres PDFs de propuestas y hazme una tabla comparativa con los puntos fuertes de cada uno"*.</p>
 
                   <div class="case-gain"><strong>Ahorro:</strong> Evita leer cientos de páginas de documentación repetitiva o densa.</div>
 
                 </div>
 
-                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                <div class="case-card" style="border-color: rgba(79, 70, 229, 0.25);">
 
-                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📝</span><h5>Auto-status y recordatorios</h5></div>
+                  <div class="case-header"><span class="case-num">📝</span><h5>Auto-status y recordatorios</h5></div>
 
                   <p class="case-desc">Genera actualizaciones de tus proyectos. Ej: *"Revisa mis correos de ayer y mi calendario de hoy, y redacta un borrador de estatus diario para enviarle a mi manager"*.</p>
 
@@ -2162,7 +2896,7 @@
 
                   <h4>3. Sensor (Antena)</h4>
 
-                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades y obstáculos.</p>
+                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades and obstáculos.</p>
 
                 </div>
 
@@ -2372,13 +3106,13 @@
 
 
 
-      <!-- ==================== SECCIÓN VII (NUEVA: BUENAS PRÁCTICAS Y SOPORTE) ==================== -->
+      <!-- ==================== SECCIÓN VII (BUENAS PRÁCTICAS Y SOPORTE) ==================== -->
 
       <div class="faq-section-block" data-section="bestpractices" id="seccion-bestpractices">
 
         <div class="section-header">
 
-          <div class="section-tag" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">Módulo VII</div>
+          <div class="section-tag" style="background: rgba(124, 58, 237, 0.08); color: #7c3aed; border: 1px solid rgba(124, 58, 237, 0.15);">Módulo VII</div>
 
           <h2 class="section-title">Buenas Prácticas y Soporte de Synaps</h2>
 
@@ -2436,9 +3170,13 @@
 
               <p class="mt-3"><strong>¿Cómo solucionarlo?</strong> Asegúrate de que el interruptor general de conectores y las autorizaciones individuales de tus herramientas estén encendidos:</p>
 
+              
+
+              <!-- Contenedor optimizado y blindado para la imagen clara de conectores -->
+
               <div class="connector-image-container">
 
-                <img src="image.png" alt="Estado de los conectores en Synaps" aria-label="Pantalla de estado de conectores activos en Synaps">
+                <img src="./image.png" alt="Estado de los conectores activos en Synaps" aria-label="Pantalla de estado de conectores activos en la barra lateral de Synaps">
 
               </div>
 
@@ -2614,7 +3352,7 @@
 
               </p>
 
-              <div class="key-takeaway" style="border-left-color: #a855f7;">
+              <div class="key-takeaway" style="border-left-color: #7c3aed;">
 
                 💡 <strong>La Regla de la Modularidad:</strong> Es infinitamente mejor diseñar **un agente pequeño y especializado para cada paso del proceso** en lugar de un único agente masivo para todo el flujo.
 
@@ -2808,7 +3546,261 @@
 
   </div>
 
-  <script src="app.js"></script>
+
+
+  <!-- Script para la carga y blindado interactivo (Evita conflictos con app.js) -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      // 1. Manejo interactivo de los Acordeones (Details / Summary)
+
+      const summaries = document.querySelectorAll(".faq-summary");
+
+      summaries.forEach(summary => {
+
+        summary.addEventListener("click", function(e) {
+
+          if (e.target.closest(".copy-link-btn")) {
+
+            e.preventDefault();
+
+            const card = this.closest(".faq-card");
+
+            const id = card.id;
+
+            const url = window.location.origin + window.location.pathname + '#' + id;
+
+            navigator.clipboard.writeText(url).then(() => {
+
+              const toast = document.getElementById("toastNotification");
+
+              const toastMsg = document.getElementById("toastMessage");
+
+              toastMsg.textContent = "¡Enlace a la pregunta copiado!";
+
+              toast.classList.add("show");
+
+              setTimeout(() => toast.classList.remove("show"), 3000);
+
+            });
+
+            return;
+
+          }
+
+        });
+
+      });
+
+
+
+      // 2. Control de Expandir / Colapsar Todas las Preguntas
+
+      document.getElementById("expandAllBtn").addEventListener("click", function() {
+
+        document.querySelectorAll(".faq-details").forEach(detail => detail.setAttribute("open", "true"));
+
+      });
+
+      document.getElementById("collapseAllBtn").addEventListener("click", function() {
+
+        document.querySelectorAll(".faq-details").forEach(detail => detail.removeAttribute("open"));
+
+      });
+
+
+
+      // 3. Sistema de Filtros por Categorías (Pills)
+
+      const pills = document.querySelectorAll(".filter-pill");
+
+      pills.forEach(pill => {
+
+        pill.addEventListener("click", function() {
+
+          pills.forEach(p => p.classList.remove("active"));
+
+          this.classList.add("active");
+
+          
+
+          const cat = this.getAttribute("data-category");
+
+          const blocks = document.querySelectorAll(".faq-section-block");
+
+          const cards = document.querySelectorAll(".faq-card");
+
+          
+
+          if (cat === "all") {
+
+            blocks.forEach(b => b.style.display = "block");
+
+            cards.forEach(c => c.style.display = "block");
+
+          } else {
+
+            blocks.forEach(b => {
+
+              const hasVisibleCards = Array.from(b.querySelectorAll(".faq-card")).some(c => c.getAttribute("data-category") === cat);
+
+              b.style.display = hasVisibleCards ? "block" : "none";
+
+            });
+
+            cards.forEach(c => {
+
+              c.style.display = c.getAttribute("data-category") === cat ? "block" : "none";
+
+            });
+
+          }
+
+          actualizarContador(cat);
+
+        });
+
+      });
+
+
+
+      // 4. Motor de Búsqueda Interactiva en tiempo real
+
+      const buscador = document.getElementById("faqSearchInput");
+
+      const clearBtn = document.getElementById("clearSearchBtn");
+
+      
+
+      buscador.addEventListener("input", function() {
+
+        const t = this.value.toLowerCase().trim();
+
+        clearBtn.style.display = t.length > 0 ? "flex" : "none";
+
+        filtrarFAQ(t);
+
+      });
+
+
+
+      clearBtn.addEventListener("click", function() {
+
+        buscador.value = "";
+
+        this.style.display = "none";
+
+        filtrarFAQ("");
+
+      });
+
+
+
+      function filtrarFAQ(texto) {
+
+        const cards = document.querySelectorAll(".faq-card");
+
+        const blocks = document.querySelectorAll(".faq-section-block");
+
+        const noResults = document.getElementById("noResultsBlock");
+
+        let visibles = 0;
+
+
+
+        if (texto === "") {
+
+          const activePill = document.querySelector(".filter-pill.active").getAttribute("data-category");
+
+          pills.forEach(p => { if (p.getAttribute("data-category") === activePill) p.click(); });
+
+          noResults.style.display = "none";
+
+          return;
+
+        }
+
+
+
+        cards.forEach(c => {
+
+          const titulo = c.querySelector(".q-title").textContent.toLowerCase();
+
+          const contenido = c.querySelector(".faq-content").textContent.toLowerCase();
+
+          if (titulo.includes(texto) || contenido.includes(texto)) {
+
+            c.style.display = "block";
+
+            visibles++;
+
+          } else {
+
+            c.style.display = "none";
+
+          }
+
+        });
+
+
+
+        blocks.forEach(b => {
+
+          const hasVisible = Array.from(b.querySelectorAll(".faq-card")).some(c => c.style.display === "block");
+
+          b.style.display = hasVisible ? "block" : "none";
+
+        });
+
+
+
+        document.getElementById("searchResultCount").textContent = `Mostrando ${visibles} de 28 preguntas`;
+
+        noResults.style.display = visibles === 0 ? "block" : "none";
+
+      }
+
+
+
+      function actualizarContador(cat) {
+
+        const cards = document.querySelectorAll(".faq-card");
+
+        let count = 0;
+
+        cards.forEach(c => {
+
+          if (cat === "all" || c.getAttribute("data-category") === cat) count++;
+
+        });
+
+        document.getElementById("searchResultCount").textContent = `Mostrando ${count} de 28 preguntas`;
+
+      }
+
+
+
+      document.getElementById("resetSearchBtn").addEventListener("click", function() {
+
+        document.querySelector('.filter-pill[data-category="all"]').click();
+
+        buscador.value = "";
+
+        clearBtn.style.display = "none";
+
+        filtrarFAQ("");
+
+      });
+
+    });
+
+  </script>
+
+  <!-- Script secundario -->
+
+  <script src="app.js" defer></script>
 
 </body>
 
