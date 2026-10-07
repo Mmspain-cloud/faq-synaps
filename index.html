@@ -66,11 +66,13 @@
 
     }
 
-    /* Estilos personalizados para la imagen de conectores */
+
+
+    /* Estilo contenedor para la imagen de los conectores */
 
     .connector-image-container {
 
-      margin: 1.25rem 0;
+      margin: 1.5rem 0;
 
       border-radius: 12px;
 
@@ -78,11 +80,13 @@
 
       border: 1px solid rgba(255, 255, 255, 0.1);
 
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.3);
 
       display: flex;
 
       justify-content: center;
+
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 
     }
 
@@ -93,6 +97,32 @@
       height: auto;
 
       display: block;
+
+    }
+
+    
+
+    /* Ajuste visual para el botón de Synaps con degradado morado corporativo */
+
+    .synaps-btn {
+
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+
+      color: #ffffff !important;
+
+      border: none !important;
+
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
+
+      transition: all 0.3s ease !important;
+
+    }
+
+    .synaps-btn:hover {
+
+      transform: translateY(-2px) !important;
+
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5) !important;
 
     }
 
@@ -150,9 +180,9 @@
 
         </a>
 
-        <!-- Botón de Acceso Directo a Synaps -->
+        <!-- Botón de Acceso a Synaps -->
 
-        <a href="https://synaps.webedia-group.com/" target="_blank" class="header-btn primary-btn" title="Ir a Synaps AI Webedia" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: white; border: none; text-decoration: none;">
+        <a href="https://synaps.webedia-group.com/" target="_blank" class="header-btn synaps-btn" title="Ir a Synaps AI Webedia">
 
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
 
@@ -266,7 +296,7 @@
 
           <span class="pill-icon">🎯</span>
 
-          I. Visión y Objetivos <span class="pill-count">4</span>
+          I. Visión <span class="pill-count">4</span>
 
         </button>
 
@@ -274,7 +304,7 @@
 
           <span class="pill-icon">⚡</span>
 
-          II. Herramientas de IA <span class="pill-count">6</span>
+          II. Herramientas <span class="pill-count">6</span>
 
         </button>
 
@@ -282,7 +312,7 @@
 
           <span class="pill-icon">✍️</span>
 
-          III. Prompts & P.A.C.T.E. <span class="pill-count">3</span>
+          III. Prompts <span class="pill-count">3</span>
 
         </button>
 
@@ -290,7 +320,7 @@
 
           <span class="pill-icon">🛡️</span>
 
-          IV. Seguridad & Ética <span class="pill-count font-weight-bold">4</span>
+          IV. Seguridad <span class="pill-count">4</span>
 
         </button>
 
@@ -298,7 +328,7 @@
 
           <span class="pill-icon">📈</span>
 
-          V. Obstáculos & KPIs <span class="pill-count">3</span>
+          V. Obstáculos <span class="pill-count">3</span>
 
         </button>
 
@@ -306,15 +336,15 @@
 
           <span class="pill-icon">🌟</span>
 
-          VI. AI Champions <span class="pill-count">4</span>
+          VI. Champions <span class="pill-count">4</span>
 
         </button>
 
-        <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(168, 85, 247, 0.4);">
+        <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(168, 85, 247, 0.45);">
 
           <span class="pill-icon">💡</span>
 
-          VII. Buenas Prácticas <span class="pill-count">4</span>
+          VII. Prácticas <span class="pill-count">4</span>
 
         </button>
 
@@ -1902,7 +1932,7 @@
 
                   <div class="case-header"><span class="case-num" style="background: #6366f1;">📁</span><h5>Organizar y resumir archivos</h5></div>
 
-                  <p class="case-desc">Sintetiza de golpe varios archivos. Ej: *"Lee estos tres PDFs de propuestas y hazme una tabla comparativa con los puntos fuertes de cada uno"*. </p>
+                  <p class="case-desc">Sintetiza de golpe varios archivos. Ej: *"Lee estos tres PDFs de propuestas y hazme una tabla comparativa con los puntos fuertes de cada uno"*.</p>
 
                   <div class="case-gain"><strong>Ahorro:</strong> Evita leer cientos de páginas de documentación repetitiva o densa.</div>
 
@@ -2162,7 +2192,7 @@
 
                   <h4>3. Sensor (Antena)</h4>
 
-                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades y obstáculos.</p>
+                  <p>Escucha las dificultades diarias del equipo y alerta al Core Team sobre nuevas necesidades and obstáculos.</p>
 
                 </div>
 
@@ -2808,7 +2838,263 @@
 
   </div>
 
-  <script src="app.js"></script>
+
+
+  <!-- Script para la carga y blindado interactivo (Evita conflictos con app.js) -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      // 1. Manejo interactivo de los Acordeones (Details / Summary)
+
+      const summaries = document.querySelectorAll(".faq-summary");
+
+      summaries.forEach(summary => {
+
+        summary.addEventListener("click", function(e) {
+
+          // Evitar que el botón de copiar enlace dispare la apertura/cierre del acordeón
+
+          if (e.target.closest(".copy-link-btn")) {
+
+            e.preventDefault();
+
+            const card = this.closest(".faq-card");
+
+            const id = card.id;
+
+            const url = window.location.origin + window.location.pathname + '#' + id;
+
+            navigator.clipboard.writeText(url).then(() => {
+
+              const toast = document.getElementById("toastNotification");
+
+              const toastMsg = document.getElementById("toastMessage");
+
+              toastMsg.textContent = "¡Enlace a la pregunta copiado!";
+
+              toast.classList.add("show");
+
+              setTimeout(() => toast.classList.remove("show"), 3000);
+
+            });
+
+            return;
+
+          }
+
+        });
+
+      });
+
+
+
+      // 2. Control de Expandir / Colapsar Todas las Preguntas
+
+      document.getElementById("expandAllBtn").addEventListener("click", function() {
+
+        document.querySelectorAll(".faq-details").forEach(detail => detail.setAttribute("open", "true"));
+
+      });
+
+      document.getElementById("collapseAllBtn").addEventListener("click", function() {
+
+        document.querySelectorAll(".faq-details").forEach(detail => detail.removeAttribute("open"));
+
+      });
+
+
+
+      // 3. Sistema de Filtros por Categorías (Pills)
+
+      const pills = document.querySelectorAll(".filter-pill");
+
+      pills.forEach(pill => {
+
+        pill.addEventListener("click", function() {
+
+          pills.forEach(p => p.classList.remove("active"));
+
+          this.classList.add("active");
+
+          
+
+          const cat = this.getAttribute("data-category");
+
+          const blocks = document.querySelectorAll(".faq-section-block");
+
+          const cards = document.querySelectorAll(".faq-card");
+
+          
+
+          if (cat === "all") {
+
+            blocks.forEach(b => b.style.display = "block");
+
+            cards.forEach(c => c.style.display = "block");
+
+          } else {
+
+            blocks.forEach(b => {
+
+              const hasVisibleCards = Array.from(b.querySelectorAll(".faq-card")).some(c => c.getAttribute("data-category") === cat);
+
+              b.style.display = hasVisibleCards ? "block" : "none";
+
+            });
+
+            cards.forEach(c => {
+
+              c.style.display = c.getAttribute("data-category") === cat ? "block" : "none";
+
+            });
+
+          }
+
+          actualizarContador(cat);
+
+        });
+
+      });
+
+
+
+      // 4. Motor de Búsqueda Interactiva en tiempo real
+
+      const buscador = document.getElementById("faqSearchInput");
+
+      const clearBtn = document.getElementById("clearSearchBtn");
+
+      
+
+      buscador.addEventListener("input", function() {
+
+        const t = this.value.toLowerCase().trim();
+
+        clearBtn.style.display = t.length > 0 ? "flex" : "none";
+
+        filtrarFAQ(t);
+
+      });
+
+
+
+      clearBtn.addEventListener("click", function() {
+
+        buscador.value = "";
+
+        this.style.display = "none";
+
+        filtrarFAQ("");
+
+      });
+
+
+
+      function filtrarFAQ(texto) {
+
+        const cards = document.querySelectorAll(".faq-card");
+
+        const blocks = document.querySelectorAll(".faq-section-block");
+
+        const noResults = document.getElementById("noResultsBlock");
+
+        let visibles = 0;
+
+
+
+        if (texto === "") {
+
+          const activePill = document.querySelector(".filter-pill.active").getAttribute("data-category");
+
+          pills.forEach(p => { if (p.getAttribute("data-category") === activePill) p.click(); });
+
+          noResults.style.display = "none";
+
+          return;
+
+        }
+
+
+
+        cards.forEach(c => {
+
+          const titulo = c.querySelector(".q-title").textContent.toLowerCase();
+
+          const contenido = c.querySelector(".faq-content").textContent.toLowerCase();
+
+          if (titulo.includes(texto) || contenido.includes(texto)) {
+
+            c.style.display = "block";
+
+            visibles++;
+
+          } else {
+
+            c.style.display = "none";
+
+          }
+
+        });
+
+
+
+        blocks.forEach(b => {
+
+          const hasVisible = Array.from(b.querySelectorAll(".faq-card")).some(c => c.style.display === "block");
+
+          b.style.display = hasVisible ? "block" : "none";
+
+        });
+
+
+
+        document.getElementById("searchResultCount").textContent = `Mostrando ${visibles} de 28 preguntas`;
+
+        noResults.style.display = visibles === 0 ? "block" : "none";
+
+      }
+
+
+
+      function actualizarContador(cat) {
+
+        const cards = document.querySelectorAll(".faq-card");
+
+        let count = 0;
+
+        cards.forEach(c => {
+
+          if (cat === "all" || c.getAttribute("data-category") === cat) count++;
+
+        });
+
+        document.getElementById("searchResultCount").textContent = `Mostrando ${count} de 28 preguntas`;
+
+      }
+
+
+
+      document.getElementById("resetSearchBtn").addEventListener("click", function() {
+
+        document.querySelector('.filter-pill[data-category="all"]').click();
+
+        buscador.value = "";
+
+        clearBtn.style.display = "none";
+
+        filtrarFAQ("");
+
+      });
+
+    });
+
+  </script>
+
+  <!-- Script secundario -->
+
+  <script src="app.js" defer></script>
 
 </body>
 
