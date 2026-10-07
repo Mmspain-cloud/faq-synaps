@@ -2144,86 +2144,6 @@ details[open] .chevron-icon {
 .slide-caption strong {
   color: var(--text-main);
 }
-
-/* ============================================================
-   LIGHTBOX MODAL (PANTALLA COMPLETA DE DIAPOSITIVAS)
-   ============================================================ */
-.lightbox-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-
-.lightbox-modal.active {
-  opacity: 1;
-  visibility: visible;
-  display: flex !important;
-}
-
-.lightbox-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.lightbox-container {
-  position: relative;
-  z-index: 2;
-  max-width: 95vw;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.lightbox-image {
-  max-width: 100%;
-  max-height: 82vh;
-  object-fit: contain;
-  border-radius: var(--radius-md);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.lightbox-close-btn {
-  position: absolute;
-  top: -45px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  color: #ffffff;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.lightbox-close-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-.lightbox-caption {
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
-  color: #f1f5f9;
-  text-align: center;
-  max-width: 800px;
-}
-
 /* ============================================================
    SYNAPS FAQ - STYLESHEET
    Webedia & Elephant AI Training Portal
@@ -4751,4 +4671,187 @@ textarea::placeholder {
 .timeline-step,
 .principle-item {
   backdrop-filter: none !important;
+}
+
+
+
+/* ============================================================
+   AJUSTES FINALES — FILTRO ACTIVO + HERRAMIENTA P.A.C.T.E.
+   ============================================================ */
+
+/* Que se vea claramente qué módulo/preguntas está seleccionado */
+.filter-pill {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #dbe3ef !important;
+  box-shadow: none !important;
+}
+
+.filter-pill:hover {
+  background: #f8fafc !important;
+  color: #111827 !important;
+  border-color: #a5b4fc !important;
+}
+
+.filter-pill.active {
+  background: #eef2ff !important;
+  color: #4338ca !important;
+  border-color: #6366f1 !important;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.14) !important;
+  font-weight: 800 !important;
+}
+
+.filter-pill.active .pill-count,
+.filter-pill.active .pill-icon,
+.filter-pill.active .pill-dot {
+  color: #4338ca !important;
+}
+
+.filter-pill.active .pill-dot {
+  background: #6366f1 !important;
+}
+
+/* Las preguntas visibles mantienen una señal visual suave */
+.faq-section-block {
+  transition: opacity 0.2s ease;
+}
+
+.faq-section-block .section-header {
+  color: #111827;
+}
+
+/* ============================================================
+   P.A.C.T.E. — FORZAR TEMA CLARO
+   No depende de [data-theme="light"], porque el HTML puede
+   seguir teniendo data-theme="dark".
+   ============================================================ */
+
+.interactive-tool-section {
+  color: #111827 !important;
+  border-top-color: #e2e8f0 !important;
+}
+
+.tool-card {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #dbe3ef !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08) !important;
+  backdrop-filter: none !important;
+}
+
+.tool-header h2,
+.tool-header p,
+.tool-header,
+.input-group label,
+.input-group label strong,
+.preview-header,
+.preview-placeholder,
+.preview-tip,
+.preview-tip strong {
+  color: #111827 !important;
+}
+
+.tool-header p,
+.preview-tip {
+  color: #475569 !important;
+}
+
+.badge-tool {
+  color: #0891b2 !important;
+  background: #ecfeff !important;
+}
+
+/* Campos P.A.C.T.E. */
+.input-group input,
+.input-group textarea,
+.input-group select {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: none !important;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: #6366f1 !important;
+  outline: 2px solid rgba(99, 102, 241, 0.12) !important;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+/* Previsualización del prompt */
+.tool-preview {
+  background: #f8fafc !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: var(--radius-md);
+}
+
+.preview-box {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.preview-box *,
+.preview-placeholder {
+  color: #475569 !important;
+}
+
+.preview-box strong {
+  color: #111827 !important;
+}
+
+.preview-tip {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Botones de la herramienta */
+.secondary-btn,
+.clear-tool-btn {
+  color: #334155 !important;
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+.secondary-btn:hover,
+.clear-tool-btn:hover {
+  color: #4338ca !important;
+  background: #eef2ff !important;
+  border-color: #a5b4fc !important;
+}
+
+.copy-pill-btn {
+  color: #ffffff !important;
+}
+
+/* Tarjetas P.A.C.T.E. que aparecen dentro del contenido */
+.pacte-card,
+.can-do-card,
+.cant-do-card {
+  background: #ffffff !important;
+  color: #334155 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.pacte-name,
+.status-header {
+  color: #111827 !important;
+}
+
+.pacte-desc,
+.pacte-example,
+.can-do-card,
+.cant-do-card,
+.can-do-card li,
+.cant-do-card li {
+  color: #475569 !important;
 }
