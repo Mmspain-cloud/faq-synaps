@@ -4864,3 +4864,29 @@ textarea::placeholder {
   font-size: 0.98rem !important;
   font-weight: 900 !important;
 }
+
+/* ============================================================
+   SELECTOR DE IDIOMA (I18N STYLE)
+   ============================================================ */
+.lang-selector-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-selector-btn:hover {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover) !important;
+  color: var(--accent-primary) !important;
+  transform: translateY(-1px);
+}
