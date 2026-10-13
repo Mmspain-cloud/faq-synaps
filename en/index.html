@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synaps FAQ | Webedia Training Center</title>
+  <meta name="description" content="Interactive FAQ portal and Training Guide for Synaps, Webedia's Corporate Artificial Intelligence platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Support cards alignment and centering in 6.3 */
+    .support-resources-grid {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 1.25rem !important;
+    }
+    .support-resources-grid .resource-card {
+      flex: 0 1 calc(33.333% - 1.25rem) !important;
+      min-width: 280px !important;
+      box-sizing: border-box !important;
+    }
+    @media (max-width: 992px) {
+      .support-resources-grid .resource-card {
+        flex: 0 1 calc(50% - 1.25rem) !important;
+      }
+    }
+    @media (max-width: 640px) {
+      .support-resources-grid .resource-card {
+        flex: 0 1 100% !important;
+      }
+    }
+    /* Container style for connectors image */
+    .connector-image-container {
+      margin: 1.5rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .connector-image-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Visual tweak for Synaps button with corporate purple gradient */
+    .synaps-btn {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+      color: #ffffff !important;
+      border: none !important;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
+      transition: all 0.3s ease !important;
+    }
+    .synaps-btn:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5) !important;
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <!-- Neural Network Background Effect -->
+  <div class="neural-bg" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <!-- Clean, Transparent Webedia SVG Logo -->
+        <div class="logo-icon" style="width: auto; height: 32px; display: flex; align-items: center;">
+          <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="height: 30px; width: auto; background: transparent;" aria-label="Webedia">
+            <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-1">webedia</text>
+            <text x="370" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#6366f1" letter-spacing="-1">/.</text>
+          </svg>
+        </div>
+      </div>
+      <div class="header-actions" style="display: flex; gap: 0.75rem; align-items: center;">
+        <a href="#pacte-generator" class="header-btn secondary-btn" title="Interactive P.A.C.T.E. Prompt Generator">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          <span>P.A.C.T.E. Tool</span>
+        </a>
+        <!-- Synaps Access Button -->
+        <a href="https://synaps.webedia-group.com/" target="_blank" class="header-btn synaps-btn" title="Go to Synaps AI Webedia">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          <span>Log into Synaps</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">
+        FAQ about <span class="gradient-text">Synaps</span>
+      </h1>
+      <p class="hero-subtitle">
+        Your interactive guide for using Synaps, as well as best practices and all training information for <strong>Webedia</strong> teams.
+      </p>
+
+      <!-- Interactive Search Bar -->
+      <div class="search-wrapper">
+        <div class="search-box">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input 
+            type="search" 
+            id="faqSearchInput" 
+            placeholder="Search by keyword (e.g., PACTE, connectors, model, workflow, reminders...)" 
+            autocomplete="off"
+            aria-label="Search questions and answers in FAQ"
+          >
+          <button id="clearSearchBtn" class="clear-btn" title="Clear search" aria-label="Clear search" style="display: none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div class="search-status-bar">
+          <span id="searchResultCount" class="result-count">Showing all 28 questions</span>
+          <div class="expand-collapse-controls">
+            <button id="expandAllBtn" class="text-action-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              Expand all
+            </button>
+            <span class="divider">|</span>
+            <button id="collapseAllBtn" class="text-action-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+              Collapse all
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <nav class="category-filters" aria-label="FAQ modules filter">
+        <button class="filter-pill active" data-category="all">
+          <span class="pill-dot"></span>
+          All <span class="pill-count">28</span>
+        </button>
+        <button class="filter-pill" data-category="vision">
+          <span class="pill-icon">🎯</span>
+          I. What is Synaps' vision? <span class="pill-count">4</span>
+        </button>
+        <button class="filter-pill" data-category="tools">
+          <span class="pill-icon">⚡</span>
+          II. What tools & agents does it offer? <span class="pill-count">6</span>
+        </button>
+        <button class="filter-pill" data-category="prompts">
+          <span class="pill-icon">✍️</span>
+          III. How do I write a good Prompt? <span class="pill-count">3</span>
+        </button>
+        <button class="filter-pill" data-category="safety">
+          <span class="pill-icon">🛡️</span>
+          IV. Is it secure? <span class="pill-count">4</span>
+        </button>
+        <button class="filter-pill" data-category="roi">
+          <span class="pill-icon">📈</span>
+          V. How can Synaps help me? <span class="pill-count">3</span>
+        </button>
+        <button class="filter-pill" data-category="champions">
+          <span class="pill-icon">🌟</span>
+          VI. What is my role with Synaps? <span class="pill-count">4</span>
+        </button>
+        <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(168, 85, 247, 0.45);">
+          <span class="pill-icon">💡</span>
+          VII. Not working? What do I do? <span class="pill-count">4</span>
+        </button>
+      </nav>
+    </section>
+
+    <!-- Golden Rule Banner -->
+    <div class="golden-rule-banner">
+      <div class="banner-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div class="banner-content">
+        <div class="banner-title">Synaps Golden Rule</div>
+        <div class="banner-text">
+          <strong>«You are the Pilot, the AI is the Co-pilot»</strong> — AI enhances your productivity and proposes drafts, but critical judgment, strategic thinking, and final validation always remain in your hands.
+        </div>
+      </div>
+    </div>
+
+    <!-- Main FAQ Container -->
+    <section class="faq-container" id="faqList">
+
+      <!-- ==================== SECTION I ==================== -->
+      <div class="faq-section-block" data-section="vision" id="seccion-vision">
+        <div class="section-header">
+          <div class="section-tag">Module I</div>
+          <h2 class="section-title">What is Synaps and What Are its Objectives & Principles?</h2>
+          <p class="section-desc">Fundamentals, Webedia strategic vision, data privacy, and corporate governance.</p>
+        </div>
+
+        <!-- Question 1.1 -->
+        <article class="faq-card" data-category="vision" id="faq-1-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">1.1</span>
+                <h3 class="q-title">What is Synaps and what is its main vision?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                <strong>Synaps</strong> is <strong>Webedia's corporate artificial intelligence platform</strong>, inspired by the synapses of the human brain. It serves as a <strong>single and secure entry gateway to Google's Enterprise AI</strong> (Gemini Enterprise) for all <strong>Webedia</strong> teams.
+              </p>
+              <div class="callout-box">
+                <div class="callout-title">🎯 Strategic Vision</div>
+                <p>Driving <strong>Vision and Efficiency</strong> within the organization as a foundational pillar of the <strong>2026–2027 Roadmap</strong>. It symbolizes our neural network, the interconnection of multidisciplinary skills, and the augmented thinking speed of enterprise AI.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 1.2 -->
+        <article class="faq-card" data-category="vision" id="faq-1-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">1.2</span>
+                <h3 class="q-title">What are the key objectives of Synaps for the organization?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>The strategic objectives established for the global rollout of Synaps are:</p>
+              <div class="grid-cards-2">
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">👥</span><strong>500 Trained Users</strong></div>
+                  <p>Reach 500 fully trained and operational professionals actively using Synaps by <strong>December 2026</strong>.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">⚙️</span><strong>Use Case Factory</strong></div>
+                  <p>Consolidate an internal engine of solutions to multiply daily operational efficiency across all business units.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">⏱️</span><strong>Thousands of Hours Saved</strong></div>
+                  <p>Free our teams from repetitive manual tasks, saving thousands of working hours globally each year.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🚀</span><strong>Maximize Value Added</strong></div>
+                  <p>Refocus human talent on artistic creation, strategic thinking, and high-value business innovation.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 1.3 -->
+        <article class="faq-card" data-category="vision" id="faq-1-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">1.3</span>
+                <h3 class="q-title">How does Synaps guarantee the safety and confidentiality of my data?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Synaps is built under the **"user extension"** principle: it can only access information that you have <strong>explicit personal permissions to</strong> in your corporate accounts.
+              </p>
+              <div class="callout-box">
+                <div class="callout-title">🔒 Walled Garden Environment</div>
+                <p>Your prompts and business data remain strictly within Webedia's secure perimeter:</p>
+              </div>
+              <ul class="styled-list">
+                <li><strong>No External Training:</strong> Your data is NEVER used to train Google's public Gemini models or any third-party systems.</li>
+                <li><strong>Total Privacy:</strong> Your information is not shared, sold, or used for advertising purposes.</li>
+                <li><strong>Enterprise Security & ACLs:</strong> Strict adherence to existing system access controls, Data Loss Prevention (DLP), auditing, and compliance.</li>
+                <li><strong>Advanced Encryption:</strong> Robust encryption at rest and in transit to fully safeguard sensitive information.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 1.4 -->
+        <article class="faq-card" data-category="vision" id="faq-1-4">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">1.4</span>
+                <h3 class="q-title">What governance rules and intellectual property apply to Synaps?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>To ensure an orderly environment and protect strategic corporate assets:</p>
+              <ul class="styled-list">
+                <li><strong>Webedia Ownership:</strong> Any agent, workflow, or prompt developed on the Synaps platform belongs entirely to Webedia.</li>
+                <li><strong>Business Continuity:</strong> Critical operational agents must be shared or transferred to the department if a collaborator changes positions or leaves.</li>
+                <li><strong>Assigned Roles:</strong> It is highly advised to formally designate an <em>"owner"</em> and a <em>"backup"</em> for each agent active in production.</li>
+                <li><strong>Offboarding Protocol:</strong> Reassigning Synaps accesses is part of our standard corporate employee offboarding process.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- ==================== SECTION II ==================== -->
+      <div class="faq-section-block" data-section="tools" id="seccion-tools">
+        <div class="section-header">
+          <div class="section-tag">Module II</div>
+          <h2 class="section-title">Key Synaps Components: Your AI Tools</h2>
+          <p class="section-desc">Synaps Chat, Deep Research, Gemini Notebook, and the complete No-Code and Pro-Code Agent architecture.</p>
+        </div>
+
+        <!-- Question 2.1 -->
+        <article class="faq-card" data-category="tools" id="faq-2-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.1</span>
+                <h3 class="q-title">What is Synaps Chat and what is its purpose?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                <strong>Synaps Chat</strong> (also called Synaps Search) is the <strong>primary conversational interface</strong> of Gemini Enterprise, designed to answer queries, generate content, and streamline daily tasks as your smart assistant.
+              </p>
+              <div class="feature-box">
+                <h4>🔄 How does it work and what does it integrate?</h4>
+                <p>You input an instruction or prompt and Gemini coordinates capabilities with Google Search and authorized corporate connectors. It can query in real time your internal repos (<strong>Gmail, Google Drive, Google Calendar</strong>) or enterprise tools (<strong>Salesforce, CRM</strong>). You can type <code>@</code> to invoke specialist agents directly within the chat.</p>
+              </div>
+              <div class="grid-cards-2 mt-3">
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🧠</span><strong>"Memorize" Function</strong></div>
+                  <p>Saves your persistent preferences (format, tone, or active projects). If a prompt contradicts a saved memory, your current manual instruction takes precedence.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">📌</span><strong>Pinned Chats</strong></div>
+                  <p>Used strictly for your daily visual organization. They do not increase context relevance for the model or impact other independent sessions.</p>
+                </div>
+              </div>
+              <div class="callout-box warning-theme mt-3">
+                <div class="callout-title">⏳ 180-Day Expiration Rule</div>
+                <p>All chats have a maximum lifespan of <strong>180 days</strong>. Synaps Chat is not a file archive; make sure to save your key prompts and final deliverables in Google Drive or your usual work folders.</p>
+              </div>
+              <p class="mt-2"><strong>What it CANNOT do:</strong> Run continuous unattended processes (use <em>Workflow Agents</em> for that), connect to unauthorized external databases, or switch to unvetted models (it runs strictly on Gemini Pro and Flash enterprise editions).</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 2.2 -->
+        <article class="faq-card" data-category="tools" id="faq-2-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.2</span>
+                <h3 class="q-title">What is Deep Research and when should I use it?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                <strong>Deep Research</strong> is a Synaps autonomous agent that acts as an <strong>augmented analyst</strong>. It is capable of <strong>cross-referencing, comparing, and synthesizing information</strong> from multiple web sources and files for complex strategic analysis.
+              </p>
+              <div class="grid-cards-2">
+                <div class="benefit-card">
+                  <div class="benefit-title">💎 Ideal Use Cases</div>
+                  <ul>
+                    <li>Deep analysis of competitors, tenders, and market benchmarking.</li>
+                    <li>Generating trend reports and 360° commercial intelligence.</li>
+                    <li>Building business pitches backed by heavy documentation.</li>
+                  </ul>
+                </div>
+                <div class="benefit-card">
+                  <div class="benefit-title">⚠️ Guidelines & Limitations</div>
+                  <ul>
+                    <li><strong>High resource consumption:</strong> Performs multiple autonomous searches in loops and can take up to 10 minutes. Use carefully.</li>
+                    <li><strong>No Paywall Access:</strong> Crawls the public web; cannot bypass log-ins or paywalls.</li>
+                    <li><strong>Precise Scope:</strong> Narrow down your goal in the prompt to prevent generic or diluted reports.</li>
+                    <li><strong>Active Verification:</strong> It cites web links, but you should always double-check the quoted extracts.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 2.3 -->
+        <article class="faq-card" data-category="tools" id="faq-2-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.3</span>
+                <h3 class="q-title">What is Gemini Notebook and how does it help me become a subject expert?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                <strong>Gemini Notebook</strong> (formerly NotebookLM) lets you build your own **expert thematic companion** grounded in your reference documents (contracts, audits, guidelines, CVs, policies, or manuals). It will answer **ONLY based on the sources you upload**, citing the exact page and paragraph.
+              </p>
+              <div class="specs-grid">
+                <div class="spec-item">
+                  <span class="spec-number">Up to 300</span>
+                  <span class="spec-desc">Authorized sources per notebook (PDFs, Google Docs, Slides, URLs, YouTube videos, or audio)</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-number">500,000</span>
+                  <span class="spec-desc">Words per source (up to 200 MB per local file), processing hundreds of pages instantly</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-number">Audio Podcast</span>
+                  <span class="spec-desc">Dynamic two-host audio summaries, study guides, structured FAQs, and conceptual maps</span>
+                </div>
+              </div>
+              <div class="callout-box mt-3">
+                <div class="callout-title">💡 Notebook Best Practices</div>
+                <p>Create <strong>dedicated notebooks for single topics</strong> or clients. Remember there is no automatic live synchronization: if a file changes, re-import it and remove outdated sources.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 2.4 -->
+        <article class="faq-card" data-category="tools" id="faq-2-4">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.4</span>
+                <h3 class="q-title">What are Synaps AI Agents and what makes them different from traditional chatbots?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                <strong>AI Agents</strong> represent the step forward from simple tooling to a <strong>proactive virtual coworker</strong>, capable of reasoning, breaking down goals into subtasks, interacting with corporate tools, and adapting to changes.
+              </p>
+              <div class="vs-comparison">
+                <div class="vs-col chatbot-col">
+                  <div class="vs-tag">Traditional Chatbot</div>
+                  <p class="vs-metaphor">«Like a rigid, automated telephone switchboard»</p>
+                  <ul>
+                    <li>Follows static scripts and hardcoded responses.</li>
+                    <li>1 Question = 1 Immediate answer.</li>
+                    <li>Stops and waits for the next manual command.</li>
+                  </ul>
+                </div>
+                <div class="vs-col agent-col">
+                  <div class="vs-tag highlight">Synaps AI Agent</div>
+                  <p class="vs-metaphor">«Like an experienced, proactive team member»</p>
+                  <ul>
+                    <li>Understands the global goal and plans the workflow.</li>
+                    <li>Executes multiple coordinated actions across software suites.</li>
+                    <li>Autonomously resolves obstacles during execution.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 2.5 -->
+        <article class="faq-card" data-category="tools" id="faq-2-5">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.5</span>
+                <h3 class="q-title">How do I decide which solution or agent to use? (Decision Tree)</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Our rule of thumb is to **always start with the simplest solution** before scaling up:</p>
+              <div class="decision-ladder">
+                <div class="ladder-steps">
+                  <div class="step-badge">1. Is it a one-off task?</div>
+                  <span><strong>YES ➔</strong> Use <strong>Synaps Chat with a simple Prompt</strong>.</span>
+                </div>
+                <div class="ladder-steps">
+                  <div class="step-badge">2. Are there recurring instructions?</div>
+                  <span><strong>NO ➔</strong> Save a reusable <strong>Saved Prompt</strong> for you or your team.</span>
+                </div>
+                <div class="ladder-steps">
+                  <div class="step-badge">3. Does it require complex logic or external APIs?</div>
+                  <span><strong>YES ➔</strong> Scale to a <strong>Pro-Code Agent</strong> built with our tech team.</span>
+                </div>
+                <div class="ladder-steps">
+                  <div class="step-badge">4. No-Code automation?</div>
+                  <span>
+                    • If it's an <strong>interactive conversation</strong> ➔ <strong>Chat Agent</strong>.<br>
+                    • If it's a <strong>background step-by-step process</strong> (e.g., Gmail to Sheets) ➔ <strong>Workflow Agent</strong>.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 2.6 -->
+        <article class="faq-card" data-category="tools" id="faq-2-6">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.6</span>
+                <h3 class="q-title">How are No-Code agents created in Synaps and what are the best practices?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>You can build custom agents using natural language in the <strong>Agent Designer</strong> via two modes:</p>
+              <div class="grid-cards-2">
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🪄</span><strong>Workflow Builder</strong></div>
+                  <p>Describe your goal in natural language and the builder will draft the first interactive version. You can request tweaks on the fly.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🛠️</span><strong>The Compiler ("Build Manually")</strong></div>
+                  <p>Provides direct, granular control over system instructions, file sources, connector setups, and starter prompts.</p>
+                </div>
+              </div>
+              <div class="callout-box warning-theme mt-3">
+                <div class="callout-title">🔒 Your Private Sandbox is Secure</div>
+                <p>By default, <strong>all agents you create are strictly private and invisible to others</strong>. This allows you to experiment freely. Think carefully before activating connectors, and contact the Core Team to publish them in the Shared Gallery if they add value for the company.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- ==================== SECTION III ==================== -->
+      <div class="faq-section-block" data-section="prompts" id="seccion-prompts">
+        <div class="section-header">
+          <div class="section-tag">Module III</div>
+          <h2 class="section-title">Mastering Prompt Engineering</h2>
+          <p class="section-desc">The art of instructing Gemini, the standard P.A.C.T.E. methodology, and proven advanced techniques.</p>
+        </div>
+
+        <!-- Question 3.1 -->
+        <article class="faq-card" data-category="prompts" id="faq-3-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">3.1</span>
+                <h3 class="q-title">What is prompt engineering and why is it so important for using Synaps?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                <strong>Prompt engineering</strong> is the practice of <strong>designing and structuring precise instructions</strong> to retrieve the best possible output from Google's Gemini models.
+              </p>
+              <div class="key-takeaway">
+                💡 <strong>Key Principle:</strong> Your prompt's quality directly determines the output's quality. Treat AI as your <strong>highly capable but literal assistant</strong>, NEVER as a mind-reading magic oracle!
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 3.2 -->
+        <article class="faq-card" data-category="prompts" id="faq-3-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">3.2</span>
+                <h3 class="q-title">What is the P.A.C.T.E. method for creating effective prompts?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                The <strong>P.A.C.T.E.</strong> method is Webedia's corporate standard to construct precise and contextualized instructions:
+              </p>
+              <div class="pacte-framework-grid">
+                <div class="pacte-card letter-p">
+                  <div class="pacte-letter">P</div>
+                  <div class="pacte-name">Persona</div>
+                  <div class="pacte-desc">The role or specialty the AI assumes.</div>
+                  <div class="pacte-example"><em>E.g.:</em> «Act as a Senior UX Designer specialized in e-commerce».</div>
+                </div>
+                <div class="pacte-card letter-a">
+                  <div class="pacte-letter">A</div>
+                  <div class="pacte-name">Action</div>
+                  <div class="pacte-desc">The specific, broken-down task to execute.</div>
+                  <div class="pacte-example"><em>E.g.:</em> «Audit the navigation and draft design recommendations».</div>
+                </div>
+                <div class="pacte-card letter-c">
+                  <div class="pacte-letter">C</div>
+                  <div class="pacte-name">Context</div>
+                  <div class="pacte-desc">Background, constraints, and target audience.</div>
+                  <div class="pacte-example"><em>E.g.:</em> «Targeting a young audience in Spain browsing on mobile».</div>
+                </div>
+                <div class="pacte-card letter-t">
+                  <div class="pacte-letter">T</div>
+                  <div class="pacte-name">Tone</div>
+                  <div class="pacte-desc">Expected style or register of communication.</div>
+                  <div class="pacte-example"><em>E.g.:</em> «Corporate, constructive, direct, and concise».</div>
+                </div>
+                <div class="pacte-card letter-e">
+                  <div class="pacte-letter">E</div>
+                  <div class="pacte-name">Element</div>
+                  <div class="pacte-desc">The exact format or structure of the output.</div>
+                  <div class="pacte-example"><em>E.g.:</em> «A table with columns: Issue, Solution, and Impact».</div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 3.3 -->
+        <article class="faq-card" data-category="prompts" id="faq-3-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">3.3</span>
+                <h3 class="q-title">Are there advanced tips and techniques for high-quality prompts?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>In addition to the P.A.C.T.E. structure, apply these formal and proven techniques:</p>
+              
+              <h4 class="subhead mt-3">🎯 The 3 Prompting Techniques</h4>
+              <div class="grid-cards-3 mt-2">
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <span class="info-icon">⚡</span>
+                    <strong>Zero-Shot</strong>
+                  </div>
+                  <p><em>«Just tell it what you want»</em></p>
+                  <p class="text-sm">Requesting the task directly without providing examples. Very fast for simple tasks, but offers less control for complex requests.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <span class="info-icon">🎯</span>
+                    <strong>One-Shot</strong>
+                  </div>
+                  <p><em>«Guide it with one example»</em></p>
+                  <p class="text-sm">Including 1 solved example. This helps the AI understand the expected tone, formality, and structure.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <span class="info-icon">💎</span>
+                    <strong>Few-Shot</strong>
+                  </div>
+                  <p><em>«Show, don't just tell»</em></p>
+                  <p class="text-sm">Providing 2 to 3 concrete examples of the output. This is highly recommended for tasks with strict guidelines or classification rules.</p>
+                </div>
+              </div>
+
+              <!-- Meta-Prompting Tip -->
+              <div class="callout-box mt-3" style="border-left: 4px solid #6366f1;">
+                <div class="callout-title">🪄 Pro Tip: Auto-Optimization (Meta-Prompting)</div>
+                <p>
+                  When working in Synaps Chat and polishing a result message after message, <strong>don't manually copy and paste your edits</strong>. Once satisfied, ask Gemini:
+                </p>
+                <div class="highlight-quote mt-2" style="font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;">
+                  «Now review our entire conversation and consolidate it into a single master prompt, structured with the P.A.C.T.E. methodology, so I can save it to my library and reuse it in the future with a single click».
+                </div>
+              </div>
+
+              <h4 class="subhead mt-4">Best Practices and Recommended Habits</h4>
+              <ul class="styled-list mt-2">
+                <li><strong>Markdown Structuring:</strong> Use headings (<code>#</code>), lists, and bold text (<code>\*\*</code>) to structure your prompts; Gemini organizes logic better this way.</li>
+                <li><strong>Clarifying Prompting:</strong> Append at the end: <em>«Before drafting, ask me 3 questions to ensure you fully understand my objective»</em>.</li>
+                <li><strong>Multimodal Capture:</strong> Drag screenshots, graphs, or tables directly into the chat to analyze both text and image simultaneously.</li>
+                <li><strong>Negative Constraints:</strong> Clearly state what NOT to do (e.g., <em>«Avoid overly complex jargon and do not mention competing brands»</em>).</li>
+                <li><strong>Define Length:</strong> Specify length constraints (e.g., <em>«in exactly 3 paragraphs of 50 words each»</em>).</li>
+                <li><strong>Order of Constraints (Primacy/Recency):</strong> Models pay the most attention to the beginning and end of your instruction; place critical limits there.</li>
+                <li><strong>Self-Correction:</strong> Ask the AI to critique its work: <em>«Review your draft and identify any potential ambiguities or factual errors»</em>.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- ==================== SECTION IV ==================== -->
+      <div class="faq-section-block" data-section="safety" id="seccion-safety">
+        <div class="section-header">
+          <div class="section-tag">Module IV</div>
+          <h2 class="section-title">Responsible Use & AI Safety</h2>
+          <p class="section-desc">Google's ethical principles, mitigating hallucinations, the Golden Rule, and essential precautions.</p>
+        </div>
+
+        <!-- Question 4.1 -->
+        <article class="faq-card" data-category="safety" id="faq-4-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">4.1</span>
+                <h3 class="q-title">What are Google's AI principles that govern Synaps?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Google and Webedia govern the development and deployment of Synaps under 7 unbreakable ethical principles:</p>
+              <div class="principles-grid">
+                <div class="principle-item"><span class="p-num">1</span><div><strong>Socially beneficial:</strong> Provide tangible business value and benefit users.</div></div>
+                <div class="principle-item"><span class="p-num">2</span><div><strong>Avoid creating/reinforcing bias:</strong> Mitigate algorithmic bias in outputs and decisions.</div></div>
+                <div class="principle-item"><span class="p-num">3</span><div><strong>Built and tested for safety:</strong> Rigorous testing to avoid operational risks.</div></div>
+                <div class="principle-item"><span class="p-num">4</span><div><strong>Accountable to people:</strong> Always maintain human oversight and control.</div></div>
+                <div class="principle-item"><span class="p-num">5</span><div><strong>Privacy by design:</strong> Absolute protection and confidentiality of corporate data.</div></div>
+                <div class="principle-item"><span class="p-num">6</span><div><strong>Scientific excellence:</strong> High standards of technological rigor and updates.</div></div>
+                <div class="principle-item"><span class="p-num">7</span><div><strong>Ethical availability:</strong> Limiting use to applications aligned with these core principles.</div></div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 4.2 -->
+        <article class="faq-card" data-category="safety" id="faq-4-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">4.2</span>
+                <h3 class="q-title">How can I make sure that AI outputs are correct and not "hallucinations"?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                A "hallucination" happens when a model confidently invents incorrect facts. To prevent them:
+              </p>
+              <div class="check-actions-list">
+                <div class="check-action-item"><span class="check-icon">🔍</span><div><strong>Validate with Google:</strong> Use the doublecheck button in Gemini to search-verify claims in real time.</div></div>
+                <div class="check-action-item"><span class="check-icon">📌</span><div><strong>Verify Citations:</strong> Click on footnotes in Gemini Notebook or Synaps to review the source paragraph.</div></div>
+                <div class="check-action-item"><span class="check-icon">🧠</span><div><strong>Human Evaluation:</strong> Treat outputs as raw drafts; you carry the responsibility to verify key facts.</div></div>
+                <div class="check-action-item"><span class="check-icon">🔄</span><div><strong>Strict Alignment:</strong> Instruct the AI: <em>«If the answer cannot be verified in the sources provided, respond explicitly: "I do not have access to this information in my verified sources"»</em>.</div></div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 4.3 -->
+        <article class="faq-card" data-category="safety" id="faq-4-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">4.3</span>
+                <h3 class="q-title">What does the Golden Rule imply: "You are the Pilot, the AI is the Co-pilot"?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <div class="pilot-manifesto">
+                <div class="pilot-role">
+                  <div class="role-badge">You = The Pilot</div>
+                  <p>You hold the controls, lead the strategy, validate correctness, and assume final accountability for the work.</p>
+                </div>
+                <div class="copilot-role">
+                  <div class="role-badge copilot">Synaps = The Co-pilot</div>
+                  <p>Suggests routes, synthesizes sparse data, automates repetitive calculations, and drafts content to save you hours of manual flight.</p>
+                </div>
+              </div>
+              <p class="mt-3">
+                <strong>Never delegate your critical thinking</strong>. The AI amplifies your capabilities but never replaces your professional expertise and judgment.
+              </p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 4.4 -->
+        <article class="faq-card" data-category="safety" id="faq-4-4">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">4.4</span>
+                <h3 class="q-title">What other precautions should I keep in mind when using AI?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <ul class="styled-list">
+                <li><strong>Data Classification:</strong> Treat information you upload as internal working documents and avoid entering non-anonymized customer details or highly sensitive corporate metrics without prior approval.</li>
+                <li><strong>Augment, Don't Replace:</strong> Use AI to spark ideas, outline drafts, and process structured information, but rely on your own logic for strategic business decisions.</li>
+                <li><strong>Diverse Perspectives:</strong> Cross-reference AI-generated summaries with teammate opinions to avoid confirmation biases or narrow analyses.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- ==================== SECTION V ==================== -->
+      <div class="faq-section-block" data-section="roi" id="seccion-roi">
+        <div class="section-header">
+          <div class="section-tag">Module V</div>
+          <h2 class="section-title">From Obstacles to Quantifiable Gains</h2>
+          <p class="section-desc">Obstacle ➔ Action ➔ Gain impact framework, measurable KPIs, and proven real cases within Webedia.</p>
+        </div>
+
+        <!-- Question 5.1 -->
+        <article class="faq-card" data-category="roi" id="faq-5-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">5.1</span>
+                <h3 class="q-title">How do we identify the obstacles that Synaps can resolve?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Obstacles are daily operational pain points identified in Webedia's department workshops, grouped into 3 areas:</p>
+              <div class="pain-categories-grid">
+                <div class="pain-category-card">
+                  <div class="pain-icon">🧠</div>
+                  <h4>Cognitive Load & Information Overload</h4>
+                  <p>Saturation from endless email threads, file dispersion across fragmented folders, and burnout on repetitive, low-value-added administrative tasks.</p>
+                </div>
+                <div class="pain-category-card">
+                  <div class="pain-icon">⏳</div>
+                  <h4>Productivity & Operational Friction</h4>
+                  <p>Repetitive manual tasks (copying data from Gmail to Sheets, reconciling reports, aligning calendars) that consume your team's core hours.</p>
+                </div>
+                <div class="pain-category-card">
+                  <div class="pain-icon">🎨</div>
+                  <h4>Creative Blocks & Innovation Barriers</h4>
+                  <p>Writer's block, the need to quickly adapt a campaign concept for multiple channels, and a lack of time for deep strategic ideation.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 5.2 -->
+        <article class="faq-card" data-category="roi" id="faq-5-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">5.2</span>
+                <h3 class="q-title">How are these obstacles translated into measurable gains using Synaps?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>We apply the structured <strong>«Obstacle (Challenge) ➔ Solution (Action) ➔ Gain (Impact)»</strong> framework:</p>
+              <div class="flow-stages">
+                <div class="flow-stage">
+                  <div class="stage-tag pain">1. Obstacle</div>
+                  <p>The specific business friction before incorporating AI tools.</p>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-stage">
+                  <div class="stage-tag action">2. Solution (Action)</div>
+                  <p>Prompt executed and secure workspace tools connected in Synaps.</p>
+                </div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-stage">
+                  <div class="stage-tag gain">3. Gain (Impact)</div>
+                  <p>Quantified benefit in hours, analytical accuracy, or revenue.</p>
+                </div>
+              </div>
+              <h4 class="subhead mt-4">Quantifiable Impact KPIs:</h4>
+              <div class="pill-tags mt-2">
+                <span class="kpi-pill">⏱️ Net time saved (hours per week or month)</span>
+                <span class="kpi-pill">🚀 Increased turnaround speed and delivery agility</span>
+                <span class="kpi-pill">🎯 Decision reliability (100% verified sources)</span>
+                <span class="kpi-pill">🛡️ Risk mitigation & corporate brand safety control</span>
+                <span class="kpi-pill">💼 New business opportunities and account expansion</span>
+                <span class="kpi-pill">📈 Traffic growth and organic engagement on Google Discover</span>
+                <span class="kpi-pill">🧘 Reduced stress and increased strategic focus</span>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 5.3 -->
+        <article class="faq-card" data-category="roi" id="faq-5-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">5.3</span>
+                <h3 class="q-title">Can you provide concrete examples of how Synaps solves real obstacles?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Real cases validated and measured within Webedia units, including everyday micro-tasks:</p>
+              
+              <h4 class="subhead mt-3">⚡ Everyday Productivity Micro-tasks:</h4>
+              <div class="use-cases-grid mt-2" style="margin-bottom: 2rem;">
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📧</span><h5>Search emails & attachments</h5></div>
+                  <p class="case-desc">Ask Synaps to query specific threads without manually scouring Gmail. E.g., *"Find the latest budget sent by Mario Rigote regarding licenses and extract the total"*.</p>
+                  <div class="case-gain"><strong>Saving:</strong> Recovers attachments and buried data from your inbox in 5 seconds.</div>
+                </div>
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">🔍</span><h5>Locate documents in seconds</h5></div>
+                  <p class="case-desc">Forget searching through massive shared folders. E.g., *"Search my Drive for the Champions Onboarding document and outline the deliverables"*.</p>
+                  <div class="case-gain"><strong>Saving:</strong> Instant access to information without tedious file searches.</div>
+                </div>
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📁</span><h5>Organize and summarize files</h5></div>
+                  <p class="case-desc">Synthesize multiple documents at once. E.g., *"Read these three pitch PDFs and draw a comparative table highlighting the strengths of each"*.</p>
+                  <div class="case-gain"><strong>Saving:</strong> Avoids reading hundreds of pages of repetitive or dense project files.</div>
+                </div>
+                <div class="case-card" style="border-color: rgba(99, 102, 241, 0.3);">
+                  <div class="case-header"><span class="case-num" style="background: #6366f1;">📝</span><h5>Auto-status and reminders</h5></div>
+                  <p class="case-desc">Draft quick updates on your work. E.g., *"Review my emails from yesterday and today's calendar, and draft a daily status email to send to my manager"*.</p>
+                  <div class="case-gain"><strong>Saving:</strong> Automates internal status reporting and keeps your priorities aligned.</div>
+                </div>
+              </div>
+
+              <h4 class="subhead">🚀 Advanced Business Use Cases:</h4>
+              <div class="use-cases-grid mt-2">
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#1</span><h5>Multi-Timezone meeting sync</h5></div>
+                  <p class="case-desc">An agent that cross-references global calendars, balances timezones, and auto-schedules invites.</p>
+                  <div class="case-gain"><strong>Gain:</strong> 1 hour saved per global meeting and zero timezone misalignments.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#2</span><h5>Active competitor monitoring</h5></div>
+                  <p class="case-desc">Automated weekly ingestion of rival brand launches to instantly generate tactical pitches.</p>
+                  <div class="case-gain"><strong>Gain:</strong> More active brands in portfolio and increased pitch conversion rate.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#3</span><h5>Cinema showtimes web scraping</h5></div>
+                  <p class="case-desc">Automated scraping of various theater websites to validate showtimes and billboard accuracy.</p>
+                  <div class="case-gain"><strong>Gain:</strong> Net saving of 8 hours per week per operator.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#4</span><h5>Trending news & hot debates roundup</h5></div>
+                  <p class="case-desc">Curation of breaking news topics linked dynamically with Webedia's editorial archives.</p>
+                  <div class="case-gain"><strong>Gain:</strong> 50% reduction in editorial meeting prep time.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#5</span><h5>Campaign budget deviations alert</h5></div>
+                  <p class="case-desc">Gemini parses Gmail alerts, matches active accounts, and highlights budget overruns.</p>
+                  <div class="case-gain"><strong>Gain:</strong> Elimination of financial leaks from neglected campaigns or missed alerts.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#6</span><h5>Data-Driven editorial performance</h5></div>
+                  <p class="case-desc">Cross-referencing internal traffic metrics with search trends to pitch viral content topics.</p>
+                  <div class="case-gain"><strong>Gain:</strong> 20 hours per month recovered for content writers.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#7</span><h5>Google Discover optimization plan</h5></div>
+                  <p class="case-desc">3-Step technical implementation checklist (key images, Core Web Vitals, and enticing titles).</p>
+                  <div class="case-gain"><strong>Gain:</strong> Immediate capture of passive organic traffic across long-tail articles.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#8</span><h5>Rights claims & Brand Safety audits</h5></div>
+                  <p class="case-desc">Filters fraudulent copyright claims and monitors safety compliance on social handles.</p>
+                  <div class="case-gain"><strong>Gain:</strong> 1 weekly hour saved and minimization of reputational risks.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#9</span><h5>Campaign reporting archiver (XMAS)</h5></div>
+                  <p class="case-desc">Scans inbox, downloads reporting decks, and structures them into secure client folders.</p>
+                  <div class="case-gain"><strong>Gain:</strong> 100% automated archiving and 0 hours spent on manual file sorting.</div>
+                </div>
+                <div class="case-card">
+                  <div class="case-header"><span class="case-num">#10</span><h5>Automated SEO client audits</h5></div>
+                  <p class="case-desc">An unattended workflow that triggers and parses SEMrush, Console, and GA4 exports.</p>
+                  <div class="case-gain"><strong>Gain:</strong> Drastic reduction in audit generation times.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- ==================== SECTION VI ==================== -->
+      <div class="faq-section-block" data-section="champions" id="seccion-champions">
+        <div class="section-header">
+          <div class="section-tag">Module VI</div>
+          <h2 class="section-title">Your Role with Synaps: From Training to Daily Action</h2>
+          <p class="section-desc">Expectations as a trained user, your personal adoption journey, and the support resources available.</p>
+        </div>
+
+        <!-- Question 6.1 -->
+        <article class="faq-card" data-category="champions" id="faq-6-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">6.1</span>
+                <h3 class="q-title">What is expected of me now that I have finished the Synaps training?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                The goal of your training is not for you to become an AI developer, but to <strong>naturally integrate Synaps as your day-to-day corporate co-pilot</strong>. As a certified Synaps user, your daily focus relies on 4 key pillars:
+              </p>
+              <div class="grid-cards-2 mt-3">
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🕵️‍♀️</span><strong>1. Inefficiency Explorer</strong></div>
+                  <p>Proactively spot repetitive manual tasks that eat up your time (such as drafting status emails, parsing complex threads, sorting files) and delegate them to Synaps.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🚀</span><strong>2. Content Creator & Validator (The Pilot)</strong></div>
+                  <p>Apply your expertise and critical thinking. Use Synaps to speed up initial draft mockups, reports, or research, but ensure that final strategic validation stays with you.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">📣</span><strong>3. Team Collaborator</strong></div>
+                  <p>Be an active contributor to organizational change. If you draft a highly effective prompt, build a useful agent, or set up a flow that saves you an hour daily, share it with your department.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🧪</span><strong>4. Iteration Expert</strong></div>
+                  <p>Adopt an experiment-and-learn mindset. Never stop at Gemini's very first reply; interact with it, refine the prompt, and direct the output to perfection in the same chat session.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 6.2 (Timeline) -->
+        <article class="faq-card" data-category="champions" id="faq-6-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">6.2</span>
+                <h3 class="q-title">What is my personal adoption roadmap for the next 3 months?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Adopting artificial intelligence in your daily routine is a progressive journey. We recommend this **4-phase personal adoption roadmap** to anchor your training:</p>
+              
+              <!-- Timeline Container -->
+              <div class="timeline-container mt-4" style="position: relative; padding-left: 20px; border-left: 3px solid rgba(168, 85, 247, 0.3); margin-left: 10px;">
+                
+                <!-- Phase 1 -->
+                <div class="timeline-item" style="position: relative; margin-bottom: 25px;">
+                  <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+                  <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                    <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Phase 1</span>
+                    <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Day +15</span>
+                  </div>
+                  <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Mapping Your Day-to-Day</strong></h4>
+                  <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Pinpoint your top 3 weekly operational bottleneck tasks and outline how Synaps Chat or connectors can help resolve them.</p>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="timeline-item" style="position: relative; margin-bottom: 25px;">
+                  <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+                  <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                    <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Phase 2</span>
+                    <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Day +1 Month</span>
+                  </div>
+                  <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Tool Mastery</strong></h4>
+                  <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Get comfortable with the **P.A.C.T.E.** prompt methodology and start leveraging real-time extensions to speed up searches and reporting.</p>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="timeline-item" style="position: relative; margin-bottom: 25px;">
+                  <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+                  <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                    <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Phase 3</span>
+                    <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Day +2 Months</span>
+                  </div>
+                  <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Building Habits</strong></h4>
+                  <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Conscientiously substitute manual data extraction or formatting with live queries to Synaps, integrating it as a start-of-day browser tab.</p>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="timeline-item" style="position: relative; margin-bottom: 5px;">
+                  <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+                  <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+                    <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Phase 4</span>
+                    <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Day +3 Months</span>
+                  </div>
+                  <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Consolidate and Share</strong></h4>
+                  <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Quantify your saved hours. Document your best prompts and use cases internally to share proven efficiencies with your department.</p>
+                </div>
+
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 6.3 (Support Cards) -->
+        <article class="faq-card" data-category="champions" id="faq-6-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">6.3</span>
+                <h3 class="q-title">What support resources and channels do I have to keep learning?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>You are never alone on your AI journey. Webedia and the Core Team have established a **robust support ecosystem** to help you:</p>
+              <div class="grid-cards-2 mt-3">
+                <!-- Card 1: Guides and Prompts -->
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🧰</span><strong>Guides & Prompt Libraries</strong></div>
+                  <p>Optimized, ready-to-use templates tailored to your department's specific workflows and daily deliverables.</p>
+                </div>
+                <!-- Card 2: FAQ and Knowledge Base -->
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">📖</span><strong>FAQ & Knowledge Base</strong></div>
+                  <p>This interactive portal, continuously updated with fresh feature rollouts, guidelines, and advanced tips.</p>
+                </div>
+                <!-- Card 3: Community Channel -->
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">💬</span><strong>Community & Live Support</strong></div>
+                  <p>A private Google Chat room where Webedia users share questions, custom agents, and productivity wins.</p>
+                </div>
+                <!-- Card 4: Local Champions -->
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🆘</span><strong>Direct Line with Champions</strong></div>
+                  <p>The designated Champion in your team is your closest expert to assist with prompt refining and use cases.</p>
+                </div>
+                <!-- Card 5: Core Team Contact -->
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">⚡</span><strong>Core Team Help Desk</strong></div>
+                  <p>Dedicated technical support for troubleshooting system bugs, licensing, or publishing agents to the gallery.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- ==================== SECTION VII ==================== -->
+      <div class="faq-section-block" data-section="bestpractices" id="seccion-bestpractices">
+        <div class="section-header">
+          <div class="section-tag" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">Module VII</div>
+          <h2 class="section-title">Best Practices & Technical Support</h2>
+          <p class="section-desc">Essential guide to troubleshooting workspace connectors, optimizing output quality, and structuring your chat workspaces.</p>
+        </div>
+        
+        <!-- Question 7.1 -->
+        <article class="faq-card" data-category="bestpractices" id="faq-7-1">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">7.1</span>
+                <h3 class="q-title">Why isn't my agent finding files or throwing errors? (Connectors)</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                The single most common cause for an agent returning blank results or throwing a search error is that <strong>workspace connectors are turned off</strong> or missing permissions.
+              </p>
+              <div class="callout-box warning-theme">
+                <div class="callout-title">⚠️ The Importance of Active Connectors</div>
+                <p>Connectors act as the "eyes and ears" of your agent. If the Google Workspace connectors (Gmail, Drive, Calendar, etc.) are disabled, the system has no technical permission to access your workspace and queries will fail.</p>
+              </div>
+              <p class="mt-3"><strong>How to resolve:</strong> Check that the primary connector switch and authorizations for your workspace apps are toggled on:</p>
+              <div class="connector-image-container">
+                <img src="image.png" alt="Connector status panel in Synaps" aria-label="Screenshot of active connector statuses in Synaps UI">
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 7.2 -->
+        <article class="faq-card" data-category="bestpractices" id="faq-7-2">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">7.2</span>
+                <h3 class="q-title">What can I do if the agent doesn't deliver the exact result I need?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Interaction with AI is conversational and iterative. If the initial response falls short, utilize these straightforward adjustments:</p>
+              <ul class="styled-list">
+                <li><strong>Switch the Model:</strong> In the configuration bar, toggle between the different versions of Gemini (e.g., swapping from fast/efficient models to highly logical, reasoning-focused ones). Complex, multi-step queries often perform much better on reasoning models.</li>
+                <li><strong>Try another Agent:</strong> If you are working in a generalized chat, invoke a specialized agent from your directory using the <code>@agent_name</code> command to handle that sub-task.</li>
+                <li><strong>Give Feedback to the Agent:</strong> You do not need to restart your chat. Command edits on the active message. E.g., *"This tone is too formal, rewrite it more conversationally"* or *"Omit the budget estimations and focus purely on the calendar schedule"*.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 7.3 -->
+        <article class="faq-card" data-category="bestpractices" id="faq-7-3">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">7.3</span>
+                <h3 class="q-title">When and why should I start a completely new chat session?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                It is easy to keep a single chat open for days, but this degrades system focus and slows down response times. **We recommend starting a fresh, clean conversation in the following scenarios:**
+              </p>
+              <div class="grid-cards-3">
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🧹</span><strong>Topic Shift</strong></div>
+                  <p class="text-sm">If you switch from writing an email template to mapping out cost structures, start a fresh chat. This prevents old parameters from confusing your new objective.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">📏</span><strong>Endless Conversations</strong></div>
+                  <p class="text-sm">If a chat becomes extremely long, the agent carries too much background data. It will consume more memory, respond slower, or start "forgetting" initial instructions.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🔄</span><strong>Too Many Refinements</strong></div>
+                  <p class="text-sm">If you have refined or corrected a prompt several times and the output has drifted, start a clean chat and submit your final, corrected prompt.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Question 7.4 -->
+        <article class="faq-card" data-category="bestpractices" id="faq-7-4">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">7.4</span>
+                <h3 class="q-title">What is the best architecture to structure workflow agents?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copy direct link" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                When building complex multi-step automations and flows, avoid the classic pitfall of cramming all steps into a single, massive agent.
+              </p>
+              <div class="key-takeaway" style="border-left-color: #a855f7;">
+                💡 <strong>The Modularity Rule:</strong> It is infinitely better to build **small, specialized agents for each step of your workflow** than one all-inclusive, massive agent.
+              </div>
+              <p class="mt-3"><strong>Why is a modular architecture superior?</strong></p>
+              <ul class="styled-list">
+                <li><strong>Higher Reliability:</strong> A specialized agent focuses 100% of its instructions on one precise outcome (e.g., only data extraction or only translation), reducing hallucinations to a minimum.</li>
+                <li><strong>Easier Maintenance:</strong> If one step of your workflow changes, you only need to modify that single agent's prompts without risking the rest of the flow.</li>
+                <li><strong>Component Reusability:</strong> You can reuse that specific micro-agent in other workflows across your department.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <!-- Empty state when search returns no matching queries -->
+      <div id="noResultsBlock" class="no-results-block" style="display: none;">
+        <div class="no-results-icon">🔍</div>
+        <h3>No matching questions found</h3>
+        <p>Try searching other terms like <em>"PACTE"</em>, <em>"connectors"</em>, <em>"model"</em>, <em>"workflow"</em>, <em>"reminders"</em>, or <em>"best practices"</em>.</p>
+        <button id="resetSearchBtn" class="primary-btn mt-3">View all questions</button>
+      </div>
+    </section>
+
+    <!-- Interactive Tool: P.A.C.T.E. Prompt Generator -->
+    <section class="interactive-tool-section" id="pacte-generator">
+      <div class="tool-card">
+        <div class="tool-header">
+          <div class="badge-tool">Interactive Training Tool</div>
+          <h2>P.A.C.T.E. Prompt Builder & Validator</h2>
+          <p>Use this interactive assistant to structure your prompts with Synaps' official methodology before copying them into Gemini.</p>
+        </div>
+        <div class="tool-grid">
+          <div class="tool-inputs">
+            <div class="input-group">
+              <label for="pInput"><strong>P</strong>ersona (Who should the AI be?)</label>
+              <input type="text" id="pInput" placeholder="E.g., You are an editor-in-chief specializing in entertainment trends...">
+            </div>
+            <div class="input-group">
+              <label for="aInput"><strong>A</strong>ction (What exactly should it do?)</label>
+              <input type="text" id="aInput" placeholder="E.g., Draft 3 headline options and a 150-word summary...">
+            </div>
+            <div class="input-group">
+              <label for="cInput"><strong>C</strong>ontext (What background data and audience does it have?)</label>
+              <input type="text" id="cInput" placeholder="E.g., Targeting the SensaCine audience in Spain for the weekend movie guide...">
+            </div>
+            <div class="input-group">
+              <label for="tInput"><strong>T</strong>one (What is the communication style?)</label>
+              <input type="text" id="tInput" placeholder="E.g., Energetic, engaging, accurate, and completely free of clickbait...">
+            </div>
+            <div class="input-group">
+              <label for="eInput"><strong>E</strong>lement (What is the output format?)</label>
+              <input type="text" id="eInput" placeholder="E.g., A numbered list with bold highlights for each headline...">
+            </div>
+            <div class="tool-buttons">
+              <button id="fillSamplePromptBtn" class="secondary-btn">Load Demo Example</button>
+              <button id="clearPromptBtn" class="clear-tool-btn">Clear</button>
+            </div>
+          </div>
+          <div class="tool-preview">
+            <div class="preview-header">
+              <span>Generated Prompt:</span>
+              <button id="copyPromptResultBtn" class="copy-pill-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Prompt
+              </button>
+            </div>
+            <div class="preview-box" id="promptOutputBox">
+              <span class="preview-placeholder">Fill out the fields or click "Load Demo Example" to see the generated prompt compile in real time, ready to copy into Synaps Chat.</span>
+            </div>
+            <div class="preview-tip">
+              <strong>Training Tip:</strong> Paste this prompt directly into <strong>Synaps Chat</strong>. If the answer isn't 100% perfect, iterate by asking for specific stylistic tweaks!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">Synaps • Webedia</div>
+        <p>Corporate Learning & Artificial Intelligence Innovation Hub.</p>
+      </div>
+      <div class="footer-right">
+        <span>«You are the Pilot, the AI is the Co-pilot»</span>
+        <button id="backToTopBtn" class="back-top-btn" title="Back to top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          Back to Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast -->
+  <div id="toastNotification" class="toast" role="alert" aria-live="assertive">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">Link copied to clipboard</span>
+  </div>
+
+  <!-- Interactive JavaScript Controller -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Interactive Accordions (Details / Summary Link Copying)
+      const summaries = document.querySelectorAll(".faq-summary");
+      summaries.forEach(summary => {
+        summary.addEventListener("click", function(e) {
+          if (e.target.closest(".copy-link-btn")) {
+            e.preventDefault();
+            const card = this.closest(".faq-card");
+            const id = card.id;
+            const url = window.location.origin + window.location.pathname + '#' + id;
+            navigator.clipboard.writeText(url).then(() => {
+              const toast = document.getElementById("toastNotification");
+              const toastMsg = document.getElementById("toastMessage");
+              toastMsg.textContent = "Question link copied to clipboard!";
+              toast.classList.add("show");
+              setTimeout(() => toast.classList.remove("show"), 3000);
+            });
+            return;
+          }
+        });
+      });
+
+      // 2. Expand / Collapse Controls
+      document.getElementById("expandAllBtn").addEventListener("click", function() {
+        document.querySelectorAll(".faq-details").forEach(detail => detail.setAttribute("open", "true"));
+      });
+      document.getElementById("collapseAllBtn").addEventListener("click", function() {
+        document.querySelectorAll(".faq-details").forEach(detail => detail.removeAttribute("open"));
+      });
+
+      // 3. Category Filter System
+      const pills = document.querySelectorAll(".filter-pill");
+      pills.forEach(pill => {
+        pill.addEventListener("click", function() {
+          pills.forEach(p => p.classList.remove("active"));
+          this.classList.add("active");
+          
+          const cat = this.getAttribute("data-category");
+          const blocks = document.querySelectorAll(".faq-section-block");
+          const cards = document.querySelectorAll(".faq-card");
+          
+          if (cat === "all") {
+            blocks.forEach(b => b.style.display = "block");
+            cards.forEach(c => c.style.display = "block");
+          } else {
+            blocks.forEach(b => {
+              const hasVisibleCards = Array.from(b.querySelectorAll(".faq-card")).some(c => c.getAttribute("data-category") === cat);
+              b.style.display = hasVisibleCards ? "block" : "none";
+            });
+            cards.forEach(c => {
+              c.style.display = c.getAttribute("data-category") === cat ? "block" : "none";
+            });
+          }
+          updateResultCounter(cat);
+        });
+      });
+
+      // 4. Real-time Search Engine
+      const searchInput = document.getElementById("faqSearchInput");
+      const clearBtn = document.getElementById("clearSearchBtn");
+      
+      searchInput.addEventListener("input", function() {
+        const text = this.value.toLowerCase().trim();
+        clearBtn.style.display = text.length > 0 ? "flex" : "none";
+        filterFAQ(text);
+      });
+      clearBtn.addEventListener("click", function() {
+        searchInput.value = "";
+        this.style.display = "none";
+        filterFAQ("");
+      });
+
+      function filterFAQ(text) {
+        const cards = document.querySelectorAll(".faq-card");
+        const blocks = document.querySelectorAll(".faq-section-block");
+        const noResults = document.getElementById("noResultsBlock");
+        let visibleCount = 0;
+
+        if (text === "") {
+          const activePill = document.querySelector(".filter-pill.active").getAttribute("data-category");
+          pills.forEach(p => { if (p.getAttribute("data-category") === activePill) p.click(); });
+          noResults.style.display = "none";
+          return;
+        }
+
+        cards.forEach(c => {
+          const title = c.querySelector(".q-title").textContent.toLowerCase();
+          const content = c.querySelector(".faq-content").textContent.toLowerCase();
+          if (title.includes(text) || content.includes(text)) {
+            c.style.display = "block";
+            visibleCount++;
+          } else {
+            c.style.display = "none";
+          }
+        });
+
+        blocks.forEach(b => {
+          const hasVisible = Array.from(b.querySelectorAll(".faq-card")).some(c => c.style.display === "block");
+          b.style.display = hasVisible ? "block" : "none";
+        });
+
+        document.getElementById("searchResultCount").textContent = `Showing ${visibleCount} of 28 questions`;
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+
+      function updateResultCounter(cat) {
+        const cards = document.querySelectorAll(".faq-card");
+        let count = 0;
+        cards.forEach(c => {
+          if (cat === "all" || c.getAttribute("data-category") === cat) count++;
+        });
+        document.getElementById("searchResultCount").textContent = `Showing ${count} of 28 questions`;
+      }
+
+      document.getElementById("resetSearchBtn").addEventListener("click", function() {
+        document.querySelector('.filter-pill[data-category="all"]').click();
+        searchInput.value = "";
+        clearBtn.style.display = "none";
+        filterFAQ("");
+      });
+    });
+  </script>
+
+  <!-- External Script -->
+  <script src="app.js" defer></script>
+</body>
+</html>
