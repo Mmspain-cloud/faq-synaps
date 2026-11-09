@@ -1,181 +1,93 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Synaps FAQ | Centro de Formación Webedia</title>
-
   <meta name="description" content="Portal interactivo de FAQ y Guía de Formación de Synaps, la plataforma de Inteligencia Artificial de Webedia.">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
-
   <style>
-
     /* Alineación y centrado de las tarjetas de soporte en 6.3 */
-
     .support-resources-grid {
-
       display: flex !important;
-
       flex-wrap: wrap !important;
-
       justify-content: center !important;
-
       gap: 1.25rem !important;
-
     }
-
     .support-resources-grid .resource-card {
-
       flex: 0 1 calc(33.333% - 1.25rem) !important;
-
       min-width: 280px !important;
-
       box-sizing: border-box !important;
-
     }
-
     @media (max-width: 992px) {
-
       .support-resources-grid .resource-card {
-
         flex: 0 1 calc(50% - 1.25rem) !important;
-
       }
-
     }
-
     @media (max-width: 640px) {
-
       .support-resources-grid .resource-card {
-
         flex: 0 1 100% !important;
-
       }
-
     }
-
-
-
     /* Estilo contenedor para la imagen de los conectores */
-
     .connector-image-container {
-
       margin: 1.5rem 0;
-
       border-radius: 12px;
-
       overflow: hidden;
-
       border: 1px solid rgba(255, 255, 255, 0.1);
-
       background: rgba(0, 0, 0, 0.3);
-
       display: flex;
-
       justify-content: center;
-
       box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-
     }
-
     .connector-image-container img {
-
       max-width: 100%;
-
       height: auto;
-
       display: block;
-
     }
-
     
-
     /* Ajuste visual para el botón de Synaps con degradado morado corporativo */
-
     .synaps-btn {
-
       background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
-
       color: #ffffff !important;
-
       border: none !important;
-
       box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3) !important;
-
       transition: all 0.3s ease !important;
-
     }
-
     .synaps-btn:hover {
-
       transform: translateY(-2px) !important;
-
       box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5) !important;
-
     }
-
   </style>
-
 </head>
-
 <body data-theme="light">
-
   <!-- Fondo con efecto de red neuronal -->
-
   <div class="neural-bg" aria-hidden="true">
-
     <div class="glow-orb orb-1"></div>
-
     <div class="glow-orb orb-2"></div>
-
     <div class="glow-orb orb-3"></div>
-
     <div class="grid-overlay"></div>
-
   </div>
-
   <!-- Barra de Navegación Superior -->
-
   <header class="site-header">
-
     <div class="header-container">
-
       <div class="brand">
-
         <!-- Logo SVG Webedia limpio y transparente sin títulos adyacentes -->
-
         <div class="logo-icon" style="width: auto; height: 32px; display: flex; align-items: center;">
-
           <svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="height: 30px; width: auto; background: transparent;" aria-label="Webedia">
-
             <text x="0" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#ffffff" letter-spacing="-1">webedia</text>
-
             <text x="370" y="58" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="56" font-weight="800" fill="#6366f1" letter-spacing="-1">/.</text>
-
           </svg>
-
         </div>
-
       </div>
-
     <div class="header-actions" style="display: flex; gap: 0.75rem; align-items: center;">
     <!-- BOTÓN PARA CAMBIAR A INGLÉS -->
     <a href="./en/index.html" class="header-btn secondary-btn" title="Switch to English" style="padding: 0.5rem 0.9rem;">
         <span>English</span>
     </a>
-
     <!-- Resto de botones -->
     <a href="#pacte-generator" class="header-btn secondary-btn" title="Generador interactivo de Prompts P.A.C.T.E.">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
@@ -186,341 +98,173 @@
         <span>Entrar a Synaps</span>
     </a>
 </div>
-
     </div>
-
   </header>
-
   <main class="main-content">
-
     <!-- Hero Section -->
-
     <section class="hero-section">
-
       <h1 class="hero-title">
-
         FAQ sobre <span class="gradient-text">Synaps</span>
-
       </h1>
-
       <p class="hero-subtitle">
-
         Tu guía interactiva para el uso de Synaps, así como las mejores prácticas y toda la información para formación de los equipos de <strong>Webedia</strong>.
-
       </p>
-
       <!-- Barra de Búsqueda Interactiva -->
-
       <div class="search-wrapper">
-
         <div class="search-box">
-
           <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-
             <circle cx="11" cy="11" r="8"></circle>
-
             <path d="m21 21-4.35-4.35"></path>
-
           </svg>
-
           <input 
-
             type="search" 
-
             id="faqSearchInput" 
-
             placeholder="Buscar por palabra clave (ej. PACTE, conectores, modelo, flujo, recordatorios...)" 
-
             autocomplete="off"
-
             aria-label="Buscar preguntas y respuestas en el FAQ"
-
           >
-
           <button id="clearSearchBtn" class="clear-btn" title="Limpiar búsqueda" aria-label="Limpiar búsqueda" style="display: none;">
-
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-
           </button>
-
         </div>
-
         <div class="search-status-bar">
-
-          <span id="searchResultCount" class="result-count">Mostrando todas las 28 preguntas</span>
-
+          <span id="searchResultCount" class="result-count">Mostrando todas las 31 preguntas</span>
           <div class="expand-collapse-controls">
-
             <button id="expandAllBtn" class="text-action-btn">
-
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-
               Expandir todas
-
             </button>
-
             <span class="divider">|</span>
-
             <button id="collapseAllBtn" class="text-action-btn">
-
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
-
               Colapsar todas
-
             </button>
-
           </div>
-
         </div>
-
       </div>
-
       <!-- Filtros por Categoría (Pills) -->
-
       <nav class="category-filters" aria-label="Filtro de módulos del FAQ">
-
         <button class="filter-pill active" data-category="all">
-
           <span class="pill-dot"></span>
-
-          Todas <span class="pill-count">28</span>
-
+          Todas <span class="pill-count">31</span>
         </button>
-
         <button class="filter-pill" data-category="vision">
-
           <span class="pill-icon">🎯</span>
-
           I. ¿Cuál es la visión de Synaps? <span class="pill-count">4</span>
-
         </button>
-
         <button class="filter-pill" data-category="tools">
-
           <span class="pill-icon">⚡</span>
-
-          II. ¿Que Herramientas y agentes ofrece? <span class="pill-count">6</span>
-
+          II. ¿Que Herramientas y agentes ofrece? <span class="pill-count">9</span>
         </button>
-
         <button class="filter-pill" data-category="prompts">
-
           <span class="pill-icon">✍️</span>
-
           III. ¿Cómo genero un buen Prompt? <span class="pill-count">3</span>
-
         </button>
-
         <button class="filter-pill" data-category="safety">
-
           <span class="pill-icon">🛡️</span>
-
           IV. ¿Es seguro? <span class="pill-count">4</span>
-
         </button>
-
         <button class="filter-pill" data-category="roi">
-
           <span class="pill-icon">📈</span>
-
           V. ¿Cómo puede ayudarme Synaps? <span class="pill-count">3</span>
-
         </button>
-
         <button class="filter-pill" data-category="champions">
-
           <span class="pill-icon">🌟</span>
-
           VI. ¿Cuál será mi rol con Synaps? <span class="pill-count">4</span>
-
         </button>
-
         <button class="filter-pill" data-category="bestpractices" style="border-color: rgba(168, 85, 247, 0.45);">
-
           <span class="pill-icon">💡</span>
-
           VII. No funciona ¿Qué hago? <span class="pill-count">4</span>
-
         </button>
-
       </nav>
-
     </section>
-
     <!-- Banner Regla de Oro -->
-
     <div class="golden-rule-banner">
-
       <div class="banner-icon">
-
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-
       </div>
-
       <div class="banner-content">
-
         <div class="banner-title">Regla de Oro de Synaps</div>
-
         <div class="banner-text">
-
           <strong>«Tú eres el Piloto, la IA es el Copiloto»</strong> — La IA aumenta tu productividad y propone borradores, pero el juicio crítico, la estrategia y la validación final siempre están en tus manos.
-
         </div>
-
       </div>
-
     </div>
-
     <!-- Contenedor Principal de Preguntas del FAQ -->
-
     <section class="faq-container" id="faqList">
-
       <!-- ==================== SECCIÓN I ==================== -->
-
       <div class="faq-section-block" data-section="vision" id="seccion-vision">
-
         <div class="section-header">
-
           <div class="section-tag">Módulo I</div>
-
           <h2 class="section-title">¿Qué es Synaps y Cuáles son sus Objetivos y Principios?</h2>
-
           <p class="section-desc">Fundamentos, visión estratégica de Webedia, privacidad y gobernanza corporativa.</p>
-
         </div>
-
         <!-- Pregunta 1.1 -->
-
         <article class="faq-card" data-category="vision" id="faq-1-1">
-
           <details class="faq-details">
-
             <summary class="faq-summary">
-
               <div class="summary-left">
-
                 <span class="q-number">1.1</span>
-
                 <h3 class="q-title">¿Qué es Synaps y cuál es su visión principal?</h3>
-
               </div>
-
               <div class="summary-actions">
-
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
-
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-
                 </button>
-
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-
               </div>
-
             </summary>
-
             <div class="faq-content">
-
               <p>
-
                 <strong>Synaps</strong> es la <strong>plataforma de inteligencia artificial de Webedia</strong>, inspirada en las sinapsis del cerebro humano. Actúa como una <strong>puerta de entrada única y segura a la inteligencia artificial de Google</strong> (Gemini Enterprise) para todos los equipos de <strong>Webedia</strong>.
-
               </p>
-
               <div class="callout-box">
-
                 <div class="callout-title">🎯 Visión Estratégica</div>
-
                 <p>Impulsar la <strong>Visión y la Eficiencia</strong> dentro de la organización como pilar fundamental de la <strong>Hoja de Ruta 2026–2027</strong>. Simboliza la red neuronal, la interconexión de habilidades multidisciplinares y la velocidad de pensamiento aumentada de la IA empresarial.</p>
-
               </div>
-
             </div>
-
           </details>
-
         </article>
-
         <!-- Pregunta 1.2 -->
-
         <article class="faq-card" data-category="vision" id="faq-1-2">
-
           <details class="faq-details">
-
             <summary class="faq-summary">
-
               <div class="summary-left">
-
                 <span class="q-number">1.2</span>
-
                 <h3 class="q-title">¿Cuáles son los objetivos clave de Synaps para la organización?</h3>
-
               </div>
-
               <div class="summary-actions">
-
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
-
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-
                 </button>
-
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-
               </div>
-
             </summary>
-
             <div class="faq-content">
-
               <p>Los objetivos estratégicos establecidos para el despliegue global de Synaps son:</p>
-
               <div class="grid-cards-2">
-
                 <div class="info-card">
-
                   <div class="info-card-header"><span class="info-icon">👥</span><strong>500 Usuarios Formados</strong></div>
-
                   <p>Alcanzar 500 profesionales formados y totalmente operativos en el uso de Synaps para <strong>diciembre de 2026</strong>.</p>
-
                 </div>
-
                 <div class="info-card">
-
                   <div class="info-card-header"><span class="info-icon">⚙️</span><strong>Fábrica de Casos de Uso</strong></div>
-
                   <p>Consolidar una factoría interna de soluciones para multiplicar la eficiencia operativa diaria en todas las unidades.</p>
-
                 </div>
-
                 <div class="info-card">
-
                   <div class="info-card-header"><span class="info-icon">⏱️</span><strong>Ahorro de Miles de Horas</strong></div>
-
                   <p>Liberar a nuestros equipos de tareas manuales repetitivas, ahorrando miles de horas de trabajo al año.</p>
-
                 </div>
-
                 <div class="info-card">
-
                   <div class="info-card-header"><span class="info-icon">🚀</span><strong>Maximizar el Valor Añadido</strong></div>
-
                   <p>Reorientar el talento humano hacia la creación artística, el pensamiento estratégico y la innovación de negocio.</p>
-
                 </div>
-
               </div>
-
             </div>
-
           </details>
-
         </article>
-
         <!-- Pregunta 1.3 -->
-
         <article class="faq-card" data-category="vision" id="faq-1-3">
-
           <details class="faq-details">
 
             <summary class="faq-summary">
@@ -645,7 +389,7 @@
 
           <h2 class="section-title">Componentes Clave de Synaps: Tus Herramientas de IA</h2>
 
-          <p class="section-desc">Synaps Chat, Deep Research, Gemini Notebook y la arquitectura completa de Agentes No-Code y Pro-Code.</p>
+          <p class="section-desc">Synaps Chat, Deep Research, Gemini Notebook y la arquitectura completa de Agentes No-Code, Pro-Code y Skills.</p>
 
         </div>
 
@@ -1127,6 +871,98 @@
 
         </article>
 
+        <!-- Pregunta 2.7 (NUEVA: Qué son las Skills) -->
+        <article class="faq-card" data-category="tools" id="faq-2-7">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.7</span>
+                <h3 class="q-title">¿Qué son las Skills de Synaps y cómo funcionan?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Las <strong>Skills</strong> de Synaps son paquetes reutilizables de instrucciones personalizadas y contextos predefinidos que ayudan a Gemini a realizar tareas muy especializadas y repetitivas (como auditar un texto según el libro de estilo, estructurar presupuestos complejos o validar la seguridad de marca).
+              </p>
+              <div class="callout-box">
+                <div class="callout-title">📂 Estructura Base SKILL.md</div>
+                <p>Cada habilidad de Synaps se fundamenta en un archivo raíz llamado <code>SKILL.md</code> escrito en formato Markdown, el cual actúa como las directrices principales para el sistema. En habilidades más complejas, puedes empaquetar scripts de automatización adicionales, hojas de referencia y recursos en un único archivo comprimido <code>.zip</code>.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Pregunta 2.8 (NUEVA: Cómo usar las Skills) -->
+        <article class="faq-card" data-category="tools" id="faq-2-8">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.8</span>
+                <h3 class="q-title">¿Cómo puedo invocar o utilizar una Skill en mis conversaciones?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Puedes activar e invocar tus habilidades cargadas en Synaps mediante tres sencillos métodos:</p>
+              <ul class="styled-list">
+                <li><strong>Comando de barra oblicua (<code>/</code>):</strong> Escribe <code>/</code> en el cuadro de texto para desplegar un listado con todas tus habilidades autorizadas y pulsa sobre la que deseas ejecutar (ej. <code>/VozDeMarca</code>).</li>
+                <li><strong>Menciones rápidas (<code>@</code>):</strong> Menciona la habilidad que desees aplicar directamente dentro de tu prompt (ej. <em>"Por favor, revisa el contenido utilizando @RevisionContratos"</em>).</li>
+                <li><strong>Detección natural inteligente:</strong> Synaps analizará el contexto de tu consulta y te sugerirá activar una habilidad si tu prompt coincide con el propósito descrito en las instrucciones del sistema de la skill.</li>
+              </ul>
+              <div class="callout-box warning-theme mt-3">
+                <div class="callout-title">⚠️ Compatibilidad de Agentes y Habilidades</div>
+                <p>No es técnicamente posible invocar un Agente especializado de IA y una Skill en el mismo prompt de tu conversación. Si interactúas con un agente, las habilidades permanecerán temporalmente inactivas para esa sesión.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Pregunta 2.9 (NUEVA: Crear y Compartir Skills) -->
+        <article class="faq-card" data-category="tools" id="faq-2-9">
+          <details class="faq-details">
+            <summary class="faq-summary">
+              <div class="summary-left">
+                <span class="q-number">2.9</span>
+                <h3 class="q-title">¿Cómo puedo crear, subir y compartir una Skill personalizada?</h3>
+              </div>
+              <div class="summary-actions">
+                <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                </button>
+                <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+              </div>
+            </summary>
+            <div class="faq-content">
+              <p>Crear, gestionar y poner en común tus propias habilidades es un proceso muy ágil dentro de tu espacio de trabajo corporativo:</p>
+              <div class="grid-cards-2">
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🛠️</span><strong>Carga y Creación de la Skill</strong></div>
+                  <p>Navega a la sección de <strong>Habilidades (Skills)</strong> en tu panel, haz clic en el botón de añadir <strong>+ (Add)</strong> y describe tus directrices en lenguaje natural, o bien sube un archivo empaquetado en formato <code>.zip</code> con tus scripts de automatización.</p>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header"><span class="info-icon">🔗</span><strong>Uso Compartido y Gobernanza</strong></div>
+                  <p>Pulsa sobre el icono de menú de opciones de tu habilidad (<code>...</code>) y selecciona <strong>Compartir</strong>. Introduce las direcciones de tus compañeros de departamento o solicita su despliegue general al administrador de TI.</p>
+                </div>
+              </div>
+              <ul class="styled-list mt-3">
+                <li><strong>Entorno de scripting avanzado:</strong> La ejecución de código personalizado incluido en los paquetes ZIP de las Skills soporta exclusivamente lenguajes <strong>Python</strong> y <strong>Bash</strong>.</li>
+                <li><strong>Recomendación para Canvas:</strong> Para que la interfaz de Canvas rinda de manera óptima y fluida, se recomienda que tu habilidad conste únicamente del archivo plano de instrucciones <code>SKILL.md</code>.</li>
+              </ul>
+            </div>
+          </details>
+        </article>
+
       </div>
 
       <!-- ==================== SECCIÓN III ==================== -->
@@ -1417,7 +1253,7 @@
 
               <ul class="styled-list mt-2">
 
-                <li><strong>Estructuración con Markdown:</strong> Emplea encabezados (<code>#</code>), listas y negritas (<code>**</code>) para estructurar tus prompts; Gemini organizará mejor el razonamiento.</li>
+                <li><strong>Estructuración con Markdown:</strong> Emplea encabezados (<code>#</code>), listas y negritas (<code>\*\*</code>) para estructurar tus prompts; Gemini organizará mejor el razonamiento.</li>
 
                 <li><strong>Prompt Interactivo de Clarificación:</strong> Pídele al final: <em>«Antes de redactar, hazme 3 preguntas para asegurarte de que comprendes mi objetivo»</em>.</li>
 
@@ -1613,7 +1449,7 @@
 
                 <div class="copilot-role">
 
-                  <div class="role-badge copilot">Synaps = El Copiloto</div>
+                  <div class="role-badge">Synaps = El Copiloto</div>
 
                   <p>Te sugiere rutas, sintetiza datos dispersos, acelera cálculos y redacta borradores para ahorrarte horas de vuelo operativo.</p>
 
@@ -1945,8 +1781,6 @@
 
               </div>
 
-
-
               <h4 class="subhead">🚀 Casos de Negocio Avanzados:</h4>
 
               <div class="use-cases-grid mt-2">
@@ -2062,193 +1896,338 @@
       </div>
 
      <!-- ==================== SECCIÓN VI ==================== -->
+
       <div class="faq-section-block" data-section="champions" id="seccion-champions">
 
         <div class="section-header">
+
           <div class="section-tag">Módulo VI</div>
+
           <h2 class="section-title">Tu Rol con Synaps: De la Formación a la Acción Diaria</h2>
+
           <p class="section-desc">Qué se espera de ti como usuario formado, tu viaje de adopción personal y el ecosistema de apoyo a tu disposición.</p>
+
         </div>
 
         <!-- Pregunta 6.1 -->
+
         <article class="faq-card" data-category="champions" id="faq-6-1">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">6.1</span>
+
                 <h3 class="q-title">¿Qué se espera de mí ahora que he terminado la formación de Synaps?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>
+
                 El objetivo de la formación no es que te conviertas en programador de IA, sino que <strong>integres Synaps de manera natural como tu copiloto en el día a día</strong>. Como usuario certificado en Synaps, tu rol diario se divide en 3 pilares clave:
+
               </p>
 
               <div class="grid-cards-2 mt-3">
+
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🕵️‍♀️</span><strong>1. Explorador de Ineficiencias</strong></div>
+
                   <p>Identifica proactivamente aquellas tareas mecánicas que bloquean tu tiempo (resúmenes de hilos, estructuración de datos, búsquedas pesadas en carpetas) y delégalas en Synaps.</p>
+
                 </div>
 
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🚀</span><strong>2. Creador y Validador (Piloto)</strong></div>
+
                   <p>Aplica tu criterio y juicio crítico. Utiliza Synaps para acelerar la creación de primeros borradores, planes o análisis, asegurando siempre que la validación estratégica final pase por tus manos.</p>
+
                 </div>
 
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">📣</span><strong>3. Conector de Equipo</strong></div>
+
                   <p>Sé parte activa del cambio. Si descubres un prompt excelente, un agente útil o una automatización que te ahorra una hora diaria, compártelo con tu equipo para escalar el beneficio.</p>
+
                 </div>
 
                 <div class="info-card">
+
                   <div class="info-card-header"><span class="info-icon">🧪</span><strong>4. Iterador Constante</strong></div>
+
                   <p>Adopta la mentalidad de prueba y aprendizaje. No te quedes con el primer resultado de Gemini; aprende a interactuar, refinar y repreguntar sobre la misma sesión.</p>
+
                 </div>
+
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 6.2 -->
-               <!-- Pregunta 6.2 -->
+
         <article class="faq-card" data-category="champions" id="faq-6-2">
+
           <details class="faq-details">
+
             <summary class="faq-summary">
+
               <div class="summary-left">
+
                 <span class="q-number">6.2</span>
+
                 <h3 class="q-title">¿Cuál es mi plan de ruta personal para los próximos 3 meses?</h3>
+
               </div>
+
               <div class="summary-actions">
+
                 <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+
                 </button>
+
                 <span class="chevron-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+
               </div>
+
             </summary>
+
             <div class="faq-content">
+
               <p>La adopción real de la inteligencia artificial es un viaje progresivo. Te proponemos esta <strong>ruta de adopción personal en 4 fases</strong> para consolidar y asentar lo aprendido en tu puesto de trabajo:</p>
+
               
+
               <!-- Contenedor de la Línea Temporal (Timeline) -->
+
               <div class="timeline-container mt-4" style="position: relative; padding-left: 20px; border-left: 3px solid rgba(168, 85, 247, 0.3); margin-left: 10px;">
+
                 
+
                 <!-- Fase 1 -->
+
                 <div class="timeline-item" style="position: relative; margin-bottom: 25px;">
+
                   <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+
                   <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+
                     <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Fase 1</span>
+
                     <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Día +15</span>
+
                   </div>
+
                   <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Mapear el Día a Día</strong></h4>
+
                   <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Detecta tus 3 principales "cuellos de botella" semanales y planifica cómo Synaps Chat o tus conectores de Gmail y Drive pueden resolverlos de forma recurrente.</p>
+
                 </div>
 
                 <!-- Fase 2 -->
+
                 <div class="timeline-item" style="position: relative; margin-bottom: 25px;">
+
                   <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+
                   <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+
                     <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Fase 2</span>
+
                     <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Día +1 Mes</span>
+
                   </div>
+
                   <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Dominio de Herramientas</strong></h4>
+
                   <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Familiarízate con la estructura de prompts <strong>P.A.C.T.E.</strong> y saca provecho a las extensiones en tiempo real para agilizar tareas complejas de búsqueda cruzada.</p>
+
                 </div>
 
                 <!-- Fase 3 -->
+
                 <div class="timeline-item" style="position: relative; margin-bottom: 25px;">
+
                   <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+
                   <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+
                     <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Fase 3</span>
+
                     <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Día +2 Meses</span>
+
                   </div>
+
                   <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Construir Hábitos</strong></h4>
+
                   <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Sustituye conscientemente las búsquedas manuales o la redacción mecánica por interacciones directas en Synaps, integrándolo como tu asistente de inicio de jornada.</p>
+
                 </div>
 
                 <!-- Fase 4 -->
+
                 <div class="timeline-item" style="position: relative; margin-bottom: 5px;">
+
                   <div class="timeline-dot" style="position: absolute; left: -27px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background-color: rgb(168, 85, 247); border: 3px solid #fff; box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);"></div>
+
                   <div class="timeline-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+
                     <span class="timeline-badge" style="background-color: rgba(168, 85, 247, 0.15); color: rgb(168, 85, 247); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 12px; text-transform: uppercase;">Fase 4</span>
+
                     <span class="timeline-time" style="color: #6b7280; font-size: 0.85rem; font-weight: 500;">Día +3 Meses</span>
+
                   </div>
+
                   <h4 class="timeline-title" style="margin: 0 0 5px 0; font-size: 1rem; color: #1f2937;"><strong>Consolidar y Compartir</strong></h4>
+
                   <p class="timeline-desc" style="margin: 0; color: #4b5563; font-size: 0.9rem;">Evalúa tus horas liberadas y documenta internamente tus casos de éxito y mejores plantillas de prompts para contagiar la adopción a tu departamento.</p>
+
                 </div>
 
               </div>
+
             </div>
+
           </details>
+
         </article>
 
         <!-- Pregunta 6.3 -->
+
         <article class="faq-card" data-category="champions" id="faq-6-3">
+
   <details class="faq-details">
+
     <summary class="faq-summary">
+
       <div class="summary-left">
+
         <span class="q-number">6.3</span>
+
         <h3 class="q-title">¿De qué recursos y soporte dispongo para seguir aprendiendo?</h3>
+
       </div>
+
       <div class="summary-actions">
+
         <button class="copy-link-btn" title="Copiar enlace directo" aria-label="Copiar enlace">
+
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+
             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+
             <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+
           </svg>
+
         </button>
+
         <span class="chevron-icon" aria-hidden="true">
+
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+
             <polyline points="6 9 12 15 18 9"></polyline>
+
           </svg>
+
         </span>
+
       </div>
+
     </summary>
+
     <div class="faq-content">
+
       <p>Nunca estás solo en tu camino con la IA. Webedia y el Core Team han desarrollado un <strong>ecosistema completo de apoyo</strong> para asistirte en cada paso:</p>
 
       <div class="grid-cards-2 mt-3">
+
         <!-- Tarjeta 1: Guías y Prompts -->
+
         <div class="info-card">
+
           <div class="info-card-header"><span class="info-icon">🧰</span><strong>Guías y Biblioteca de Prompts</strong></div>
+
           <p>Plantillas optimizadas y listas para usar que te servirán como punto de partida para tus tareas del departamento.</p>
+
         </div>
 
         <!-- Tarjeta 2: FAQ y Base de Conocimiento -->
+
         <div class="info-card">
+
           <div class="info-card-header"><span class="info-icon">📖</span><strong>FAQ y Base de Conocimiento</strong></div>
+
           <p>Este portal interactivo en continua evolución con las últimas directrices, actualizaciones y trucos avanzados.</p>
+
         </div>
 
         <!-- Tarjeta 3: Canal de Comunidad -->
+
         <div class="info-card">
+
           <div class="info-card-header"><span class="info-icon">💬</span><strong>Canal de Comunidad y Soporte</strong></div>
+
           <p>Espacio privado en Google Chat donde los usuarios comparten dudas, soluciones y casos inspiradores.</p>
+
         </div>
 
         <!-- Tarjeta 4: Contacto Champions -->
+
         <div class="info-card">
+
           <div class="info-card-header"><span class="info-icon">🆘</span><strong>Línea Directa con Champions</strong></div>
+
           <p>El facilitador de tu área es tu primer punto de apoyo para desbloquear consultas o refinar prompts complejos.</p>
+
         </div>
 
         <!-- Tarjeta 5: Contacto Core Team -->
+
         <div class="info-card">
+
           <div class="info-card-header"><span class="info-icon">⚡</span><strong>Contacto Directo con Core Team</strong></div>
+
           <p>Soporte dedicado para resolver incidencias técnicas críticas o gestionar solicitudes de licencias adicionales.</p>
+
         </div>
+
       </div>
 
     </div>
+
   </details>
+
 </article>
+
       </div>
-
-
 
       <!-- ==================== SECCIÓN VII (NUEVA: BUENAS PRÁCTICAS Y SOPORTE) ==================== -->
 
@@ -2326,8 +2305,6 @@
 
         </article>
 
-
-
         <!-- Pregunta 7.2 -->
 
         <article class="faq-card" data-category="bestpractices" id="faq-7-2">
@@ -2377,8 +2354,6 @@
           </details>
 
         </article>
-
-
 
         <!-- Pregunta 7.3 -->
 
@@ -2452,8 +2427,6 @@
 
         </article>
 
-
-
         <!-- Pregunta 7.4 -->
 
         <article class="faq-card" data-category="bestpractices" id="faq-7-4">
@@ -2517,8 +2490,6 @@
         </article>
 
       </div>
-
-
 
       <!-- Estado vacío cuando la búsqueda no da resultados -->
 
@@ -2686,8 +2657,6 @@
 
   </div>
 
-
-
   <!-- Script para la carga y blindado interactivo (Evita conflictos con app.js) -->
 
   <script>
@@ -2736,8 +2705,6 @@
 
       });
 
-
-
       // 2. Control de Expandir / Colapsar Todas las Preguntas
 
       document.getElementById("expandAllBtn").addEventListener("click", function() {
@@ -2751,8 +2718,6 @@
         document.querySelectorAll(".faq-details").forEach(detail => detail.removeAttribute("open"));
 
       });
-
-
 
       // 3. Sistema de Filtros por Categorías (Pills)
 
@@ -2806,8 +2771,6 @@
 
       });
 
-
-
       // 4. Motor de Búsqueda Interactiva en tiempo real
 
       const buscador = document.getElementById("faqSearchInput");
@@ -2826,8 +2789,6 @@
 
       });
 
-
-
       clearBtn.addEventListener("click", function() {
 
         buscador.value = "";
@@ -2838,8 +2799,6 @@
 
       });
 
-
-
       function filtrarFAQ(texto) {
 
         const cards = document.querySelectorAll(".faq-card");
@@ -2849,8 +2808,6 @@
         const noResults = document.getElementById("noResultsBlock");
 
         let visibles = 0;
-
-
 
         if (texto === "") {
 
@@ -2863,8 +2820,6 @@
           return;
 
         }
-
-
 
         cards.forEach(c => {
 
@@ -2886,8 +2841,6 @@
 
         });
 
-
-
         blocks.forEach(b => {
 
           const hasVisible = Array.from(b.querySelectorAll(".faq-card")).some(c => c.style.display === "block");
@@ -2896,15 +2849,11 @@
 
         });
 
-
-
-        document.getElementById("searchResultCount").textContent = `Mostrando ${visibles} de 28 preguntas`;
+        document.getElementById("searchResultCount").textContent = `Mostrando ${visibles} de 31 preguntas`;
 
         noResults.style.display = visibles === 0 ? "block" : "none";
 
       }
-
-
 
       function actualizarContador(cat) {
 
@@ -2914,15 +2863,13 @@
 
         cards.forEach(c => {
 
-          if (cat === "all" || c.getAttribute("data-category") === cat) count++;
+          if (cat === "all" || c.getAttribute("data-category" === cat)) count++;
 
         });
 
-        document.getElementById("searchResultCount").textContent = `Mostrando ${count} de 28 preguntas`;
+        document.getElementById("searchResultCount").textContent = `Mostrando ${count} de 31 preguntas`;
 
       }
-
-
 
       document.getElementById("resetSearchBtn").addEventListener("click", function() {
 
